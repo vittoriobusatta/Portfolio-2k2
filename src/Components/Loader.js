@@ -71,7 +71,7 @@ function Loader() {
   return (
     <Container>
       <Maintenance>
-        <p>Ce site est actuellement en maintenance, je suis désolé la gêne occasionné.</p>
+        <p>Ce site fait actuellement l'objet d'une maintenance, je m'excuse pour le désagrément.</p>
       </Maintenance>
       <Content>
         {/* {useWindowSize().width >= 992 ? <LogoTall /> : <LogoSmall />} */}
