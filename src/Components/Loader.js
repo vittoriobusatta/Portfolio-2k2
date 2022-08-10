@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import { Github, LogoTall, LogoSmall, Dribble, Twitter } from "../Utils/Icons";
-import { useWindowSize } from "../Utils/WindowsResize";
+import { Github, LogoTall, Dribble, Twitter } from "../Utils/Icons";
 
 const Container = styled.section`
   position: fixed;
@@ -23,7 +22,7 @@ const Maintenance = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #797636;
-  padding: 20px;
+  padding: 15px;
 
   & p {
     color: #f9f2e8;
@@ -40,9 +39,11 @@ const Content = styled.div`
   flex-direction: column;
 `;
 const Socials = styled.ul`
+position: absolute;
+bottom: 15px;
   display: inline-flex;
   padding-top: 100px;
-  column-gap: 25px;
+  column-gap: 40px;
 `;
 const LoaderRotate = keyframes`
     from {
