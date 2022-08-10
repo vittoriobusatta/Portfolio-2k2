@@ -90,11 +90,6 @@ function Loader() {
             <Dribble />
           </a>
         </li>
-        <li>
-          <a href="https://twitter.com/busvtta">
-            <Twitter />
-          </a>
-        </li>
       </Socials>
     </Container>
   );
