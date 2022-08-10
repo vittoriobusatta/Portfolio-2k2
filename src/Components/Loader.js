@@ -6,7 +6,7 @@ const Container = styled.section`
   position: fixed;
   z-index: 1000;
   width: 100%;
-  height: 100vh;
+  height: fill-available;
   background: #f9f2e8;
   overflow: hidden;
   display: flex;
