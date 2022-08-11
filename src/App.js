@@ -1,7 +1,12 @@
 import Loader from "./Components/Loader";
 import "./Assets/Styles//Fonts.css";
 import "./Assets/Styles/Reset.css";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+import { useEffect, useState } from "react";
+import { ManropeMedium } from "./Utils/Common";
+import faviconDark from "./Assets/Icons/faviconDark.png";
+import faviconLight from "./Assets/Icons/faviconLight.png";
+// import Landing from "./Components/Landing";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -34,8 +39,11 @@ const GlobalStyle = createGlobalStyle`
     
   } 
   body {
-    background-color: #f9f2e8;
+    background-color: ${(props) =>
+      props.darkMode === true ? "#1D1D1D" : "#FFEFD1"};
     font-size: 1.6rem;
+    transition: background-color 0.5s ease-in-out;
+
   }
   ::-moz-selection {
     background: #1AC8ED;
@@ -45,14 +53,44 @@ const GlobalStyle = createGlobalStyle`
     background: #1AC8ED;
     text-shadow: none;
   }
-  
+`;
+
+const ThemeButton = styled.button`
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 30px;
+  background: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
+  color: ${(props) => (props.colorTheme === true ? "#1D1D1D" : "#FFEFD1")};
+  font-size: 14px;
+  font-family: ${ManropeMedium};
+  z-index: 200;
 `;
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  }
+
+  let link = document.querySelector("link[rel~='icon']");
+  if (!link) {
+    link = document.createElement('link');
+    link.rel = 'icon';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  }
+  link.href = darkMode === true ? faviconLight : faviconDark;
+
   return (
     <>
-      <GlobalStyle />
-      <Loader />
+      <GlobalStyle darkMode={darkMode} />
+      <Loader darkMode={darkMode} />
+      <ThemeButton colorTheme={darkMode} onClick={toggleTheme}>
+        {darkMode ? "Light" : "Dark"}
+      </ThemeButton>
     </>
   );
 }
