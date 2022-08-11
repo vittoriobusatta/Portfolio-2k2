@@ -357,23 +357,6 @@ function Loader({ darkMode }) {
           </p>
         </Texte>
       </Content>
-      <Socials>
-        <li>
-          <a href="https://github.com/vittoriobusatta">
-            <Github />
-          </a>
-        </li>
-        <li>
-          <a href="https://dribbble.com/FlytzWoo">
-            <Dribble />
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/busvtta">
-            <Twitter />
-          </a>
-        </li>
-      </Socials>
     </Container>
   );
 }
