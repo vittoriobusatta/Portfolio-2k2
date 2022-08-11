@@ -2,11 +2,11 @@ import Loader from "./Components/Loader";
 import "./Assets/Styles//Fonts.css";
 import "./Assets/Styles/Reset.css";
 import styled, { createGlobalStyle } from "styled-components";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ManropeMedium } from "./Utils/Common";
 import faviconDark from "./Assets/Icons/faviconDark.png";
 import faviconLight from "./Assets/Icons/faviconLight.png";
-// import Landing from "./Components/Landing";
+import Landing from "./Components/Landing";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -91,6 +91,7 @@ function App() {
       <ThemeButton colorTheme={darkMode} onClick={toggleTheme}>
         {darkMode ? "Light" : "Dark"}
       </ThemeButton>
+      <Landing />
     </>
   );
 }

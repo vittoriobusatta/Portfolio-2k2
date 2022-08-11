@@ -1,8 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Container = styled.section`
+  height: 100vh;
+  width: 100vw;
+`
 
 function Landing() {
   return (
-    <div>Landing</div>
+    <Container>Landing</Container>
   )
 }
 

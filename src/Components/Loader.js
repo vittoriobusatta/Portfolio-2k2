@@ -20,6 +20,15 @@ const Container = styled.section`
   opacity: 1;
 `;
 
+const Overlay = styled.div`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: ${(props) =>
+    props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"};
+  z-index: 200;
+`;
+
 const Content = styled.div`
   display: flex;
   justify-content: center;
@@ -86,6 +95,7 @@ function Loader({ darkMode }) {
   let firstSpan = useRef(null);
   let secondSpan = useRef(null);
   let thirdSpan = useRef(null);
+  let overlay = useRef(null);
 
   useEffect(() => {
     const Loader = () => {
@@ -93,9 +103,10 @@ function Loader({ darkMode }) {
         container.current,
         { opacity: 1 },
         {
-          // display: "none",
-          duration: 3,
-          ease: "power3.inOut",
+          display: "none",
+          // opacity: 0,
+          duration: 4,
+          // ease: "power3.inOut",
           delay: 1,
         }
       );
@@ -270,6 +281,18 @@ function Loader({ darkMode }) {
         }
       );
       gsap.fromTo(
+        overlay.current,
+        {
+          clipPath: "circle(0%"
+        },
+        {
+          delay: 3.2,
+          duration: 1,
+          ease: "Expo.easeInOut",
+          clipPath: "circle(100%"
+        }
+      );
+      gsap.fromTo(
         thirdSpan.current,
         {
           opacity: 0,
@@ -289,6 +312,7 @@ function Loader({ darkMode }) {
 
   return (
     <Container ref={container} colorTheme={darkMode}>
+      <Overlay ref={overlay} colorTheme={darkMode}/>
       <Content>
         <Circle ref={circle} colorTheme={darkMode} />
         <Svg
@@ -353,7 +377,7 @@ function Loader({ darkMode }) {
           <p>
             <span ref={firstSpan}>vittorio busatta</span>
             <span ref={secondSpan}>Front-End Developer & Designer</span>
-            <span ref={thirdSpan}>© 2003</span>
+            <span ref={thirdSpan}>© 2022</span>
           </p>
         </Texte>
       </Content>
