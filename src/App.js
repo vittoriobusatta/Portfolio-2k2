@@ -1,7 +1,9 @@
 import Loader from "./Components/Loader";
 import "./Assets/Styles//Fonts.css";
 import "./Assets/Styles/Reset.css";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+import { useState } from "react";
+import { ManropeMedium } from "./Utils/Common";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -45,14 +47,31 @@ const GlobalStyle = createGlobalStyle`
     background: #1AC8ED;
     text-shadow: none;
   }
-  
+`;
+
+const ThemeButton = styled.button`
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
+  color: ${(props) => (props.colorTheme === true ? "#1D1D1D" : "#FFEFD1")};
+  font-size: 14px;
+  font-family: ${ManropeMedium};
 `;
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
     <>
       <GlobalStyle />
-      <Loader />
+      <Loader darkMode={darkMode} />
+      <ThemeButton colorTheme={darkMode} onClick={() => setDarkMode(!darkMode)}>
+        {darkMode ? "Light" : "Dark"}
+      </ThemeButton>
     </>
   );
 }
