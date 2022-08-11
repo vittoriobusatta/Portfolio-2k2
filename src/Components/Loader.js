@@ -2,10 +2,11 @@ import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import styled, { keyframes } from "styled-components";
 import { ManropeMedium } from "../Utils/Common";
-import setTitle from '../Utils/setTitle';
+import setTitle from "../Utils/setTitle";
 
 const Container = styled.section`
-  z-index: 1000;
+  position: fixed;
+  z-index: 100;
   width: 100%;
   height: fill-available;
   min-height: 100vh;
@@ -68,7 +69,6 @@ const Texte = styled.div`
 `;
 
 function Loader({ darkMode }) {
-
   setTitle("Loader");
 
   let container = useRef(null);
@@ -288,10 +288,7 @@ function Loader({ darkMode }) {
   }, []);
 
   return (
-    <Container
-      ref={container}
-      colorTheme={darkMode}
-    >
+    <Container ref={container} colorTheme={darkMode}>
       <Content>
         <Circle ref={circle} colorTheme={darkMode} />
         <Svg

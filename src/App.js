@@ -66,6 +66,7 @@ const ThemeButton = styled.button`
   color: ${(props) => (props.colorTheme === true ? "#1D1D1D" : "#FFEFD1")};
   font-size: 14px;
   font-family: ${ManropeMedium};
+  z-index: 200;
 `;
 
 function App() {
