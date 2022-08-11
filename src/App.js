@@ -2,9 +2,9 @@ import Loader from "./Components/Loader";
 import "./Assets/Styles//Fonts.css";
 import "./Assets/Styles/Reset.css";
 import styled, { createGlobalStyle } from "styled-components";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ManropeMedium } from "./Utils/Common";
-import Landing from "./Components/Landing";
+// import Landing from "./Components/Landing";
 
 const GlobalStyle = createGlobalStyle`
   html {

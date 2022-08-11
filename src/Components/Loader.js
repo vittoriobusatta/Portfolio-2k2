@@ -1,14 +1,13 @@
 import gsap from "gsap";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { ManropeMedium } from "../Utils/Common";
-import { PortfolioLogoLight, PortfolioLogoDark } from "../Utils/Icons";
 
 const Container = styled.section`
   z-index: 1000;
   width: 100%;
-  height: 100vh;
-  min-height: fill-available;
+  height: fill-available;
+  min-height: 100vh;
   background-color: ${(props) =>
     props.colorTheme === true ? "#1D1D1D" : "#FFEFD1"};
   display: flex;
@@ -90,7 +89,7 @@ function Loader({ darkMode }) {
         container.current,
         { opacity: 1 },
         {
-          display: "none",
+          // display: "none",
           duration: 3,
           ease: "power3.inOut",
           delay: 1,
@@ -285,7 +284,10 @@ function Loader({ darkMode }) {
   }, []);
 
   return (
-    <Container ref={container} colorTheme={darkMode}>
+    <Container
+      ref={container}
+      colorTheme={darkMode}
+    >
       <Content>
         <Circle ref={circle} colorTheme={darkMode} />
         <Svg
@@ -340,7 +342,11 @@ function Loader({ darkMode }) {
             d="M148.4 168.48C150.427 176.693 149.44 183.973 145.44 190.32C143.2 194.267 140.053 197.333 136 199.52C132 201.707 127.68 202.8 123.04 202.8C116.533 202.8 110.907 200.693 106.16 196.48C101.467 192.267 98.32 186.88 96.72 180.32C94.8 172.267 95.7867 164.96 99.68 158.4C102.027 154.453 105.2 151.413 109.2 149.28C113.2 147.093 117.52 146 122.16 146C128.507 146 134.08 148.16 138.88 152.48C143.68 156.747 146.853 162.08 148.4 168.48ZM129.2 198.24C132.4 197.493 134.293 194.56 134.88 189.44C135.52 184.267 134.933 178.293 133.12 171.52C131.52 165.013 129.333 159.84 126.56 156C123.84 152.16 121.04 150.24 118.16 150.24C117.627 150.24 117.093 150.32 116.56 150.48C113.467 151.173 111.547 154.107 110.8 159.28C110.107 164.453 110.667 170.453 112.48 177.28C114.133 183.947 116.293 189.147 118.96 192.88C121.627 196.613 124.48 198.48 127.52 198.48C128.107 198.48 128.667 198.4 129.2 198.24Z"
             fill="#1D1D1D"
           />
-          <path ref={point} d="M165 186.76V201.56H179.8V186.76H165Z" fill="#1D1D1D" />
+          <path
+            ref={point}
+            d="M165 186.76V201.56H179.8V186.76H165Z"
+            fill="#1D1D1D"
+          />
         </Svg>
         <Texte colorTheme={darkMode}>
           <p>
