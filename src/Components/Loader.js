@@ -1,7 +1,8 @@
 import gsap from "gsap";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import styled, { keyframes } from "styled-components";
 import { ManropeMedium } from "../Utils/Common";
+import setTitle from '../Utils/setTitle';
 
 const Container = styled.section`
   z-index: 1000;
@@ -67,6 +68,9 @@ const Texte = styled.div`
 `;
 
 function Loader({ darkMode }) {
+
+  setTitle("Loader");
+
   let container = useRef(null);
   let P = useRef(null);
   let O = useRef(null);

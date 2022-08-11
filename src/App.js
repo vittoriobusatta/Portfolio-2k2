@@ -2,8 +2,10 @@ import Loader from "./Components/Loader";
 import "./Assets/Styles//Fonts.css";
 import "./Assets/Styles/Reset.css";
 import styled, { createGlobalStyle } from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ManropeMedium } from "./Utils/Common";
+import faviconDark from "./Assets/Icons/faviconDark.png";
+import faviconLight from "./Assets/Icons/faviconLight.png";
 // import Landing from "./Components/Landing";
 
 const GlobalStyle = createGlobalStyle`
@@ -69,11 +71,23 @@ const ThemeButton = styled.button`
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  }
+
+  let link = document.querySelector("link[rel~='icon']");
+  if (!link) {
+    link = document.createElement('link');
+    link.rel = 'icon';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  }
+  link.href = darkMode === true ? faviconLight : faviconDark;
+
   return (
     <>
       <GlobalStyle darkMode={darkMode} />
       <Loader darkMode={darkMode} />
-      <ThemeButton colorTheme={darkMode} onClick={() => setDarkMode(!darkMode)}>
+      <ThemeButton colorTheme={darkMode} onClick={toggleTheme}>
         {darkMode ? "Light" : "Dark"}
       </ThemeButton>
     </>
