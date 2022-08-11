@@ -37,8 +37,11 @@ const GlobalStyle = createGlobalStyle`
     
   } 
   body {
-    background-color: #f9f2e8;
+    background-color: ${(props) =>
+      props.darkMode === true ? "#1D1D1D" : "#FFEFD1"};
     font-size: 1.6rem;
+    transition: background-color 0.5s ease-in-out;
+
   }
   ::-moz-selection {
     background: #1AC8ED;
@@ -68,7 +71,7 @@ function App() {
 
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyle darkMode={darkMode} />
       <Loader darkMode={darkMode} />
       <ThemeButton colorTheme={darkMode} onClick={() => setDarkMode(!darkMode)}>
         {darkMode ? "Light" : "Dark"}
