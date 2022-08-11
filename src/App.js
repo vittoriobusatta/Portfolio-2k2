@@ -2,8 +2,9 @@ import Loader from "./Components/Loader";
 import "./Assets/Styles//Fonts.css";
 import "./Assets/Styles/Reset.css";
 import styled, { createGlobalStyle } from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ManropeMedium } from "./Utils/Common";
+import Landing from "./Components/Landing";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -55,7 +56,7 @@ const ThemeButton = styled.button`
   right: 20px;
   border: none;
   padding: 10px 15px;
-  border-radius: 20px;
+  border-radius: 30px;
   background: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
   color: ${(props) => (props.colorTheme === true ? "#1D1D1D" : "#FFEFD1")};
   font-size: 14px;
@@ -64,11 +65,24 @@ const ThemeButton = styled.button`
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const OnLoad = () => {
+      setLoading(false);
+    }
+    window.addEventListener("load", OnLoad);
+    return () => window.removeEventListener("load", OnLoad);
+  } , [loading]);
+
+
+
+
 
   return (
     <>
       <GlobalStyle />
-      <Loader darkMode={darkMode} />
+      {loading ? <Loader /> : <Landing />}
       <ThemeButton colorTheme={darkMode} onClick={() => setDarkMode(!darkMode)}>
         {darkMode ? "Light" : "Dark"}
       </ThemeButton>

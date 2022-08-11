@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
+import { ManropeMedium } from "../Utils/Common";
 import { PortfolioLogoLight, PortfolioLogoDark } from "../Utils/Icons";
 
 const Container = styled.section`
@@ -21,23 +22,29 @@ const Content = styled.div`
   align-items: center;
   flex-direction: column;
 `;
+
+const bounce = keyframes`
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+`;
+
+
 const Circle = styled.div`
   height: 20px;
   width: 20px;
   background-color: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
   border-radius: 50%;
   margin-bottom: 180px;
+  animation: ${bounce} 1.5s ease infinite;
 `;
+
 
 const Texte = styled.div`
   margin-top: 180px;
   & p {
-    font-family: Manrope;
-    font-size: 10px;
-    font-weight: 800;
-    line-height: 14px;
-    letter-spacing: 0em;
-    text-align: left;
+    font-family: ${ManropeMedium};
+    font-size: 12px;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
