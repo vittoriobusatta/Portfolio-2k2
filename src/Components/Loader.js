@@ -39,7 +39,7 @@ const Circle = styled.div`
   background-color: ${(props) =>
     props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"};
   border-radius: 50%;
-  margin-bottom: 180px;
+  margin-bottom: 120px;
   animation: ${bounce} 1.5s ease infinite;
 `;
 
