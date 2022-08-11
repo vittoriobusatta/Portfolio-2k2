@@ -65,24 +65,11 @@ const ThemeButton = styled.button`
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const OnLoad = () => {
-      setLoading(false);
-    }
-    window.addEventListener("load", OnLoad);
-    return () => window.removeEventListener("load", OnLoad);
-  } , [loading]);
-
-
-
-
 
   return (
     <>
       <GlobalStyle />
-      {loading ? <Loader /> : <Landing />}
+      <Loader darkMode={darkMode} />
       <ThemeButton colorTheme={darkMode} onClick={() => setDarkMode(!darkMode)}>
         {darkMode ? "Light" : "Dark"}
       </ThemeButton>
