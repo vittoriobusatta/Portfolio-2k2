@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { CustomEase } from "gsap/all";
 import React, { useEffect, useRef } from "react";
 import styled, { keyframes } from "styled-components";
 import { ManropeMedium } from "../Utils/Common";
@@ -16,8 +17,9 @@ const Container = styled.section`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out ;
   opacity: 1;
+  
 `;
 
 const Overlay = styled.div`
@@ -50,11 +52,12 @@ const Circle = styled.div`
   border-radius: 50%;
   animation: ${bounce} 1.5s ease infinite;
   animation-delay: 1.1s;
+  opacity: 0;
 `;
 
 const Svg = styled.svg`
   & path {
-    overflow: hidden;
+    opacity: 0;
     fill: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
   }
 `;
@@ -86,6 +89,10 @@ const Div = styled.div`
   flex-direction: column;
   align-items: center;
   color: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
+
+  & span {
+    opacity: 0;
+  }
 `;
 
 function Loader({ darkMode }) {
@@ -109,16 +116,20 @@ function Loader({ darkMode }) {
   let overlay = useRef(null);
 
   useEffect(() => {
-    const Loader = () => {
+    const onLoad = () => {
       gsap.fromTo(
         container.current,
-        { opacity: 1, y: 0 + "%" },
+        { opacity: 1, 
+          y: 0 + "%",
+          skewY: 0 + "deg"
+         },
         {
-          duration: 1.5,
-          ease: "expo.out",
+          duration: 1.8,
+          ease: CustomEase.create("custom", "M0,0 C0.34,0.52 0,1 1,1 "),
           delay: 4.4,
-          y: -100 + "%",
-          display: "none",
+          y: -110 + "%",
+          skewY: 2.5 + "deg",
+          display: "none"
         }
       );
       gsap.fromTo(
@@ -130,12 +141,12 @@ function Loader({ darkMode }) {
           delay: 1,
           y: 0,
           ease: "expo.out",
+          opacity: 1
         }
       );
       gsap.fromTo(
         P.current,
         {
-          opacity: 0,
           y: 20,
         },
         {
@@ -148,7 +159,6 @@ function Loader({ darkMode }) {
       gsap.fromTo(
         T.current,
         {
-          opacity: 0,
           y: 20,
         },
         {
@@ -161,7 +171,6 @@ function Loader({ darkMode }) {
       gsap.fromTo(
         L.current,
         {
-          opacity: 0,
           y: 20,
         },
         {
@@ -174,7 +183,6 @@ function Loader({ darkMode }) {
       gsap.fromTo(
         O.current,
         {
-          opacity: 0,
           y: 20,
         },
         {
@@ -187,7 +195,6 @@ function Loader({ darkMode }) {
       gsap.fromTo(
         I.current,
         {
-          opacity: 0,
           y: 20,
         },
         {
@@ -200,7 +207,6 @@ function Loader({ darkMode }) {
       gsap.fromTo(
         F.current,
         {
-          opacity: 0,
           y: 20,
         },
         {
@@ -213,7 +219,6 @@ function Loader({ darkMode }) {
       gsap.fromTo(
         R.current,
         {
-          opacity: 0,
           y: 20,
         },
         {
@@ -226,7 +231,6 @@ function Loader({ darkMode }) {
       gsap.fromTo(
         O2.current,
         {
-          opacity: 0,
           y: 20,
         },
         {
@@ -271,6 +275,7 @@ function Loader({ darkMode }) {
         {
           delay: 2.4,
           y: 0,
+          opacity: 1
         }
       );
       gsap.fromTo(
@@ -281,6 +286,7 @@ function Loader({ darkMode }) {
         {
           delay: 2.5,
           y: 0,
+          opacity: 1
         }
       );
       gsap.fromTo(
@@ -291,6 +297,7 @@ function Loader({ darkMode }) {
         {
           delay: 2.8,
           y: 0,
+          opacity: 1
         }
       );
       gsap.fromTo(
@@ -308,8 +315,8 @@ function Loader({ darkMode }) {
         }
       );
     };
-    window.addEventListener("load", Loader);
-    return () => window.removeEventListener("load", Loader);
+    window.addEventListener("load", onLoad); 
+    return () => window.removeEventListener("load", onLoad);
   }, []);
 
   return (
