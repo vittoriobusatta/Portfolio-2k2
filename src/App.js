@@ -1,4 +1,3 @@
-import Loader from "./Components/Loader";
 import "./Assets/Styles//Fonts.css";
 import "./Assets/Styles/Reset.css";
 import styled, { createGlobalStyle } from "styled-components";
@@ -6,7 +5,9 @@ import { useEffect, useState } from "react";
 import { ManropeMedium } from "./Utils/Common";
 import faviconDark from "./Assets/Icons/faviconDark.png";
 import faviconLight from "./Assets/Icons/faviconLight.png";
-// import Landing from "./Components/Landing";
+import Landing from "./Components/Landing";
+import Loader from "./Components/Loader";
+
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -43,6 +44,8 @@ const GlobalStyle = createGlobalStyle`
       props.darkMode === true ? "#1D1D1D" : "#FFEFD1"};
     font-size: 1.6rem;
     transition: background-color 0.5s ease-in-out;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 
   }
   ::-moz-selection {
@@ -56,7 +59,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const ThemeButton = styled.button`
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
   border: none;
@@ -66,31 +69,41 @@ const ThemeButton = styled.button`
   color: ${(props) => (props.colorTheme === true ? "#1D1D1D" : "#FFEFD1")};
   font-size: 14px;
   font-family: ${ManropeMedium};
-  z-index: 200;
+  z-index: 90;
+  letter-spacing: 0;
 `;
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
-  }
+  };
 
   let link = document.querySelector("link[rel~='icon']");
   if (!link) {
-    link = document.createElement('link');
-    link.rel = 'icon';
-    document.getElementsByTagName('head')[0].appendChild(link);
+    link = document.createElement("link");
+    link.rel = "icon";
+    document.getElementsByTagName("head")[0].appendChild(link);
   }
   link.href = darkMode === true ? faviconLight : faviconDark;
 
-  return (
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+      console.log("Loading finished");
+    }, 6000);
+  });
+
+  return(
     <>
+      {loading ? <Loader darkMode={darkMode} /> : null}
       <GlobalStyle darkMode={darkMode} />
-      <Loader darkMode={darkMode} />
       <ThemeButton colorTheme={darkMode} onClick={toggleTheme}>
         {darkMode ? "Light" : "Dark"}
       </ThemeButton>
+      <Landing darkMode={darkMode}/>
     </>
   );
 }

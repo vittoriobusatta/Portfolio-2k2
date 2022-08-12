@@ -1,8 +1,8 @@
 import gsap from "gsap";
+import { CustomEase } from "gsap/all";
 import React, { useEffect, useRef } from "react";
 import styled, { keyframes } from "styled-components";
 import { ManropeMedium } from "../Utils/Common";
-import setTitle from "../Utils/setTitle";
 
 const Container = styled.section`
   position: fixed;
@@ -16,8 +16,18 @@ const Container = styled.section`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out ;
   opacity: 1;
+  user-select: none;
+`;
+
+const Overlay = styled.div`
+  position: absolute;
+  width: 100%;
+  background-color: ${(props) =>
+    props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"};
+  z-index: 200;
+  top: 20%;
 `;
 
 const Content = styled.div`
@@ -25,6 +35,9 @@ const Content = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  row-gap: 20rem;
 `;
 
 const bounce = keyframes`
@@ -39,38 +52,50 @@ const Circle = styled.div`
   background-color: ${(props) =>
     props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"};
   border-radius: 50%;
-  margin-bottom: 120px;
   animation: ${bounce} 1.5s ease infinite;
+  animation-delay: 1.1s;
+  opacity: 0;
 `;
 
 const Svg = styled.svg`
   & path {
+    opacity: 0;
     fill: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
   }
 `;
 
 const Texte = styled.div`
-  margin-top: 180px;
-  & p {
-    font-family: ${ManropeMedium};
-    font-size: 12px;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
-    & span:nth-child(1) {
+  & div {
+    &:nth-child(1) {
       margin-bottom: 2px;
     }
-    & span:nth-child(3) {
+    &:nth-child(3) {
       margin-top: 14px;
     }
   }
 `;
+const CircleContainer = styled.div`
+  overflow: hidden;
+  padding-top: 30px;
+`;
+
+const Div = styled.div`
+  overflow: hidden;
+  height: 14px;
+  font-family: ${ManropeMedium};
+  font-size: 12px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
+
+  & span {
+    opacity: 0;
+  }
+`;
 
 function Loader({ darkMode }) {
-  setTitle("Loader");
-
   let container = useRef(null);
   let P = useRef(null);
   let O = useRef(null);
@@ -86,36 +111,55 @@ function Loader({ darkMode }) {
   let firstSpan = useRef(null);
   let secondSpan = useRef(null);
   let thirdSpan = useRef(null);
+  let overlay = useRef(null);
 
   useEffect(() => {
-    const Loader = () => {
+    const onLoad = () => {
       gsap.fromTo(
         container.current,
-        { opacity: 1 },
+        { opacity: 1, 
+          y: 0 + "%",
+          skewY: 0 + "deg"
+         },
         {
-          // display: "none",
-          duration: 3,
-          ease: "power3.inOut",
-          delay: 1,
+          duration: 1.8,
+          ease: CustomEase.create("custom", "M0,0 C0.34,0.52 0,1 1,1 "),
+          delay: 4.4,
+          y: -110 + "%",
+          skewY: 2.5 + "deg",
         }
       );
       gsap.fromTo(
-        circle.current,
+        overlay.current,
         {
-          opacity: 0,
-          y: 20,
+          clipPath: "circle(0%",
         },
         {
-          opacity: 1,
+          delay: 3.4,
+          duration: 1,
+          ease: "Expo.easeInOut",
+          clipPath: "circle(100%",
+          height: 100 + "%",
+          top: 0
+        }
+      );
+
+
+      gsap.fromTo(
+        circle.current,
+        {
+          y: 100 + "%",
+        },
+        {
           delay: 1,
-          ease: "power2.out",
           y: 0,
+          ease: "expo.out",
+          opacity: 1
         }
       );
       gsap.fromTo(
         P.current,
         {
-          opacity: 0,
           y: 20,
         },
         {
@@ -128,7 +172,6 @@ function Loader({ darkMode }) {
       gsap.fromTo(
         T.current,
         {
-          opacity: 0,
           y: 20,
         },
         {
@@ -141,7 +184,6 @@ function Loader({ darkMode }) {
       gsap.fromTo(
         L.current,
         {
-          opacity: 0,
           y: 20,
         },
         {
@@ -154,7 +196,6 @@ function Loader({ darkMode }) {
       gsap.fromTo(
         O.current,
         {
-          opacity: 0,
           y: 20,
         },
         {
@@ -167,7 +208,6 @@ function Loader({ darkMode }) {
       gsap.fromTo(
         I.current,
         {
-          opacity: 0,
           y: 20,
         },
         {
@@ -180,7 +220,6 @@ function Loader({ darkMode }) {
       gsap.fromTo(
         F.current,
         {
-          opacity: 0,
           y: 20,
         },
         {
@@ -193,7 +232,6 @@ function Loader({ darkMode }) {
       gsap.fromTo(
         R.current,
         {
-          opacity: 0,
           y: 20,
         },
         {
@@ -206,12 +244,24 @@ function Loader({ darkMode }) {
       gsap.fromTo(
         O2.current,
         {
-          opacity: 0,
           y: 20,
         },
         {
           opacity: 1,
           delay: 2.2,
+          ease: "power2.out",
+          y: 0,
+        }
+      );
+      gsap.fromTo(
+        O3.current,
+        {
+          opacity: 0,
+          y: 20,
+        },
+        {
+          opacity: 1,
+          delay: 2.3,
           ease: "power2.out",
           y: 0,
         }
@@ -229,68 +279,52 @@ function Loader({ darkMode }) {
           y: 0,
         }
       );
-      gsap.fromTo(
-        O3.current,
-        {
-          opacity: 0,
-          y: 20,
-        },
-        {
-          opacity: 1,
-          delay: 2.3,
-          ease: "power2.out",
-          y: 0,
-        }
-      );
 
       gsap.fromTo(
         firstSpan.current,
         {
-          opacity: 0,
-          y: 5,
+          y: 200 + "%",
         },
         {
-          opacity: 1,
-          delay: 2.2,
-          ease: "power3.inOut",
+          delay: 2.4,
           y: 0,
+          opacity: 1
         }
       );
       gsap.fromTo(
         secondSpan.current,
         {
-          opacity: 0,
-          y: 5,
+          y: 200 + "%",
         },
         {
-          opacity: 1,
-          delay: 2.4,
-          ease: "power3.inOut",
+          delay: 2.5,
           y: 0,
+          opacity: 1
         }
       );
       gsap.fromTo(
         thirdSpan.current,
         {
-          opacity: 0,
-          y: 5,
+          y: 200 + "%",
         },
         {
-          opacity: 1,
-          delay: 2.6,
-          ease: "power3.inOut",
+          delay: 2.8,
           y: 0,
+          opacity: 1
         }
       );
+      
     };
-    window.addEventListener("load", Loader);
-    return () => window.removeEventListener("load", Loader);
+    onLoad();
   }, []);
 
   return (
     <Container ref={container} colorTheme={darkMode}>
+      <Overlay ref={overlay} colorTheme={darkMode} />
       <Content>
-        <Circle ref={circle} colorTheme={darkMode} />
+        <CircleContainer>
+          <Circle ref={circle} colorTheme={darkMode} />
+        </CircleContainer>
         <Svg
           colorTheme={darkMode}
           width="180"
@@ -349,12 +383,16 @@ function Loader({ darkMode }) {
             fill="#1D1D1D"
           />
         </Svg>
-        <Texte colorTheme={darkMode}>
-          <p>
+        <Texte>
+          <Div colorTheme={darkMode}>
             <span ref={firstSpan}>vittorio busatta</span>
+          </Div>
+          <Div colorTheme={darkMode}>
             <span ref={secondSpan}>Front-End Developer & Designer</span>
-            <span ref={thirdSpan}>© 2003</span>
-          </p>
+          </Div>
+          <Div colorTheme={darkMode}>
+            <span ref={thirdSpan}>© 2022</span>
+          </Div>
         </Texte>
       </Content>
     </Container>
