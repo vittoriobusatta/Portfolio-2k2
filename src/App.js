@@ -100,19 +100,13 @@ function App() {
 
   return(
     <>
-      {loading === true ? <Loader darkMode={darkMode} /> : null}
+      {/* {loading ? <Loader darkMode={darkMode} /> : null} */}
+      <Loader />
       <GlobalStyle darkMode={darkMode} />
       <ThemeButton colorTheme={darkMode} onClick={toggleTheme}>
         {darkMode ? "Light" : "Dark"}
       </ThemeButton>
-      <BrowserRouter>
-      <Link to="landing">Landing</Link>
-      <Link to="contact">Contact</Link>
-        <Routes>
-          <Route path="landing" element={<Landing darkMode={darkMode} />} />
-          <Route path="contact" element={<Contact darkMode={darkMode} />} />
-        </Routes>
-      </BrowserRouter>
+      <Landing darkMode={darkMode}/>
     </>
   );
 }

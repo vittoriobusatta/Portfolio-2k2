@@ -1,6 +1,8 @@
-import React from "react";
+import gsap from "gsap";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { ManropeMedium } from "../Utils/Common";
+import setTitle from "../Utils/setTitle";
 
 const Container = styled.section`
   height: 100vh;
@@ -15,30 +17,50 @@ const Content = styled.div`
   height: 75px;
   font-size: 64px;
   font-family: ${ManropeMedium};
-  color: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
   cursor: pointer;
 
   & div {
-    transform: translateY(120%) skew(3deg, -6deg);
-    transition: transform 0.4s;
+    opacity: 0;
+    transition: letter-spacing .8s cubic-bezier(.165, .84, .44, 1);
+    color: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
+    &:hover {
+      letter-spacing: 2px;
+    }
   }
 
-  & div {
-    transform: translateY(0) skew(0, 0);
-  }
 `;
 
 function Landing({ darkMode }) {
+
+  setTitle("Home");
+
+  let div = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      div.current,
+      {
+        y: 130 + "%",
+        skewX: -12 + "deg",
+        skewY: -5 + "deg",
+      },
+      {
+        opacity: 1,
+        delay: 5.5,
+        ease: "power3.out",
+        y: 0,
+        skewX: 0 + "deg",
+        skewY: 0 + "deg",
+      }
+    );
+  } , []);
+
+
+
   return (
     <Container>
       <Content colorTheme={darkMode}>
-        <div>Landing</div>
-      </Content>
-      <Content colorTheme={darkMode}>
-        <div>Landing</div>
-      </Content>
-      <Content colorTheme={darkMode}>
-        <div>Landing</div>
+        <div  ref={div}>Welcome</div>
       </Content>
     </Container>
   );

@@ -3,7 +3,6 @@ import { CustomEase } from "gsap/all";
 import React, { useEffect, useRef } from "react";
 import styled, { keyframes } from "styled-components";
 import { ManropeMedium } from "../Utils/Common";
-import setTitle from "../Utils/setTitle";
 
 const Container = styled.section`
   position: fixed;
@@ -36,6 +35,9 @@ const Content = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  row-gap: 20rem;
 `;
 
 const bounce = keyframes`
@@ -63,7 +65,6 @@ const Svg = styled.svg`
 `;
 
 const Texte = styled.div`
-  margin-top: 180px;
   & div {
     &:nth-child(1) {
       margin-bottom: 2px;
@@ -76,7 +77,6 @@ const Texte = styled.div`
 const CircleContainer = styled.div`
   overflow: hidden;
   padding-top: 30px;
-  margin-bottom: 120px;
 `;
 
 const Div = styled.div`
@@ -96,8 +96,6 @@ const Div = styled.div`
 `;
 
 function Loader({ darkMode }) {
-  setTitle("Loader");
-
   let container = useRef(null);
   let P = useRef(null);
   let O = useRef(null);
@@ -131,6 +129,22 @@ function Loader({ darkMode }) {
           skewY: 2.5 + "deg",
         }
       );
+      gsap.fromTo(
+        overlay.current,
+        {
+          clipPath: "circle(0%",
+        },
+        {
+          delay: 3.4,
+          duration: 1,
+          ease: "Expo.easeInOut",
+          clipPath: "circle(100%",
+          height: 100 + "%",
+          top: 0
+        }
+      );
+
+
       gsap.fromTo(
         circle.current,
         {
@@ -240,19 +254,6 @@ function Loader({ darkMode }) {
         }
       );
       gsap.fromTo(
-        point.current,
-        {
-          opacity: 0,
-          y: 50,
-        },
-        {
-          opacity: 1,
-          delay: 2.4,
-          ease: "power3.out",
-          y: 0,
-        }
-      );
-      gsap.fromTo(
         O3.current,
         {
           opacity: 0,
@@ -262,6 +263,19 @@ function Loader({ darkMode }) {
           opacity: 1,
           delay: 2.3,
           ease: "power2.out",
+          y: 0,
+        }
+      );
+      gsap.fromTo(
+        point.current,
+        {
+          opacity: 0,
+          y: 50,
+        },
+        {
+          opacity: 1,
+          delay: 2.4,
+          ease: "power3.out",
           y: 0,
         }
       );
@@ -299,20 +313,7 @@ function Loader({ darkMode }) {
           opacity: 1
         }
       );
-      gsap.fromTo(
-        overlay.current,
-        {
-          clipPath: "circle(0%",
-        },
-        {
-          delay: 3.4,
-          duration: 1,
-          ease: "Expo.easeInOut",
-          clipPath: "circle(100%",
-          height: 100 + "%",
-          top: 0
-        }
-      );
+      
     };
     onLoad();
   }, []);
