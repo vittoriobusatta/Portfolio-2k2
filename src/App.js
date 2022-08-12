@@ -1,4 +1,3 @@
-import Loader from "./Components/Loader";
 import "./Assets/Styles//Fonts.css";
 import "./Assets/Styles/Reset.css";
 import styled, { createGlobalStyle } from "styled-components";
@@ -43,6 +42,8 @@ const GlobalStyle = createGlobalStyle`
       props.darkMode === true ? "#1D1D1D" : "#FFEFD1"};
     font-size: 1.6rem;
     transition: background-color 0.5s ease-in-out;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 
   }
   ::-moz-selection {
@@ -56,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const ThemeButton = styled.button`
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
   border: none;
@@ -88,7 +89,6 @@ function App() {
   return (
     <>
       <GlobalStyle darkMode={darkMode} />
-      <Loader darkMode={darkMode} />
       <ThemeButton colorTheme={darkMode} onClick={toggleTheme}>
         {darkMode ? "Light" : "Dark"}
       </ThemeButton>

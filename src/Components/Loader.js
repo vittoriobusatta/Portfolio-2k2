@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { CustomEase } from "gsap/all";
 import React, { useEffect, useRef } from "react";
 import styled, { keyframes } from "styled-components";
 import { ManropeMedium } from "../Utils/Common";
@@ -16,8 +17,9 @@ const Container = styled.section`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out ;
   opacity: 1;
+  
 `;
 
 const Overlay = styled.div`
@@ -112,13 +114,17 @@ function Loader({ darkMode }) {
     const onLoad = () => {
       gsap.fromTo(
         container.current,
-        { opacity: 1, y: 0 + "%" },
+        { opacity: 1, 
+          y: 0 + "%",
+          skewY: 0 + "deg"
+         },
         {
-          duration: 1.5,
-          ease: "expo.out",
+          duration: 1.8,
+          ease: CustomEase.create("custom", "M0,0 C0.34,0.52 0,1 1,1 "),
           delay: 4.4,
-          y: -100 + "%",
-          display: "none",
+          y: -110 + "%",
+          skewY: 2.5 + "deg",
+          display: "none"
         }
       );
       gsap.fromTo(
@@ -308,13 +314,8 @@ function Loader({ darkMode }) {
         }
       );
     };
-    // window.addEventListener("load", Loader);
-   
-    window.addEventListener("load", () => {
-      onLoad();
-    })
+    window.addEventListener("load", onLoad); 
     return () => window.removeEventListener("load", onLoad);
-
   }, []);
 
   return (
