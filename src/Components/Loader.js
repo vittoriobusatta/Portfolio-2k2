@@ -22,12 +22,11 @@ const Container = styled.section`
 
 const Overlay = styled.div`
   position: absolute;
-  height: 10%;
   width: 100%;
   background-color: ${(props) =>
     props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"};
   z-index: 200;
-  top: 15%;
+  top: 20%;
 `;
 
 const Content = styled.div`
