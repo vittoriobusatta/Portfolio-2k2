@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import { Github, LogoTall, Dribble, Twitter } from "../Utils/Icons";
+import { Github, LogoTall, Dribble } from "../Utils/Icons";
 
 const Container = styled.section`
   position: fixed;
