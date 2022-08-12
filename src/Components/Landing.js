@@ -32,35 +32,11 @@ const Content = styled.div`
 
 function Landing({ darkMode }) {
 
-  setTitle("Home");
-
-  let div = useRef(null);
-
-  useEffect(() => {
-    gsap.fromTo(
-      div.current,
-      {
-        y: 130 + "%",
-        skewX: -12 + "deg",
-        skewY: -5 + "deg",
-      },
-      {
-        opacity: 1,
-        delay: 5.5,
-        ease: "power3.out",
-        y: 0,
-        skewX: 0 + "deg",
-        skewY: 0 + "deg",
-      }
-    );
-  } , []);
-
-
+  setTitle("Vittorio Busatta — Creative Developer ");
 
   return (
     <Container>
       <Content colorTheme={darkMode}>
-        <div  ref={div}>Welcome</div>
       </Content>
     </Container>
   );

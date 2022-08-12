@@ -23,10 +23,11 @@ const Container = styled.section`
 const Overlay = styled.div`
   position: absolute;
   width: 100%;
-  background-color: ${(props) =>
-    props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"};
+  /* background-color: ${(props) =>
+    props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"}; */
+    background-color: #FFA400;
   z-index: 200;
-  top: 20%;
+  top: 25%;
 `;
 
 const Content = styled.div`
@@ -48,8 +49,9 @@ const bounce = keyframes`
 const Circle = styled.div`
   height: 20px;
   width: 20px;
-  background-color: ${(props) =>
-    props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"};
+  /* background-color: ${(props) =>
+    props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"}; */
+    background-color: #FFA400;
   border-radius: 50%;
   animation: ${bounce} 1.5s ease infinite;
   animation-delay: 1.1s;
@@ -387,7 +389,7 @@ function Loader({ darkMode }) {
             <span ref={firstSpan}>vittorio busatta</span>
           </Div>
           <Div colorTheme={darkMode}>
-            <span ref={secondSpan}>Front-End Developer & Designer</span>
+            <span ref={secondSpan}>Creative Developer & Designer</span>
           </Div>
           <Div colorTheme={darkMode}>
             <span ref={thirdSpan}>© 2022</span>
