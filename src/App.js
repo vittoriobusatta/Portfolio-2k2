@@ -7,8 +7,6 @@ import faviconDark from "./Assets/Icons/faviconDark.png";
 import faviconLight from "./Assets/Icons/faviconLight.png";
 import Landing from "./Components/Landing";
 import Loader from "./Components/Loader";
-import Contact from "./Components/Contact";
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
 
 const GlobalStyle = createGlobalStyle`
@@ -100,8 +98,7 @@ function App() {
 
   return(
     <>
-      {/* {loading ? <Loader darkMode={darkMode} /> : null} */}
-      <Loader />
+      {loading ? <Loader darkMode={darkMode} /> : null}
       <GlobalStyle darkMode={darkMode} />
       <ThemeButton colorTheme={darkMode} onClick={toggleTheme}>
         {darkMode ? "Light" : "Dark"}
