@@ -1,5 +1,4 @@
 import gsap from "gsap";
-import { CustomEase } from "gsap/all";
 import React, { useEffect, useRef } from "react";
 import styled, { keyframes } from "styled-components";
 import { ManropeMedium } from "../Utils/Common";
@@ -123,7 +122,7 @@ function Loader({ darkMode }) {
          },
         {
           duration: 1.8,
-          ease: CustomEase.create("custom", "M0,0 C0.34,0.52 0,1 1,1 "),
+          ease: "expo.out",
           delay: 4.4,
           y: -110 + "%",
           skewY: 2.5 + "deg",

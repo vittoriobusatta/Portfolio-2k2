@@ -92,9 +92,21 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-      console.log("Loading finished");
     }, 6000);
   });
+
+
+
+  useEffect (() => {
+    const theme = localStorage.getItem("theme");
+    if (theme) {
+      setDarkMode(theme === "true" ? true : false);
+    }
+  } , [])
+
+  useEffect(() => {
+    window.localStorage.setItem("theme", JSON.stringify(darkMode));
+  } , [darkMode]);
 
   return(
     <>
