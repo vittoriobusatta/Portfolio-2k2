@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import styled, { keyframes } from "styled-components";
-import { ManropeMedium } from "../Utils/Common";
+import { ManropeBold } from "../Utils/Common";
 
 const Container = styled.section`
   position: fixed;
@@ -83,7 +83,7 @@ const CircleContainer = styled.div`
 const Div = styled.div`
   overflow: hidden;
   height: 14px;
-  font-family: ${ManropeMedium};
+  font-family: ${ManropeBold};
   font-size: 12px;
   text-transform: uppercase;
   display: flex;

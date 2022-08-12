@@ -30,3 +30,11 @@
   text-rendering: optimizeLegibility;
   font-swap: swap;
 }
+@font-face {
+  font-family: "Manrope Bold";
+  src: url("../Fonts/manrope/manrope-bold.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  font-swap: swap;
+}
