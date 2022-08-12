@@ -6,6 +6,10 @@ import { ManropeMedium } from "./Utils/Common";
 import faviconDark from "./Assets/Icons/faviconDark.png";
 import faviconLight from "./Assets/Icons/faviconLight.png";
 import Landing from "./Components/Landing";
+import Loader from "./Components/Loader";
+import Contact from "./Components/Contact";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -67,7 +71,7 @@ const ThemeButton = styled.button`
   color: ${(props) => (props.colorTheme === true ? "#1D1D1D" : "#FFEFD1")};
   font-size: 14px;
   font-family: ${ManropeMedium};
-  z-index: 200;
+  z-index: 90;
   letter-spacing: 0;
 `;
 
@@ -87,23 +91,28 @@ function App() {
   }
   link.href = darkMode === true ? faviconLight : faviconDark;
 
-  const onLoad = () => {
-    setLoading(false);
-  }
-
   useEffect(() => {
-    setTimeout(onLoad, 6000);
-  } , [])
+    setTimeout(() => {
+      setLoading(false);
+      console.log("Loading finished");
+    }, 6000);
+  });
 
-
-
-  return (
+  return(
     <>
+      {loading === true ? <Loader darkMode={darkMode} /> : null}
       <GlobalStyle darkMode={darkMode} />
       <ThemeButton colorTheme={darkMode} onClick={toggleTheme}>
         {darkMode ? "Light" : "Dark"}
       </ThemeButton>
-      <Landing darkMode={darkMode} />
+      <BrowserRouter>
+      <Link to="landing">Landing</Link>
+      <Link to="contact">Contact</Link>
+        <Routes>
+          <Route path="landing" element={<Landing darkMode={darkMode} />} />
+          <Route path="contact" element={<Contact darkMode={darkMode} />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

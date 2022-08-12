@@ -19,7 +19,7 @@ const Container = styled.section`
   align-items: center;
   transition: background-color 0.5s ease-in-out ;
   opacity: 1;
-  
+  user-select: none;
 `;
 
 const Overlay = styled.div`
@@ -129,7 +129,6 @@ function Loader({ darkMode }) {
           delay: 4.4,
           y: -110 + "%",
           skewY: 2.5 + "deg",
-          display: "none"
         }
       );
       gsap.fromTo(
@@ -315,8 +314,7 @@ function Loader({ darkMode }) {
         }
       );
     };
-    window.addEventListener("load", onLoad); 
-    return () => window.removeEventListener("load", onLoad);
+    onLoad();
   }, []);
 
   return (
