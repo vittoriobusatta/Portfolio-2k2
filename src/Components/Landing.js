@@ -1,5 +1,4 @@
-import gsap from "gsap";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import { ManropeMedium } from "../Utils/Common";
 import setTitle from "../Utils/setTitle";

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Galleria",
+    "date": "Août. 2022",
+    "images": {
+      "thumbnail": {
+        "small": "./Images/galleria.png",
+        "large": ""
+      }
+    }
+  },
+  {
+    "name": "AB Distribution",
+    "date": "May. 2022",
+    "images": {
+      "thumbnail": {
+        "small": "./Images/ab.png",
+        "large": ""
+      }
+    }
+  },
+  {
+    "name": "Sunnyside",
+    "date": "Jul. 2022",
+    "images": {
+      "thumbnail": {
+        "small": "./Images/sunnyside.png",
+        "large": ""
+      }
+    }
+  },
+  {
+    "name": "Muteza",
+    "date": "May. 2021",
+    "images": {
+      "thumbnail": {
+        "small": "./Images/muteza.png",
+        "large": ""
+      }
+    }
+  },
+  {
+    "name": "EasyBank",
+    "date": "May. 2021",
+    "images": {
+      "thumbnail": {
+        "small": "./Images/easybank.png",
+        "large": ""
+      }
+    }
+  }
+]
