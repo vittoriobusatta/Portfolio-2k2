@@ -18,6 +18,7 @@ const Container = styled.section`
   transition: background-color 0.5s ease-in-out ;
   opacity: 1;
   user-select: none;
+  z-index: 999;
 `;
 
 const Overlay = styled.div`
@@ -90,7 +91,6 @@ const Div = styled.div`
   flex-direction: column;
   align-items: center;
   color: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
-
   & span {
     opacity: 0;
   }

@@ -1,73 +1,58 @@
 import React from "react";
 import styled from "styled-components";
+import { ManropeMedium } from "./Utils/Common";
 import { LogoDark, LogoLight } from "./Utils/Icon";
 
 const Container = styled.header`
   position: fixed;
   top: 0;
+  height: 82px;
   width: 100%;
+  z-index: 200;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: solid 2px
     ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
+  background-color: ${(props) =>
+    props.colorTheme === true ? "#1D1D1D" : "#FFEFD1"};
+  transition: background-color 0.5s ease-in-out;
 `;
 const Content = styled.div`
   display: inline-flex;
-  /* justify-content: space-between; */
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100%;
   padding: 25px 30px;
 `;
-// const Button = styled.button`
-//   position: relative;
-//   height: 30px;
-//   width: 40px;
-//   background-color: ${(props) =>
-//     props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"};
-//   border: none;
-//   background-color: transparent;
 
-//   &:hover > span:last-child {
-//     width: 100%;
-//   }
+const ThemeButton = styled.button`
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 30px;
+  background: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
+  color: ${(props) => (props.colorTheme === true ? "#1D1D1D" : "#FFEFD1")};
+  font-size: 14px;
+  font-family: ${ManropeMedium};
+  z-index: 90;
+  letter-spacing: 0;
+`;
 
-//   & span {
-//     position: absolute;
-//     height: 2px;
-//     border-radius: 10px;
-//     z-index: 999;
-//     &:first-child {
-//       top: 0;
-//       left: 0;
-//       width: 100%;
-//       transform: translateY(10px);
-//       background-color: ${(props) =>
-//         props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"};
-//     }
-//     &:last-child {
-//       bottom: 0;
-//       right: 0;
-//       width: 70%;
-//       transform: translateY(-8px);
-//       background-color: ${(props) =>
-//         props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"};
-//       transition: width 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
-//     }
-//   }
-// `;
+function Navbar({ darkMode, setDarkMode }) {
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  };
 
-function Navbar({ darkMode }) {
   return (
     <Container colorTheme={darkMode}>
       <Content>
         {darkMode ? <LogoDark /> : <LogoLight />}
-        {/* <Button colorTheme={darkMode}>
-          <span></span>
-          <span></span>
-        </Button> */}
+        <ThemeButton colorTheme={darkMode} onClick={toggleTheme}>
+          {darkMode ? "Light" : "Dark"}
+        </ThemeButton>
       </Content>
     </Container>
   );
