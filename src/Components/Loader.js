@@ -20,6 +20,16 @@ const Container = styled.section`
   opacity: 1;
 `;
 
+const Overlay = styled.div`
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  background-color: ${(props) =>
+    props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"};
+  z-index: 200;
+  top: 15%;
+`;
+
 const Content = styled.div`
   display: flex;
   justify-content: center;
@@ -39,33 +49,44 @@ const Circle = styled.div`
   background-color: ${(props) =>
     props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"};
   border-radius: 50%;
-  margin-bottom: 120px;
   animation: ${bounce} 1.5s ease infinite;
+  animation-delay: 1.1s;
 `;
 
 const Svg = styled.svg`
   & path {
+    overflow: hidden;
     fill: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
   }
 `;
 
 const Texte = styled.div`
   margin-top: 180px;
-  & p {
-    font-family: ${ManropeMedium};
-    font-size: 12px;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
-    & span:nth-child(1) {
+  & div {
+    &:nth-child(1) {
       margin-bottom: 2px;
     }
-    & span:nth-child(3) {
+    &:nth-child(3) {
       margin-top: 14px;
     }
   }
+`;
+const CircleContainer = styled.div`
+  overflow: hidden;
+  padding-top: 30px;
+  margin-bottom: 120px;
+`;
+
+const Div = styled.div`
+  overflow: hidden;
+  height: 14px;
+  font-family: ${ManropeMedium};
+  font-size: 12px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
 `;
 
 function Loader({ darkMode }) {
@@ -86,30 +107,30 @@ function Loader({ darkMode }) {
   let firstSpan = useRef(null);
   let secondSpan = useRef(null);
   let thirdSpan = useRef(null);
+  let overlay = useRef(null);
 
   useEffect(() => {
     const Loader = () => {
       gsap.fromTo(
         container.current,
-        { opacity: 1 },
+        { opacity: 1, y: 0 + "%" },
         {
-          // display: "none",
-          duration: 3,
-          ease: "power3.inOut",
-          delay: 1,
+          duration: 1.5,
+          ease: "expo.out",
+          delay: 4.4,
+          y: -100 + "%",
+          display: "none",
         }
       );
       gsap.fromTo(
         circle.current,
         {
-          opacity: 0,
-          y: 20,
+          y: 100 + "%",
         },
         {
-          opacity: 1,
           delay: 1,
-          ease: "power2.out",
           y: 0,
+          ease: "expo.out",
         }
       );
       gsap.fromTo(
@@ -246,40 +267,45 @@ function Loader({ darkMode }) {
       gsap.fromTo(
         firstSpan.current,
         {
-          opacity: 0,
-          y: 5,
+          y: 200 + "%",
         },
         {
-          opacity: 1,
-          delay: 2.2,
-          ease: "power3.inOut",
+          delay: 2.4,
           y: 0,
         }
       );
       gsap.fromTo(
         secondSpan.current,
         {
-          opacity: 0,
-          y: 5,
+          y: 200 + "%",
         },
         {
-          opacity: 1,
-          delay: 2.4,
-          ease: "power3.inOut",
+          delay: 2.5,
           y: 0,
         }
       );
       gsap.fromTo(
         thirdSpan.current,
         {
-          opacity: 0,
-          y: 5,
+          y: 200 + "%",
         },
         {
-          opacity: 1,
-          delay: 2.6,
-          ease: "power3.inOut",
+          delay: 2.8,
           y: 0,
+        }
+      );
+      gsap.fromTo(
+        overlay.current,
+        {
+          clipPath: "circle(0%",
+        },
+        {
+          delay: 3.4,
+          duration: 1,
+          ease: "Expo.easeInOut",
+          clipPath: "circle(100%",
+          height: 100 + "%",
+          top: 0
         }
       );
     };
@@ -289,8 +315,11 @@ function Loader({ darkMode }) {
 
   return (
     <Container ref={container} colorTheme={darkMode}>
+      <Overlay ref={overlay} colorTheme={darkMode} />
       <Content>
-        <Circle ref={circle} colorTheme={darkMode} />
+        <CircleContainer>
+          <Circle ref={circle} colorTheme={darkMode} />
+        </CircleContainer>
         <Svg
           colorTheme={darkMode}
           width="180"
@@ -349,12 +378,16 @@ function Loader({ darkMode }) {
             fill="#1D1D1D"
           />
         </Svg>
-        <Texte colorTheme={darkMode}>
-          <p>
+        <Texte>
+          <Div colorTheme={darkMode}>
             <span ref={firstSpan}>vittorio busatta</span>
+          </Div>
+          <Div colorTheme={darkMode}>
             <span ref={secondSpan}>Front-End Developer & Designer</span>
-            <span ref={thirdSpan}>© 2003</span>
-          </p>
+          </Div>
+          <Div colorTheme={darkMode}>
+            <span ref={thirdSpan}>© 2022</span>
+          </Div>
         </Texte>
       </Content>
     </Container>
