@@ -109,7 +109,7 @@ function Loader({ darkMode }) {
   let overlay = useRef(null);
 
   useEffect(() => {
-    const Loader = () => {
+    const onLoad = () => {
       gsap.fromTo(
         container.current,
         { opacity: 1, y: 0 + "%" },
@@ -308,8 +308,13 @@ function Loader({ darkMode }) {
         }
       );
     };
-    window.addEventListener("load", Loader);
-    return () => window.removeEventListener("load", Loader);
+    // window.addEventListener("load", Loader);
+   
+    window.addEventListener("load", () => {
+      onLoad();
+    })
+    return () => window.removeEventListener("load", onLoad);
+
   }, []);
 
   return (
