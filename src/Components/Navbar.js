@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { ManropeMedium } from "./Utils/Common";
-import { LogoDark, LogoLight } from "./Utils/Icon";
+import { ManropeMedium } from "../Utils/Common";
+import { LogoDark, LogoLight } from "../Utils/Icon";
 
 const Container = styled.header`
   position: fixed;
@@ -31,7 +31,7 @@ const ThemeButton = styled.button`
   bottom: 20px;
   right: 20px;
   border: none;
-  padding: 10px 15px;
+  padding: 10px 14px;
   border-radius: 30px;
   background: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
   color: ${(props) => (props.colorTheme === true ? "#1D1D1D" : "#FFEFD1")};
@@ -51,7 +51,6 @@ function Navbar({ darkMode, setDarkMode }) {
       <Content>
         {darkMode ? <LogoDark /> : <LogoLight />}
         <ThemeButton colorTheme={darkMode} onClick={toggleTheme}>
-          {darkMode ? "Light" : "Dark"}
         </ThemeButton>
       </Content>
     </Container>

@@ -6,7 +6,7 @@ import faviconDark from "./Assets/Icons/faviconDark.png";
 import faviconLight from "./Assets/Icons/faviconLight.png";
 import Landing from "./Components/Landing";
 import Loader from "./Components/Loader";
-import Navbar from "./Navbar";
+import Navbar from "./Components/Navbar";
 
 const GlobalStyle = createGlobalStyle`
   html {

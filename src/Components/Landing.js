@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { ManropeMedium, ManropeRegular } from "../Utils/Common";
+import {
+  ManropeMedium,
+  ManropeRegular,
+  RecoletaRegular,
+} from "../Utils/Common";
 import setTitle from "../Utils/setTitle";
 import Marquee from "./Marquee";
 
@@ -39,12 +43,26 @@ const Details = styled.div`
 const Information = styled.div`
   padding: 15px 10px;
 `;
-
 const Thumnail = styled.div`
   height: 200px;
   width: 100%;
   background-color: ${(props) =>
     props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"};
+`;
+
+const Title = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  min-height: 700px;
+  padding: 40px;
+  & h1 {
+    font-size: 64px;
+    font-family: ${RecoletaRegular};
+    text-align: center;
+    color: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
+  }
 `;
 
 const dataProjects = [
@@ -71,7 +89,10 @@ function Landing({ darkMode }) {
   return (
     <Container>
       <Content colorTheme={darkMode}>
-        <Marquee darkMode={darkMode}/>
+        {/* <Title colorTheme={darkMode}>
+          <h1>Vittorio Busatta</h1>
+        </Title> */}
+        <Marquee darkMode={darkMode} />
         {dataProjects.map((project, index) => (
           <Item colorTheme={darkMode} key={index}>
             <Thumnail colorTheme={darkMode}></Thumnail>
