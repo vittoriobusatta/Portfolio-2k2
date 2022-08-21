@@ -15,7 +15,7 @@ const Container = styled.section`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  transition: background-color 0.5s ease-in-out ;
+  transition: background-color 0.5s ease-in-out;
   opacity: 1;
   user-select: none;
   z-index: 999;
@@ -23,12 +23,13 @@ const Container = styled.section`
 
 const Overlay = styled.div`
   position: absolute;
+  height: 100%;
   width: 100%;
   /* background-color: ${(props) =>
     props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"}; */
-    background-color: #FFA400;
+  background-color: #ffa400;
   z-index: 200;
-  top: 25%;
+  opacity: 0;
 `;
 
 const Content = styled.div`
@@ -52,7 +53,7 @@ const Circle = styled.div`
   width: 20px;
   /* background-color: ${(props) =>
     props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"}; */
-    background-color: #FFA400;
+  background-color: #ffa400;
   border-radius: 50%;
   animation: ${bounce} 1.5s ease infinite;
   animation-delay: 1.1s;
@@ -118,10 +119,7 @@ function Loader({ darkMode }) {
     const onLoad = () => {
       gsap.fromTo(
         container.current,
-        { opacity: 1, 
-          y: 0 + "%",
-          skewY: 0 + "deg"
-         },
+        { opacity: 1, y: 0 + "%", skewY: 0 + "deg" },
         {
           duration: 1.8,
           ease: "expo.out",
@@ -140,11 +138,9 @@ function Loader({ darkMode }) {
           duration: 1,
           ease: "Expo.easeInOut",
           clipPath: "circle(100%",
-          height: 100 + "%",
-          top: 0
+          opacity: 1,
         }
       );
-
 
       gsap.fromTo(
         circle.current,
@@ -155,7 +151,7 @@ function Loader({ darkMode }) {
           delay: 1,
           y: 0,
           ease: "expo.out",
-          opacity: 1
+          opacity: 1,
         }
       );
       gsap.fromTo(
@@ -289,7 +285,7 @@ function Loader({ darkMode }) {
         {
           delay: 2.4,
           y: 0,
-          opacity: 1
+          opacity: 1,
         }
       );
       gsap.fromTo(
@@ -300,7 +296,7 @@ function Loader({ darkMode }) {
         {
           delay: 2.5,
           y: 0,
-          opacity: 1
+          opacity: 1,
         }
       );
       gsap.fromTo(
@@ -311,10 +307,9 @@ function Loader({ darkMode }) {
         {
           delay: 2.8,
           y: 0,
-          opacity: 1
+          opacity: 1,
         }
       );
-      
     };
     onLoad();
   }, []);

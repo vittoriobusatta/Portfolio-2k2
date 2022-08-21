@@ -7,6 +7,7 @@ import faviconLight from "./Assets/Icons/faviconLight.png";
 import Landing from "./Components/Landing";
 import Loader from "./Components/Loader";
 import Navbar from "./Components/Navbar";
+import axios from "axios";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -59,7 +60,23 @@ const GlobalStyle = createGlobalStyle`
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [scrollTop, setScrollTop] = useState(0); 
+  const [scrollTop, setScrollTop] = useState(0);
+  const [data, setData] = useState([]);
+
+  function fetchPaintingsData() {
+    axios
+      .get("./Data/Data.json")
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  useEffect(() => {
+    fetchPaintingsData();
+  }, []);
 
   let link = document.querySelector("link[rel~='icon']");
   if (!link) {
@@ -107,7 +124,7 @@ function App() {
       {loading ? <Loader darkMode={darkMode} /> : null}
       <GlobalStyle darkMode={darkMode} />
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Landing darkMode={darkMode} />
+      <Landing darkMode={darkMode} data={data} />
     </>
   );
 }

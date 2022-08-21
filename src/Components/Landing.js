@@ -1,58 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import {
-  ManropeMedium,
-  ManropeRegular,
-  RecoletaRegular,
-} from "../Utils/Common";
 import setTitle from "../Utils/setTitle";
 import Marquee from "./Marquee";
+import Projects from "./Projects";
+import { ReactComponent as Vector } from "../Assets/Share/Vector.svg";
 
-const Container = styled.section`
-  height: 100vh;
+const Container = styled.main`
+  height: auto;
   min-height: 800px;
   width: 100vw;
   padding-top: 80px;
 `;
-const Content = styled.div`
+const Content = styled.section`
   display: flex;
   flex-direction: column;
 `;
-
-const Item = styled.div`
-  height: 300px;
-  padding: 24px;
-  max-width: 450px;
-  & a {
-    font-size: 18px;
-    font-family: ${ManropeMedium};
-    color: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
-  }
-  & p {
-    font-size: 12px;
-    font-family: ${ManropeRegular};
-    color: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
-  }
-`;
-const Details = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-direction: row;
-`;
-const Information = styled.div`
-  padding: 15px 10px;
-`;
-const Thumnail = styled.div`
-  height: 200px;
-  width: 100%;
-  background-color: ${(props) =>
-    props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"};
-    & img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
+const Introduction = styled.div`
+  height: auto;
+  padding: 80px 20px;
 `;
 
 function Landing({ darkMode, data }) {
@@ -61,26 +26,11 @@ function Landing({ darkMode, data }) {
   return (
     <Container>
       <Content colorTheme={darkMode}>
+        <Introduction>
+          <Vector />
+        </Introduction>
         <Marquee darkMode={darkMode} />
-        {data.map((project, index) => (
-          <Item colorTheme={darkMode} key={index}>
-            <Thumnail colorTheme={darkMode}>
-              <img src={project.images.thumbnail.small} alt={project.title} />
-            </Thumnail>
-            <Information>
-              <Details>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {project.name}
-                </a>
-                <p>{project.date}</p>
-              </Details>
-            </Information>
-          </Item>
-        ))}
+        <Projects darkMode={darkMode} data={data} />
       </Content>
     </Container>
   );

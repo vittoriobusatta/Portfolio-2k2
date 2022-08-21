@@ -2,7 +2,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { Morgenwalsh } from "../Utils/Common";
 
-const Container = styled.section`
+const Container = styled.div`
   position: relative;
   width: 100vw;
   max-width: 100%;
