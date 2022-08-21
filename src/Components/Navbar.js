@@ -16,7 +16,7 @@ const Container = styled.header`
     ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
   background-color: ${(props) =>
     props.colorTheme === true ? "#1D1D1D" : "#FFEFD1"};
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out, top 0.3s;
 `;
 const Content = styled.div`
   display: inline-flex;
@@ -25,6 +25,9 @@ const Content = styled.div`
   width: 100%;
   height: 100%;
   padding: 25px 30px;
+  @media screen and (min-width: 1224px) {
+    padding: 25px 50px;
+  }
 `;
 
 const ThemeButton = styled.button`
@@ -47,11 +50,10 @@ function Navbar({ darkMode, setDarkMode }) {
   };
 
   return (
-    <Container colorTheme={darkMode}>
+    <Container id="navbar" colorTheme={darkMode}>
       <Content>
         {darkMode ? <LogoDark /> : <LogoLight />}
-        <ThemeButton colorTheme={darkMode} onClick={toggleTheme}>
-        </ThemeButton>
+        <ThemeButton colorTheme={darkMode} onClick={toggleTheme}></ThemeButton>
       </Content>
     </Container>
   );
