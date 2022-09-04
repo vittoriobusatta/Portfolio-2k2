@@ -40,8 +40,9 @@ const GlobalStyle = createGlobalStyle`
     
   } 
   body {
-    background-color: ${(props) =>
-      props.darkMode === true ? "#1D1D1D" : "#FFEFD1"};
+    /* background-color: ${(props) =>
+      props.darkMode === true ? "#1D1D1D" : "#FFEFD1"}; */
+    background-color: #fff;
     font-size: 1.6rem;
     transition: background-color 0.5s ease-in-out;
     min-height: 100vh;

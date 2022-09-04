@@ -1,116 +1,132 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { ManropeMedium, ManropeRegular } from "../Utils/Common";
+import { ManropeMedium, Morgenwalsh } from "../Utils/Common";
 
 const Grid = styled.ul`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 1fr);
-  grid-row-gap: 60px;
-  padding: 48px 24px;
-  @media screen and (min-width: 576px) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    grid-column-gap: 30px;
-    padding: 48px;
-  }
-`;
-
-const Item = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  & h4 {
-    font-size: 16px;
-    font-family: ${ManropeMedium};
-    color: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
-  }
-  & p {
-    font-size: 12px;
-    font-family: ${ManropeRegular};
-    color: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
-  }
+  row-gap: 400px;
+  margin-top: 10vh;
+`;
 
-  &:nth-child(1) {
-    grid-area: 1 / 1 / 3 / 4;
-  }
-  &:nth-child(2) {
-    grid-area: 2 / 1 / 3 / 2;
-  }
-  &:nth-child(3) {
-    grid-area: 3 / 1 / 4 / 2;
-  }
-  &:nth-child(4) {
-    grid-area: 4 / 1 / 5 / 2;
-  }
-  &:nth-child(5) {
-    grid-area: 5 / 1 / 6 / 2;
-  }
+const Item = styled.li`
+  width: 100%;
+  position: relative;
+`;
 
-  @media screen and (min-width: 576px) {
-    &:nth-child(1) {
-      grid-area: 1 / 1 / 3 / 4;
+const Mask = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vw;
+  width: 100%;
+  border-radius: 50% 50% 0 0;
+  border-radius: 100%;
+  background-color: ${(props) => props.background};
+`;
+const Content = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & img {
+      width: 16vw;
+      min-width: 300px;
+      height: auto;
+      transition: transform 0.4s;
     }
-    &:nth-child(2) {
-      grid-area: 3 / 2 / 5 / 5;
+    &:hover {
+      & img:first-child {
+        transform: translateX(-6%) rotate(-5deg);
+      }
+      & img:last-child {
+        transform: translateX(6%) translateY(-2%) rotate(5deg);
+      }
     }
-    &:nth-child(3) {
-      grid-area: 5 / 1 / 7 / 4;
+    & img:first-child {
+      /* width: 16vw; */
+      height: auto;
+      top: -4vw;
+      transform-origin: right;
+      z-index: 1;
+      left: 4%;
+      position: relative;
+      transform: translateX(-8%) rotate(-10deg);
+      /* transform: ${(props) =>
+        props.onHover
+          ? "translateX(-6%) rotate(-5deg)"
+          : "translateX(-8%) rotate(-10deg)"}; */
     }
-    &:nth-child(4) {
-      grid-area: 7 / 2 / 9 / 5;
-    }
-    &:nth-child(5) {
-      grid-area: 9 / 1 / 11 / 4;
+    & img:last-child {
+      /* width: 16vw; */
+      height: auto;
+      transform-origin: left top;
+      left: -4%;
+      position: relative;
+      transform: translateX(8%) translateY(-10%) rotate(10deg);
+      /* transform: ${(props) =>
+        props.onHover
+          ? "translateX(6%) translateY(-2%) rotate(5deg)"
+          : "translateX(8%) translateY(-10%) rotate(10deg)"}; */
     }
   }
 `;
-const ItemContent = styled.div`
-  height: 100%;
-  width: 100%;
-  max-width: 420px;
+const Cards = styled.div`
+  display: inline-flex;
 `;
 const Details = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-direction: row;
-`;
-const Information = styled.div`
-  width: 100%;
-  padding: 20px 5px 0 5px;
-`;
-const Thumnail = styled.div`
-  height: 200px;
-  width: 100%;
-  background-color: ${(props) =>
-    props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"};
-  & img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  color: #222;
+  margin-top: 40px;
+  & h1 {
+    font-family: ${Morgenwalsh};
+    font-size: 60px;
+  }
+  & span {
+    font-family: ${Morgenwalsh};
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  & p {
+    font-family: ${ManropeMedium};
+    font-size: 16px;
+    margin-top: 15px;
+    max-width: 300px;
+    line-height: 20px;
+    text-align: center;
   }
 `;
 
-function Projects({data, darkMode}) {
+function Projects({ data, darkMode }) {
   return (
     <Grid>
       {data.map((project, index) => (
         <Item colorTheme={darkMode} key={index}>
-          <ItemContent>
-            <Thumnail colorTheme={darkMode}>
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <img src={project.images.thumbnail.small} alt={project.title} />
-              </a>
-            </Thumnail>
-            <Information>
+          <Mask background={project.background} />
+          <Content>
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <Cards>
+                <img src={project.images.card.first} alt={project.title} />
+                <img src={project.images.card.second} alt={project.title} />
+              </Cards>
               <Details>
-                <h4>{project.name}</h4>
-                <p>{project.date}</p>
+                <span>{project.id}/5</span>
+                <h1>{project.name}</h1>
+                <p>{project.description}</p>
               </Details>
-            </Information>
-          </ItemContent>
+            </a>
+          </Content>
         </Item>
       ))}
     </Grid>

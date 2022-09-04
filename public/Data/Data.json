@@ -1,56 +1,68 @@
 [
   {
-    "name": "Galleria",
-    "date": "Aug. 2022",
-    "link": "https://galleria-ten.vercel.app/",
+    "name": "AB Distribution",
+    "id": 1,
+    "date": "Mai 2022",
+    "link": "https://www.ab-distribution.re/",
+    "background": "#FFA928",
     "images": {
-      "thumbnail": {
-        "small": "../Images/gall.png",
-        "large": ""
+      "card": {
+        "first": "../Images/ab1.png",
+        "second": "../Images/ab2.png"
+      }
+    },
+    "description":"Web design & developement of the website for a wholesaler "
+  },
+  {
+    "name": "Galleria",
+    "id": 2,
+    "date": "Août 2022",
+    "link": "http://galleria-ten.vercel.app/",
+    "background": "#860EE3",
+    "images": {
+      "card": {
+        "first": "../Images/gal1.png",
+        "second": "../Images/gal2.png"
+      }
+    },
+    "description":"Who needs a website when you can have a gallery ? "
+  },
+  {
+    "name": "Unkle",
+    "id": 3,
+    "date": "Juin 2022",
+    "link": "https://password-components.vercel.app/",
+    "background": "#2EB4FF",
+    "images": {
+      "card": {
+        "first": "../Images/unk1.png",
+        "second": "../Images/unk2.png"
       }
     }
   },
   {
     "name": "Sunnyside",
-    "date": "Jul. 2022",
+    "id": 4,
+    "date": "Juillet 2022",
     "link": "https://sunnyside-lovat.vercel.app/",
+    "background": "#FAFF00",
     "images": {
-      "thumbnail": {
-        "small": "../Images/sun.png",
-        "large": ""
-      }
-    }
-  },
-  {
-    "name": "Unkle",
-    "date": "Jun. 2022",
-    "link": "https://password-components.vercel.app/",
-    "images": {
-      "thumbnail": {
-        "small": "../Images/unk.png",
-        "large": ""
-      }
-    }
-  },
-  {
-    "name": "AB Distribution",
-    "date": "May. 2022",
-    "link": "https://www.ab-distribution.re/",
-    "images": {
-      "thumbnail": {
-        "small": "../Images/ab.png",
-        "large": ""
+      "card": {
+        "first": "../Images/sun1.png",
+        "second": "../Images/sun2.png"
       }
     }
   },
   {
     "name": "Muteza",
-    "date": "May. 2021",
+    "id": 5,
+    "date": "Mai 2021",
     "link": "https://tonii0.github.io/Muteza/",
+    "background": "#FFD6C1",
     "images": {
-      "thumbnail": {
-        "small": "../Images/mut.png",
-        "large": ""
+      "card": {
+        "first": "../Images/mut1.png",
+        "second": "../Images/mut2.png"
       }
     }
   }

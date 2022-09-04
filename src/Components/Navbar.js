@@ -12,10 +12,10 @@ const Container = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: solid 2px
-    ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
-  background-color: ${(props) =>
-    props.colorTheme === true ? "#1D1D1D" : "#FFEFD1"};
+  /* border-bottom: solid 2px
+    ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")}; */
+  /* background-color: ${(props) =>
+    props.colorTheme === true ? "#1D1D1D" : "#FFEFD1"}; */
   transition: background-color 0.5s ease-in-out, top 0.3s;
 `;
 const Content = styled.div`
@@ -26,7 +26,7 @@ const Content = styled.div`
   height: 100%;
   padding: 25px 30px;
   @media screen and (min-width: 1224px) {
-    padding: 25px 50px;
+    padding: 25px 70px;
   }
 `;
 
