@@ -9,7 +9,7 @@ import Loader from "./Components/Loader";
 import Navbar from "./Components/Navbar";
 import axios from "axios";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AbDistribution from "./Components/Projects/AbDistribution";
+import ABDistribution from "./Components/Projects/ABDistribution";
 import Galleria from "./Components/Projects/Galleria";
 import Unkle from "./Components/Projects/Unkle";
 import Sunnyside from "./Components/Projects/Sunnyside";
@@ -116,21 +116,21 @@ function App() {
     window.localStorage.setItem("theme", JSON.stringify(darkMode));
   }, [darkMode]);
 
-  useEffect(() => {
-    function onScroll() {
-      let navBar = document.getElementById("navbar");
-      let currentPosition = window.pageYOffset;
-      if (currentPosition > scrollTop) {
-        navBar.style.top = "-100px";
-      } else {
-        navBar.style.top = "0";
-      }
-      setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
-    }
+  // useEffect(() => {
+  //   function onScroll() {
+  //     let navBar = document.getElementById("navbar");
+  //     let currentPosition = window.pageYOffset;
+  //     if (currentPosition > scrollTop) {
+  //       navBar.style.top = "-100px";
+  //     } else {
+  //       navBar.style.top = "0";
+  //     }
+  //     setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
+  //   }
 
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [scrollTop]);
+  //   window.addEventListener("scroll", onScroll);
+  //   return () => window.removeEventListener("scroll", onScroll);
+  // }, [scrollTop]);
 
 
   return (
@@ -141,7 +141,7 @@ function App() {
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <Routes>
           <Route path="/" element={<Landing data={data} />} />
-          <Route path={`${data[0]?.path}`} element={<AbDistribution data={data} />} />
+          <Route path={`${data[0]?.path}`} element={<ABDistribution data={data} />} />
           <Route path={`${data[1]?.path}`} element={<Galleria data={data} />} />
           <Route path={`${data[2]?.path}`} element={<Unkle data={data} />} />
           <Route path={`${data[3]?.path}`} element={<Sunnyside data={data} />} />

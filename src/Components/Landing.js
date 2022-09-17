@@ -3,8 +3,6 @@ import styled from "styled-components";
 import setTitle from "../Utils/setTitle";
 import { ManropeMedium, Morgenwalsh } from "../Utils/Common";
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-
 
 const Container = styled.main`
   height: auto;
@@ -44,7 +42,6 @@ const Content = styled.div`
   align-items: center;
   border-radius: 50% 50%;
   max-width: 1000px;
-  background-color: ${(props) => props.background};
   background-color: #fff;
   height: 100%;
   width: 100%;
@@ -127,11 +124,11 @@ function Landing({ darkMode, data }) {
       <Grid>
         {data.map((project, index) => (
           <Item
-            background={project.background}
+            background={project.primaryColor}
             colorTheme={darkMode}
             key={index}
           >
-            <Content background={project.background}>
+            <Content>
               <Link to={`${project.path}`}>
                 <Path>
                   <Cards>
@@ -141,7 +138,7 @@ function Landing({ darkMode, data }) {
                   <Details>
                     <span>{project.id}/5</span>
                     <h1>{project.name}</h1>
-                    <p>{project.description}</p>
+                    <p>{project.intro}</p>
                   </Details>
                 </Path>
                 </Link>

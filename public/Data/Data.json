@@ -2,76 +2,106 @@
   {
     "name": "AB Distribution",
     "id": 1,
-    "date": "Mai 2022",
-    "link": "https://www.ab-distribution.re/",
     "path": "ab-distribution",
-    "background": "#FFA928",
+    "type": "Mission",
+    "date": "Mai 2022",
+    "role": "Développement & Design",
+    "technologies": "React, Figma",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur vitae nibh et mi efficitur iaculis ac vitae dui.",
+    "link": "https://www.ab-distribution.re/",
+    "primaryColor": "#FFA928",
+    "textColor": "#FFA928",
+    "background": "#EDE9E5",
+    "intro":"Web design & developement of the website for a wholesaler ",
     "images": {
       "card": {
         "first": "../Images/ab1.png",
         "second": "../Images/ab2.png"
       }
-    },
-    "description":"Web design & developement of the website for a wholesaler "
+    }
   },
   {
     "name": "Galleria",
     "id": 2,
-    "date": "Août 2022",
-    "link": "http://galleria-ten.vercel.app/",
     "path": "galleria",
-    "background": "#860EE3",
+    "type": "Expérimentale",
+    "date": "Août 2022",
+    "role": "Développement",
+    "technologies": "React",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur vitae nibh et mi efficitur iaculis ac vitae dui.",
+    "link": "http://galleria-ten.vercel.app/",
+    "primaryColor": "#860EE3",
+    "textColor": "#860EE3",
+    "background": "#E9E5ED",
+    "intro":"Who needs a website when you can have a gallery ? ",
     "images": {
       "card": {
         "first": "../Images/gal1.png",
         "second": "../Images/gal2.png"
       }
-    },
-    "description":"Who needs a website when you can have a gallery ? "
+    }
   },
   {
     "name": "Unkle",
     "id": 3,
-    "date": "Juin 2022",
-    "link": "https://password-components.vercel.app/",
     "path": "unkle",
-    "background": "#2EB4FF",
+    "type": "Mission",
+    "date": "Juin 2022",
+    "role": "Développement",
+    "technologies": "React, Regex",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur vitae nibh et mi efficitur iaculis ac vitae dui.",
+    "link": "https://password-components.vercel.app/",
+    "primaryColor": "#2EB4FF",
+    "textColor": "#2EB4FF",
+    "background": "#E5EBED",
+    "intro":"Password generator with regex",
     "images": {
       "card": {
         "first": "../Images/unk1.png",
         "second": "../Images/unk2.png"
       }
-    },
-    "description":"Web design & developement of the website for a wholesaler "
+    }
   },
   {
     "name": "Sunnyside",
     "id": 4,
-    "date": "Juillet 2022",
-    "link": "https://sunnyside-lovat.vercel.app/",
     "path": "sunnyside",
-    "background": "#FAFF00",
+    "type": "Expérimentale",
+    "date": "Juillet 2022",
+    "role": "Développement",
+    "technologies": "React",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur vitae nibh et mi efficitur iaculis ac vitae dui.",
+    "link": "https://sunnyside-lovat.vercel.app/",
+    "primaryColor": "#FAFF00",
+    "textColor": "#F1DA0D",
+    "background": "#EDEDE5",
+    "intro":"Landing page for a fictional agency",
     "images": {
       "card": {
         "first": "../Images/sun1.png",
         "second": "../Images/sun2.png"
       }
-    },
-    "description":"Web design & developement of the website for a wholesaler "
+    }
   },
   {
     "name": "Muteza",
     "id": 5,
-    "date": "Mai 2021",
-    "link": "https://tonii0.github.io/Muteza/",
     "path": "muteza",
-    "background": "#FFD6C1",
+    "type": "Expérimentale",
+    "date": "Mai 2021",
+    "role": "Développement",
+    "technologies": "HTML, CSS, JavaScript",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur vitae nibh et mi efficitur iaculis ac vitae dui.",
+    "link": "https://tonii0.github.io/Muteza/",
+    "primaryColor": "#FFD6C1",
+    "textColor": "#FFA372",
+    "background": "#EDE5E9",
+    "intro":"Care product presentation website",
     "images": {
       "card": {
         "first": "../Images/mut1.png",
         "second": "../Images/mut2.png"
       }
-    },
-    "description":"Web design & developement of the website for a wholesaler "
+    }
   }
 ]

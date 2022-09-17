@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { ManropeMedium } from "../Utils/Common";
+// import { ManropeMedium } from "../Utils/Common";
 import { LogoDark, LogoLight } from "../Utils/Icon";
 
 const Container = styled.header`
@@ -31,24 +31,24 @@ const Content = styled.div`
   }
 `;
 
-const ThemeButton = styled.button`
-  bottom: 20px;
-  right: 20px;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 30px;
-  background: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
-  color: ${(props) => (props.colorTheme === true ? "#1D1D1D" : "#FFEFD1")};
-  font-size: 14px;
-  font-family: ${ManropeMedium};
-  z-index: 90;
-  letter-spacing: 0;
-`;
+// const ThemeButton = styled.button`
+//   bottom: 20px;
+//   right: 20px;
+//   border: none;
+//   padding: 10px 14px;
+//   border-radius: 30px;
+//   background: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
+//   color: ${(props) => (props.colorTheme === true ? "#1D1D1D" : "#FFEFD1")};
+//   font-size: 14px;
+//   font-family: ${ManropeMedium};
+//   z-index: 90;
+//   letter-spacing: 0;
+// `;
 
 function Navbar({ darkMode, setDarkMode }) {
-  const toggleTheme = () => {
-    setDarkMode(!darkMode);
-  };
+  // const toggleTheme = () => {
+  //   setDarkMode(!darkMode);
+  // };
 
   return (
     <Container id="navbar" colorTheme={darkMode}>
