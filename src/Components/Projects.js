@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { ManropeMedium, Morgenwalsh } from "../Utils/Common";
 
@@ -7,39 +7,52 @@ const Grid = styled.ul`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  row-gap: 400px;
-  margin-top: 10vh;
 `;
 
 const Item = styled.li`
+  height: 60vh;
+  min-width: 100vw;
   width: 100%;
-  position: relative;
-`;
-
-const Mask = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vw;
-  width: 100%;
-  border-radius: 50% 50% 0 0;
-  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #fff;
   background-color: ${(props) => props.background};
+  padding: 5rem;
+  @media screen and (min-width: 576px) {
+    height: 80vh;
+  }
+  @media screen and (min-width: 992px) {
+    height: 100vh;
+  }
 `;
 const Content = styled.div`
+  position: relative;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50% 50%;
+  max-width: 1000px;
+  background-color: ${(props) => props.background};
+  background-color: #fff;
+
+  height: 100%;
+  width: 100%;
   & a {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     & img {
-      width: 16vw;
-      min-width: 300px;
+      width: 40%;
       height: auto;
+      /* min-width: 100px; */
+      max-width: 270px;
       transition: transform 0.4s;
+      @media screen and (min-width: 992px) {
+        max-width: 350px;
+      }
     }
     &:hover {
       & img:first-child {
@@ -50,35 +63,24 @@ const Content = styled.div`
       }
     }
     & img:first-child {
-      /* width: 16vw; */
-      height: auto;
       top: -4vw;
       transform-origin: right;
       z-index: 1;
       left: 4%;
       position: relative;
       transform: translateX(-8%) rotate(-10deg);
-      /* transform: ${(props) =>
-        props.onHover
-          ? "translateX(-6%) rotate(-5deg)"
-          : "translateX(-8%) rotate(-10deg)"}; */
     }
     & img:last-child {
-      /* width: 16vw; */
-      height: auto;
       transform-origin: left top;
       left: -4%;
       position: relative;
       transform: translateX(8%) translateY(-10%) rotate(10deg);
-      /* transform: ${(props) =>
-        props.onHover
-          ? "translateX(6%) translateY(-2%) rotate(5deg)"
-          : "translateX(8%) translateY(-10%) rotate(10deg)"}; */
     }
   }
 `;
 const Cards = styled.div`
   display: inline-flex;
+  justify-content: center;
 `;
 const Details = styled.div`
   display: flex;
@@ -112,9 +114,9 @@ function Projects({ data, darkMode }) {
   return (
     <Grid>
       {data.map((project, index) => (
-        <Item colorTheme={darkMode} key={index}>
-          <Mask background={project.background} />
-          <Content>
+        <Item background={project.background} colorTheme={darkMode} key={index}>
+          {/* <Mask  /> */}
+          <Content background={project.background}>
             <a href={project.link} target="_blank" rel="noopener noreferrer">
               <Cards>
                 <img src={project.images.card.first} alt={project.title} />

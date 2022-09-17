@@ -38,7 +38,8 @@
         "first": "../Images/unk1.png",
         "second": "../Images/unk2.png"
       }
-    }
+    },
+    "description":"Web design & developement of the website for a wholesaler "
   },
   {
     "name": "Sunnyside",
@@ -51,7 +52,8 @@
         "first": "../Images/sun1.png",
         "second": "../Images/sun2.png"
       }
-    }
+    },
+    "description":"Web design & developement of the website for a wholesaler "
   },
   {
     "name": "Muteza",
@@ -64,6 +66,7 @@
         "first": "../Images/mut1.png",
         "second": "../Images/mut2.png"
       }
-    }
+    },
+    "description":"Web design & developement of the website for a wholesaler "
   }
 ]

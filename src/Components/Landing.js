@@ -7,7 +7,7 @@ const Container = styled.main`
   height: auto;
   min-height: 800px;
   width: 100vw;
-  padding-top: 80px;
+  /* padding-top: 80px; */
 `;
 const Content = styled.section`
 `;
