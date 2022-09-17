@@ -4,6 +4,7 @@
     "id": 1,
     "date": "Mai 2022",
     "link": "https://www.ab-distribution.re/",
+    "path": "ab-distribution",
     "background": "#FFA928",
     "images": {
       "card": {
@@ -18,6 +19,7 @@
     "id": 2,
     "date": "Août 2022",
     "link": "http://galleria-ten.vercel.app/",
+    "path": "galleria",
     "background": "#860EE3",
     "images": {
       "card": {
@@ -32,6 +34,7 @@
     "id": 3,
     "date": "Juin 2022",
     "link": "https://password-components.vercel.app/",
+    "path": "unkle",
     "background": "#2EB4FF",
     "images": {
       "card": {
@@ -46,6 +49,7 @@
     "id": 4,
     "date": "Juillet 2022",
     "link": "https://sunnyside-lovat.vercel.app/",
+    "path": "sunnyside",
     "background": "#FAFF00",
     "images": {
       "card": {
@@ -60,6 +64,7 @@
     "id": 5,
     "date": "Mai 2021",
     "link": "https://tonii0.github.io/Muteza/",
+    "path": "muteza",
     "background": "#FFD6C1",
     "images": {
       "card": {

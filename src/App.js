@@ -8,6 +8,12 @@ import Landing from "./Components/Landing";
 import Loader from "./Components/Loader";
 import Navbar from "./Components/Navbar";
 import axios from "axios";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AbDistribution from "./Components/Projects/AbDistribution";
+import Galleria from "./Components/Projects/Galleria";
+import Unkle from "./Components/Projects/Unkle";
+import Sunnyside from "./Components/Projects/Sunnyside";
+import Muteza from "./Components/Projects/Muteza";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -15,9 +21,9 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    ::-webkit-scrollbar{
+    /* ::-webkit-scrollbar{
       display: none;
-    }
+    } */
  
     @media screen and (max-width: 1400px) {
       font-size: 58%;
@@ -40,9 +46,6 @@ const GlobalStyle = createGlobalStyle`
     
   } 
   body {
-    /* background-color: ${(props) =>
-      props.darkMode === true ? "#1D1D1D" : "#FFEFD1"}; */
-    background-color: #fff;
     font-size: 1.6rem;
     transition: background-color 0.5s ease-in-out;
     min-height: 100vh;
@@ -55,6 +58,15 @@ const GlobalStyle = createGlobalStyle`
   ::selection {
     background: #FFA400;
     text-shadow: none;
+  }
+  ::-webkit-scrollbar{
+    width: 10px;
+    background-color: #FAF7EE;
+  }
+    
+  ::-webkit-scrollbar-thumb{
+    background: #D4CEBD;
+    border-radius: 15px;
   }
 `;
 
@@ -120,12 +132,22 @@ function App() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
 
+
   return (
     <>
-      {loading ? <Loader darkMode={darkMode} /> : null}
       <GlobalStyle darkMode={darkMode} />
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Landing darkMode={darkMode} data={data} />
+      <BrowserRouter>
+      {loading ? <Loader darkMode={darkMode} /> : null}
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Routes>
+          <Route path="/" element={<Landing data={data} />} />
+          <Route path={`${data[0]?.path}`} element={<AbDistribution data={data} />} />
+          <Route path={`${data[1]?.path}`} element={<Galleria data={data} />} />
+          <Route path={`${data[2]?.path}`} element={<Unkle data={data} />} />
+          <Route path={`${data[3]?.path}`} element={<Sunnyside data={data} />} />
+          <Route path={`${data[4]?.path}`} element={<Muteza data={data} />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

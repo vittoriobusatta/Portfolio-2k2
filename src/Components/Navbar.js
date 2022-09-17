@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ManropeMedium } from "../Utils/Common";
 import { LogoDark, LogoLight } from "../Utils/Icon";
@@ -52,8 +53,9 @@ function Navbar({ darkMode, setDarkMode }) {
   return (
     <Container id="navbar" colorTheme={darkMode}>
       <Content>
-        {darkMode ? <LogoDark /> : <LogoLight />}
-        <ThemeButton colorTheme={darkMode} onClick={toggleTheme}></ThemeButton>
+        <Link to="/">{darkMode ? <LogoDark /> : <LogoLight />}</Link>
+        <button>Menu</button>
+        {/* <ThemeButton colorTheme={darkMode} onClick={toggleTheme}></ThemeButton> */}
       </Content>
     </Container>
   );
