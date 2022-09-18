@@ -1,6 +1,14 @@
 import React from 'react'
-import { Container, Content, Details, Info, Title } from '../../Utils/Common'
+import styled from 'styled-components';
+import { Container, Content, Details, Info, Title, Presentation } from '../../Utils/Common'
 import setTitle from "../../Utils/setTitle";
+
+export const Overview = styled(Presentation)`
+  & img {
+    width: 80%;
+    height: 100%;
+  }
+`;
 
 function Muteza({data}) {
   setTitle("Vittorio Busatta — Muteza");
@@ -38,6 +46,14 @@ function Muteza({data}) {
             </li>
           </Details>
         </Info>
+        <Overview background={projectData[0].background}>
+          <img src={projectData[0].images.view.first.image} alt={projectData[0].images.view.first.alt} />
+          <img src={projectData[0].images.view.second.image} alt={projectData[0].images.view.second.alt} />
+          <img src={projectData[0].images.view.third.image} alt={projectData[0].images.view.third.alt} />
+          <img src={projectData[0].images.view.fourth.image} alt={projectData[0].images.view.fourth.alt} />
+          <img src={projectData[0].images.view.fifth.image} alt={projectData[0].images.view.fifth.alt} />
+          <img src={projectData[0].images.view.sixth.image} alt={projectData[0].images.view.sixth.alt} />
+        </Overview>
       </Content>
     </Container>
   );

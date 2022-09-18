@@ -178,6 +178,32 @@
           "image": "../Images/Muteza/mut2.png",
           "alt": "Deuxième Carte Galleria"
         }
+      },
+      "view": {
+        "first": {
+          "image": "../Images/Muteza/first.png",
+          "alt": ""
+        },
+        "second": {
+          "image": "../Images/Muteza/second.png",
+          "alt": ""
+        },
+        "third": {
+          "image": "../Images/Muteza/third.png",
+          "alt": ""
+        },
+        "fourth": {
+          "image": "../Images/Muteza/fourth.png",
+          "alt": ""
+        },
+        "fifth": {
+          "image": "../Images/Muteza/fifth.png",
+          "alt": ""
+        },
+        "sixth": {
+          "image": "../Images/Muteza/sixth.png",
+          "alt": ""
+        }
       }
     }
   }
