@@ -17,7 +17,6 @@ export const Overview = styled(Presentation)`
 function ABDistribution({ data }) {
   setTitle("Vittorio Busatta — AB Distribution ");
   const projectData = data.filter(project => project.id === 1)
-  console.log(projectData[0].images);
   return (
     <Container background={projectData[0].background}>
       <Content>

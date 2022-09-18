@@ -21,10 +21,6 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    /* ::-webkit-scrollbar{
-      display: none;
-    } */
- 
     @media screen and (max-width: 1400px) {
       font-size: 58%;
     }
@@ -43,7 +39,6 @@ const GlobalStyle = createGlobalStyle`
     @media screen and (max-width: 321px) {
       font-size: 28%;
     }
-    
   } 
   body {
     font-size: 1.6rem;

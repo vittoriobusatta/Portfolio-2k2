@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
-import { LogoDark, LogoLight } from "../Utils/Icon";
+import { LogoLight } from "../Utils/Icon";
 
 const Container = styled.header`
   position: fixed;
@@ -43,7 +43,7 @@ function Navbar({ darkMode }) {
   return (
     <Container id="navbar" colorTheme={darkMode}>
       <Content>
-        <Link to="/">{darkMode ? <LogoDark /> : <LogoLight />}</Link>
+        <Link to="/"><LogoLight /></Link>
         <Svg
           width="32"
           height="36"
@@ -56,8 +56,6 @@ function Navbar({ darkMode }) {
             fill="#FFA400"
           />
         </Svg>
-        {/* <button>Menu</button> */}
-        {/* <ThemeButton colorTheme={darkMode} onClick={toggleTheme}></ThemeButton> */}
       </Content>
     </Container>
   );

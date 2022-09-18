@@ -19,7 +19,7 @@ const Grid = styled.ul`
 `;
 
 const Item = styled.li`
-  height: 60vh;
+  height: 50vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -99,16 +99,17 @@ const Details = styled.div`
   margin-top: 40px;
   & h1 {
     font-family: ${Morgenwalsh};
-    font-size: 60px;
+    font-size: 6rem;
+    text-align: center;
   }
   & span {
     font-family: ${Morgenwalsh};
-    font-size: 24px;
+    font-size: max(2.4rem, 16px);
     margin-bottom: 15px;
   }
   & p {
     font-family: ${ManropeMedium};
-    font-size: 16px;
+    font-size: max(1.6rem, 14px);
     margin-top: 15px;
     max-width: 300px;
     line-height: 20px;
