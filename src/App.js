@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import faviconDark from "./Assets/Icons/faviconDark.png";
 import faviconLight from "./Assets/Icons/faviconLight.png";
 import Landing from "./Components/Landing";
-import Loader from "./Components/Loader";
+// import Loader from "./Components/Loader";
 import Navbar from "./Components/Navbar";
 import axios from "axios";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -72,8 +72,8 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const [scrollTop, setScrollTop] = useState(0);
+  // const [loading, setLoading] = useState(true);
+  // const [scrollTop, setScrollTop] = useState(0);
   const [data, setData] = useState([]);
 
   function fetchPaintingsData() {
@@ -99,11 +99,11 @@ function App() {
   }
   link.href = darkMode === true ? faviconLight : faviconDark;
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 6000);
-  });
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 6000);
+  // });
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
