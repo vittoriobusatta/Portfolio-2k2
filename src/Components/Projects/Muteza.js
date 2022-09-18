@@ -5,7 +5,7 @@ import setTitle from "../../Utils/setTitle";
 
 export const Overview = styled(Presentation)`
   & img {
-    width: 80%;
+    width: 90%;
     height: 100%;
   }
 `;

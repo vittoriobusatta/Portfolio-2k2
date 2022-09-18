@@ -1,18 +1,13 @@
 import React from 'react';
-import styled from "styled-components";
 import { Container, Content, Details, Info, Title, Presentation } from '../../Utils/Common'
 import setTitle from "../../Utils/setTitle";
 
-export const Overview = styled(Presentation)`
-  & img {
-    width: 80%;
-    height: 100%;
-    /* &:nth-child(3) {
-      width: auto;
-      max-width: 205px;
-    } */
-  }
-`;
+// export const Overview = styled(Presentation)`
+//   & img {
+//     width: 80%;
+//     height: 100%;
+//   }
+// `;
 
 function ABDistribution({ data }) {
   setTitle("Vittorio Busatta — AB Distribution ");
@@ -50,7 +45,7 @@ function ABDistribution({ data }) {
             </li>
           </Details>
         </Info>
-        <Overview background={projectData[0].background}>
+        <Presentation background={projectData[0].background}>
           <img src={projectData[0].images.page.first.image} alt={projectData[0].images.page.first.alt} />
           <img src={projectData[0].images.page.second.image} alt={projectData[0].images.page.second.alt} />
           <img src={projectData[0].images.view.desktop.image} alt={projectData[0].images.view.desktop.alt} />
@@ -60,7 +55,7 @@ function ABDistribution({ data }) {
           <img src={projectData[0].images.post.second.image} alt={projectData[0].images.post.second.alt} />
           <img src={projectData[0].images.post.third.image} alt={projectData[0].images.post.third.alt} />
           <img src={projectData[0].images.post.fourth.image} alt={projectData[0].images.post.fourth.alt} />
-        </Overview>
+        </Presentation>
       </Content>
     </Container>
   );

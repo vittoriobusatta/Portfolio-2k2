@@ -48,7 +48,7 @@ export const Presentation = styled.div`
   padding-bottom: 80px;
   row-gap: 60px;
   & img {
-    width: 80%;
+    width: 90%;
     height: 100%;
   }
   @media screen and (min-width: 992px) {

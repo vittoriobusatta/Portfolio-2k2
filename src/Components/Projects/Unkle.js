@@ -1,14 +1,13 @@
 import React from 'react'
-import styled from 'styled-components';
 import { Container, Content, Details, Info, Title, Presentation } from '../../Utils/Common'
 import setTitle from "../../Utils/setTitle";
 
-export const Overview = styled(Presentation)`
-  & img {
-    width: 80%;
-    height: 100%;
-  }
-`;
+// export const Overview = styled(Presentation)`
+//   & img {
+//     width: 80%;
+//     height: 100%;
+//   }
+// `;
 
 function Unkle({data}) {
   setTitle("Vittorio Busatta — Unkle");
@@ -46,11 +45,11 @@ function Unkle({data}) {
             </li>
           </Details>
         </Info>
-        <Overview background={projectData[0].background}>
+        <Presentation background={projectData[0].background}>
           <img src={projectData[0].images.view.first.image} alt={projectData[0].images.view.first.alt} />
           <img src={projectData[0].images.view.second.image} alt={projectData[0].images.view.second.alt} />
           <img src={projectData[0].images.view.third.image} alt={projectData[0].images.view.third.alt} />
-        </Overview>
+        </Presentation>
       </Content>
     </Container>
   );
