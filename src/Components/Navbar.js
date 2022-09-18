@@ -32,7 +32,7 @@ const Content = styled.div`
   padding: 25px 30px;
   & a svg path:nth-child(4),
   & a svg path:nth-child(5) {
-    fill: #fff;
+    fill: #FFF6E7;
   }
   @media screen and (min-width: 1224px) {
     padding: 25px 70px;

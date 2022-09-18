@@ -7,7 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import faviconDark from "./Assets/Icons/faviconDark.png";
 import faviconLight from "./Assets/Icons/faviconLight.png";
 import Landing from "./Components/Landing";
-// import Loader from "./Components/Loader";
+import Loader from "./Components/Loader";
 import Navbar from "./Components/Navbar";
 import ABDistribution from "./Components/Projects/AbDistribution";
 import Galleria from "./Components/Projects/Galleria";
@@ -68,7 +68,7 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
   // const [scrollTop, setScrollTop] = useState(0);
   const [data, setData] = useState([]);
 
@@ -95,11 +95,11 @@ function App() {
   }
   link.href = darkMode === true ? faviconLight : faviconDark;
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 6000);
-  // });
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 6000);
+  });
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
@@ -131,7 +131,7 @@ function App() {
   return (
     <>
       <GlobalStyle darkMode={darkMode} />
-      {/* {loading ? <Loader darkMode={darkMode} /> : null} */}
+      {loading ? <Loader darkMode={darkMode} /> : null}
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Routes>
         <Route path="/" element={<Landing data={data} />} />

@@ -20,7 +20,7 @@ const Container = styled.footer`
 function Footer() {
   return (
     <Container>
-        <p>Designed & Build by Vittorio Busatta</p>
+        <p>Designed and build by Vittorio</p>
     </Container>
   )
 }

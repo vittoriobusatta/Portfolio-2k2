@@ -125,7 +125,7 @@ export const Details = styled.ul`
     margin-bottom: 14px;
     color: ${(props) => props.color};
   }
-  &,
+  &, p
   a {
     font-size: max(1.6rem, 12px);
     font-family: ${ManropeMedium};

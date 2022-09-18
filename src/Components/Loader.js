@@ -9,8 +9,7 @@ const Container = styled.section`
   width: 100%;
   height: fill-available;
   min-height: 100vh;
-  background-color: ${(props) =>
-    props.colorTheme === true ? "#1D1D1D" : "#FFEFD1"};
+  background-color: #FFF6E7;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -25,8 +24,6 @@ const Overlay = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
-  /* background-color: ${(props) =>
-    props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"}; */
   background-color: #ffa400;
   z-index: 200;
   opacity: 0;
@@ -51,8 +48,6 @@ const bounce = keyframes`
 const Circle = styled.div`
   height: 20px;
   width: 20px;
-  /* background-color: ${(props) =>
-    props.colorTheme === true ? "#FFEFD1" : "#1D1D1D"}; */
   background-color: #ffa400;
   border-radius: 50%;
   animation: ${bounce} 1.5s ease infinite;
