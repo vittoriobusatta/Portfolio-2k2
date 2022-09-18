@@ -14,6 +14,7 @@ import Galleria from "./Components/Projects/Galleria";
 import Unkle from "./Components/Projects/Unkle";
 import Sunnyside from "./Components/Projects/Sunnyside";
 import Muteza from "./Components/Projects/Muteza";
+import Footer from "./Components/Footer";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -143,6 +144,7 @@ function App() {
         <Route path={`${data[3]?.path}`} element={<Sunnyside data={data} />} />
         <Route path={`${data[4]?.path}`} element={<Muteza data={data} />} />
       </Routes>
+      <Footer data={data} />
     </>
   );
 }
