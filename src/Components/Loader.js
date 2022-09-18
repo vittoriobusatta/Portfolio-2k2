@@ -58,7 +58,7 @@ const Circle = styled.div`
 const Svg = styled.svg`
   & path {
     opacity: 0;
-    fill: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
+    fill: #1D1D1D;
   }
 `;
 
@@ -86,7 +86,7 @@ const Div = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: ${(props) => (props.colorTheme === true ? "#FFEFD1" : "#1D1D1D")};
+  color: #1D1D1D;
   & span {
     opacity: 0;
   }
