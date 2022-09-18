@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import setTitle from "../Utils/setTitle";
 import { ManropeMedium, Morgenwalsh } from "../Utils/Common";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+
 
 const Container = styled.main`
   height: auto;
@@ -162,6 +163,7 @@ function Landing({ darkMode, data }) {
                   </Details>
                 </Path>
               </Link>
+              <Outlet />
             </Content>
           </Item>
         ))}

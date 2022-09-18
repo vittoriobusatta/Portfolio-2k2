@@ -1,14 +1,14 @@
 import "./Assets/Styles//Fonts.css";
 import "./Assets/Styles/Reset.css";
+import axios from "axios";
 import { createGlobalStyle } from "styled-components";
 import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import faviconDark from "./Assets/Icons/faviconDark.png";
 import faviconLight from "./Assets/Icons/faviconLight.png";
 import Landing from "./Components/Landing";
 // import Loader from "./Components/Loader";
 import Navbar from "./Components/Navbar";
-import axios from "axios";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ABDistribution from "./Components/Projects/AbDistribution";
 import Galleria from "./Components/Projects/Galleria";
 import Unkle from "./Components/Projects/Unkle";
@@ -127,22 +127,22 @@ function App() {
   //   return () => window.removeEventListener("scroll", onScroll);
   // }, [scrollTop]);
 
-
   return (
     <>
       <GlobalStyle darkMode={darkMode} />
-      <BrowserRouter>
       {/* {loading ? <Loader darkMode={darkMode} /> : null} */}
-        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-        <Routes>
-          <Route path="/" element={<Landing data={data} />} />
-          <Route path={`${data[0]?.path}`} element={<ABDistribution data={data} />} />
-          <Route path={`${data[1]?.path}`} element={<Galleria data={data} />} />
-          <Route path={`${data[2]?.path}`} element={<Unkle data={data} />} />
-          <Route path={`${data[3]?.path}`} element={<Sunnyside data={data} />} />
-          <Route path={`${data[4]?.path}`} element={<Muteza data={data} />} />
-        </Routes>
-      </BrowserRouter>
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Routes>
+        <Route path="/" element={<Landing data={data} />} />
+        <Route
+          path={`${data[0]?.path}`}
+          element={<ABDistribution data={data} />}
+        />
+        <Route path={`${data[1]?.path}`} element={<Galleria data={data} />} />
+        <Route path={`${data[2]?.path}`} element={<Unkle data={data} />} />
+        <Route path={`${data[3]?.path}`} element={<Sunnyside data={data} />} />
+        <Route path={`${data[4]?.path}`} element={<Muteza data={data} />} />
+      </Routes>
     </>
   );
 }
