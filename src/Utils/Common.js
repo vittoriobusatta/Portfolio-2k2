@@ -20,7 +20,7 @@ export const Content = styled.section`
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 992px) {
-    justify-content: flex-end;
+    align-items: flex-end;
   }
 `;
 export const Info = styled.div`
@@ -125,7 +125,7 @@ export const Details = styled.ul`
     margin-bottom: 14px;
     color: ${(props) => props.color};
   }
-  &, p
+  &, p,
   a {
     font-size: max(1.6rem, 12px);
     font-family: ${ManropeMedium};

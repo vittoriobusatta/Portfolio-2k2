@@ -9,18 +9,21 @@ const Container = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem 1rem;
+  padding: 3rem 2rem;
   & p {
     font-size: 12px;
     font-family: ${ManropeMedium};
     color: #000;
+  }
+  @media screen and (min-width: 992px) {
+    display: none;
   }
 `;
 
 function Footer() {
   return (
     <Container>
-        <p>Designed and build by Vittorio</p>
+        <p>Designed & Build by Vittorio</p>
     </Container>
   )
 }

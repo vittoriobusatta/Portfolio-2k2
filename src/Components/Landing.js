@@ -113,9 +113,9 @@ const Details = styled.div`
   & p {
     font-family: ${ManropeMedium};
     font-size: max(1.6rem, 14px);
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     max-width: 200px;
-    line-height: 20px;
+    line-height: 16px;
     text-align: center;
     padding-bottom: 10px;
     
