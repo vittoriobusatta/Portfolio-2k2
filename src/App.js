@@ -3,7 +3,7 @@ import "./Assets/Styles/Reset.css";
 import axios from "axios";
 import { createGlobalStyle } from "styled-components";
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import faviconDark from "./Assets/Icons/faviconDark.png";
 import faviconLight from "./Assets/Icons/faviconLight.png";
 import Landing from "./Components/Landing";
