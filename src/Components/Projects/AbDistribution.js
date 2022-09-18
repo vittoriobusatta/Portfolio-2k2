@@ -1,6 +1,18 @@
 import React from "react";
+import styled from "styled-components";
 import { Container, Content, Details, Info, Title, Presentation } from '../../Utils/Common'
 import setTitle from "../../Utils/setTitle";
+
+export const Overview = styled(Presentation)`
+  & img {
+    width: 80%;
+    height: 100%;
+    /* &:nth-child(3) {
+      width: auto;
+      max-width: 205px;
+    } */
+  }
+`;
 
 function ABDistribution({ data }) {
   setTitle("Vittorio Busatta — AB Distribution ");
@@ -9,7 +21,7 @@ function ABDistribution({ data }) {
   return (
     <Container background={projectData[0].background}>
       <Content>
-        <Info>
+        <Info background={projectData[0].background}>
           <Title color={projectData[0].textColor}>{projectData[0].name}</Title>
           <Details color={projectData[0].textColor}>
             <li>
@@ -39,9 +51,17 @@ function ABDistribution({ data }) {
             </li>
           </Details>
         </Info>
-        <Presentation>
-          {/* <img src={projectData[0].images.post.landing} alt={projectData[0].name} /> */}
-        </Presentation>
+        <Overview background={projectData[0].background}>
+          <img src={projectData[0].images.page.first.image} alt={projectData[0].images.page.first.alt} />
+          <img src={projectData[0].images.page.second.image} alt={projectData[0].images.page.second.alt} />
+          <img src={projectData[0].images.view.desktop.image} alt={projectData[0].images.view.desktop.alt} />
+          {/* <img src={projectData[0].images.view.tablet.image} alt={projectData[0].images.view.tablet.alt} /> */}
+          {/* <img src={projectData[0].images.view.mobile.image} alt={projectData[0].images.view.mobile.alt} /> */}
+          <img src={projectData[0].images.post.first.image} alt={projectData[0].images.post.first.alt} />
+          <img src={projectData[0].images.post.second.image} alt={projectData[0].images.post.second.alt} />
+          <img src={projectData[0].images.post.third.image} alt={projectData[0].images.post.third.alt} />
+          <img src={projectData[0].images.post.fourth.image} alt={projectData[0].images.post.fourth.alt} />
+        </Overview>
       </Content>
     </Container>
   );

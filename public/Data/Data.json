@@ -7,16 +7,64 @@
     "date": "Mai 2022",
     "role": "Développement & Design",
     "technologies": "React, Figma",
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus.",
+    "description": "Dans ce projet j'ai dût concevoir en premier la maquette visuel. Afin de bien différencier les 8 catégories differentes, j'ai beaucoup joué avec les couleurs. Ensuite j'ai intégrér la maquette finale avec le framework React.",
     "link": "https://www.ab-distribution.re/",
     "primaryColor": "#FFA928",
     "textColor": "#FFA928",
     "background": "#EDE9E5",
-    "intro":"Web design & developement of the website for a wholesaler ",
+    "intro": "Web design & developement of the website for a wholesaler ",
     "images": {
       "card": {
-        "first": "../Images/ABDistribution/ab1.png",
-        "second": "../Images/ABDistribution/ab2.png"
+        "first": {
+          "image": "../Images/ABDistribution/firstcard.png",
+          "alt": "Première Carte AB Distribution"
+        },
+        "second": {
+          "image": "../Images/ABDistribution/secondcard.png",
+          "alt": "Deuxième Carte AB Distribution"
+        }
+      },
+      "view": {
+        "desktop": {
+          "image": "../Images/ABDistribution/desktop.png",
+          "alt": "Vue version Ordinateur"
+        },
+        "tablet": {
+          "image": "../Images/ABDistribution/tablet.png",
+          "alt": "Vue version Tablette"
+        },
+        "mobile": {
+          "image": "../Images/ABDistribution/mobile.png",
+          "alt": "Vue version Téléphone"
+        }
+      },
+      "page": {
+        "first": {
+          "image": "../Images/ABDistribution/coffee.png",
+          "alt": ""
+        },
+        "second": {
+          "image": "../Images/ABDistribution/bodymist.png",
+          "alt": ""
+        }
+      },
+      "post": {
+        "first": {
+          "image": "../Images/ABDistribution/firstpost.png",
+          "alt": ""
+        },
+        "second": {
+          "image": "../Images/ABDistribution/secondpost.png",
+          "alt": ""
+        },
+        "third": {
+          "image": "../Images/ABDistribution/thirdpost.png",
+          "alt": ""
+        },
+        "fourth": {
+          "image": "../Images/ABDistribution/fourthpost.png",
+          "alt": ""
+        }
       }
     }
   },
@@ -28,16 +76,22 @@
     "date": "Août 2022",
     "role": "Développement",
     "technologies": "React",
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus.",
     "link": "http://galleria-ten.vercel.app/",
     "primaryColor": "#860EE3",
     "textColor": "#860EE3",
     "background": "#E9E5ED",
-    "intro":"Who needs a website when you can have a gallery ? ",
+    "intro": "Who needs a website when you can have a gallery ? ",
     "images": {
       "card": {
-        "first": "../Images/Galleria/gal1.png",
-        "second": "../Images/Galleria/gal2.png"
+        "first": {
+          "image": "../Images/Galleria/gal1.png",
+          "alt": "Première Carte Galleria"
+        },
+        "second": {
+          "image": "../Images/Galleria/gal2.png",
+          "alt": "Deuxième Carte Galleria"
+        }
       }
     }
   },
@@ -49,16 +103,22 @@
     "date": "Juin 2022",
     "role": "Développement",
     "technologies": "React, Regex",
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus.",
     "link": "https://password-components.vercel.app/",
     "primaryColor": "#2EB4FF",
     "textColor": "#2EB4FF",
     "background": "#E5EBED",
-    "intro":"Password generator with regex",
+    "intro": "Password generator using regex",
     "images": {
       "card": {
-        "first": "../Images/Unkle/unk1.png",
-        "second": "../Images/Unkle/unk2.png"
+        "first": {
+          "image": "../Images/Unkle/unk1.png",
+          "alt": "Première Carte Galleria"
+        },
+        "second": {
+          "image": "../Images/Unkle/unk2.png",
+          "alt": "Deuxième Carte Galleria"
+        }
       }
     }
   },
@@ -70,18 +130,24 @@
     "date": "Juillet 2022",
     "role": "Développement",
     "technologies": "React",
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus.",
     "link": "https://sunnyside-lovat.vercel.app/",
     "primaryColor": "#FAFF00",
     "textColor": "#FFE600",
     "background": "#EDEDE5",
-    "intro":"Landing page for a fictional agency",
+    "intro": "Landing page for a fictional agency",
     "images": {
       "card": {
-        "first": "../Images/Sunnyside/sun1.png",
-        "second": "../Images/Sunnyside/sun2.png"
+        "first": {
+          "image": "../Images/Sunnyside/sun1.png",
+          "alt": "Première Carte Galleria"
+        },
+        "second": {
+          "image": "../Images/Sunnyside/sun2.png",
+          "alt": "Deuxième Carte Galleria"
+        }
       },
-      "post": {
+      "view": {
         "landing": "../Images/Sunnyside/landingSun.png",
         "desktop": "../Images/Sunnyside/desktopSun.png",
         "mobile": "../Images/Sunnyside/mobileSun.png"
@@ -96,16 +162,22 @@
     "date": "Mai 2021",
     "role": "Développement",
     "technologies": "HTML, CSS, JavaScript",
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus.",
     "link": "https://tonii0.github.io/Muteza/",
     "primaryColor": "#FFD6C1",
     "textColor": "#FFA372",
     "background": "#EDE5E9",
-    "intro":"Care product presentation website",
+    "intro": "Care product presentation website",
     "images": {
       "card": {
-        "first": "../Images/Muteza/mut1.png",
-        "second": "../Images/Muteza/mut2.png"
+        "first": {
+          "image": "../Images/Muteza/mut1.png",
+          "alt": "Première Carte Galleria"
+        },
+        "second": {
+          "image": "../Images/Muteza/mut2.png",
+          "alt": "Deuxième Carte Galleria"
+        }
       }
     }
   }

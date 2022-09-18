@@ -132,8 +132,8 @@ function Landing({ darkMode, data }) {
               <Link to={`${project.path}`}>
                 <Path>
                   <Cards>
-                    <img src={project.images.card.first} alt={project.title} />
-                    <img src={project.images.card.second} alt={project.title} />
+                    <img src={project.images.card.first.image} alt={project.images.card.first.alt} />
+                    <img src={project.images.card.second.image} alt={project.images.card.second.alt} />
                   </Cards>
                   <Details>
                     <span>{project.id}/5</span>

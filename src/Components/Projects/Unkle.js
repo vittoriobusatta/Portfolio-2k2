@@ -8,7 +8,7 @@ function Unkle({data}) {
   return (
     <Container background={projectData[0].background}>
       <Content>
-        <Info>
+        <Info background={projectData[0].background}>
           <Title color={projectData[0].textColor}>{projectData[0].name}</Title>
           <Details color={projectData[0].textColor}>
             <li>

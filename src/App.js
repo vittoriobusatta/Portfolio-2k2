@@ -137,7 +137,7 @@ function App() {
     <>
       <GlobalStyle darkMode={darkMode} />
       <BrowserRouter>
-      {loading ? <Loader darkMode={darkMode} /> : null}
+      {/* {loading ? <Loader darkMode={darkMode} /> : null} */}
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <Routes>
           <Route path="/" element={<Landing data={data} />} />

@@ -15,35 +15,45 @@ export const Container = styled.main`
   background-color: ${(props) => props.background};
 `;
 export const Content = styled.section`
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  @media screen and (min-width: 992px) {
+    justify-content: flex-end;
+  }
 `;
 export const Info = styled.div`
-  height: 100%;
-  width: 45%;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  padding: 15rem 8rem;
+  height: fill-available;
+  width: 100%;
+  background-color: ${(props) => props.background};
+  padding: 100px 15px;
+  @media screen and (min-width: 992px) {
+    width: 45%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    min-height: 100vh;
+    padding: 15rem 8rem;
+  }
 `;
 export const Presentation = styled.div`
-  height: auto;
-  width: 55%;
+  height: fit-content;
+  width: 100%;
+  background-color: ${(props) => props.background};
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 80px;
   padding-bottom: 80px;
   row-gap: 60px;
   & img {
     width: 80%;
-    height: auto;
-    &:last-child {
-        width: auto;
-    }
+    height: 100%;
+  }
+  @media screen and (min-width: 992px) {
+    margin-top: 15rem;
+    width: 55%;
   }
 `;
 export const Title = styled.h1`
@@ -51,29 +61,39 @@ export const Title = styled.h1`
   font-size: 8rem;
   font-family: ${Morgenwalsh};
   text-transform: uppercase;
-  max-width: 200px;
   line-height: 65px;
   z-index: 2;
+  margin-left: 5px;
   &::before {
     content: "";
-    top: -4px;
-    left: -6px;
+    top: 0px;
+    left: -7px;
     position: absolute;
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background-color: ${(props) => props.color};
     z-index: -1;
+    @media screen and (min-width: 992px) {
+      top: -4px;
+      width: 45px;
+      height: 45px;
+    }
   }
 `;
 export const Details = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr) 1.5fr 1fr;
-  grid-column-gap: 100px;
-  grid-row-gap: 30px;
-  margin-top: 60px;
+  grid-column-gap: 50px;
+  grid-row-gap: 20px;
+  margin-top: 40px;
   max-width: 500px;
+  @media screen and (min-width: 992px) {
+    grid-column-gap: 100px;
+    grid-row-gap: 30px;
+    margin-top: 60px;
+  }
   & li {
     display: flex;
     flex-direction: column;
@@ -99,7 +119,7 @@ export const Details = styled.ul`
     }
   }
   & h2 {
-    font-size: 1.8rem;
+    font-size: max(1.8rem, 14px);
     font-family: ${ManropeBold};
     text-transform: uppercase;
     margin-bottom: 14px;
@@ -107,7 +127,7 @@ export const Details = styled.ul`
   }
   &,
   a {
-    font-size: 1.6rem;
+    font-size: max(1.6rem, 12px);
     font-family: ${ManropeMedium};
     line-height: 24px;
     letter-spacing: 0.5px;

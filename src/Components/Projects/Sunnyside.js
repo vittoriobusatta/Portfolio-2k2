@@ -1,6 +1,17 @@
 import React from 'react'
+import styled from 'styled-components';
 import { Container, Content, Details, Info, Presentation, Title } from '../../Utils/Common'
 import setTitle from "../../Utils/setTitle";
+
+export const Overview = styled(Presentation)`
+  & img {
+    width: 80%;
+    height: 100%;
+    &:nth-child(3) {
+      width: auto;
+    }
+  }
+`;
 
 function Sunnyside({data}) {
   setTitle("Vittorio Busatta — Sunnyside");
@@ -8,7 +19,7 @@ function Sunnyside({data}) {
   return (
     <Container background={projectData[0].background}>
       <Content>
-        <Info>
+        <Info background={projectData[0].background}>
           <Title color={projectData[0].textColor}>{projectData[0].name}</Title>
           <Details color={projectData[0].textColor}>
             <li>
@@ -38,11 +49,11 @@ function Sunnyside({data}) {
             </li>
           </Details>
         </Info>
-        <Presentation>
-          <img src={projectData[0].images.post.landing} alt={projectData[0].name} />
-          <img src={projectData[0].images.post.desktop} alt={projectData[0].name} />
-          <img src={projectData[0].images.post.mobile} alt={projectData[0].name} />
-        </Presentation>
+        <Overview background={projectData[0].background}>
+          <img src={projectData[0].images.view.landing} alt={projectData[0].name} />
+          <img src={projectData[0].images.view.desktop} alt={projectData[0].name} />
+          <img src={projectData[0].images.view.mobile} alt={projectData[0].name} />
+        </Overview>
       </Content>
     </Container>
   );
