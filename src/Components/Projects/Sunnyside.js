@@ -1,13 +1,13 @@
 import React from 'react'
-import { Container, Content, Details, Info, Title } from '../../Utils/Common'
+import { Container, Content, Details, Info, Presentation, Title } from '../../Utils/Common'
 import setTitle from "../../Utils/setTitle";
 
 function Sunnyside({data}) {
-  setTitle("Vittorio Busatta — Muteza");
+  setTitle("Vittorio Busatta — Sunnyside");
   const projectData = data.filter(project => project.id === 4)
   return (
-    <Container>
-      <Content background={projectData[0].background}>
+    <Container background={projectData[0].background}>
+      <Content>
         <Info>
           <Title color={projectData[0].textColor}>{projectData[0].name}</Title>
           <Details color={projectData[0].textColor}>
@@ -38,6 +38,11 @@ function Sunnyside({data}) {
             </li>
           </Details>
         </Info>
+        <Presentation>
+          <img src={projectData[0].images.post.landing} alt={projectData[0].name} />
+          <img src={projectData[0].images.post.desktop} alt={projectData[0].name} />
+          <img src={projectData[0].images.post.mobile} alt={projectData[0].name} />
+        </Presentation>
       </Content>
     </Container>
   );

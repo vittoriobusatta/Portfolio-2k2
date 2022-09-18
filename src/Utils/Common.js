@@ -12,18 +12,39 @@ export const Morgenwalsh = "Morgenwalsh";
 export const Container = styled.main`
   height: auto;
   width: 100%;
-  /* background-color: #ede9e5; */
+  background-color: ${(props) => props.background};
 `;
 export const Content = styled.section`
-  height: 200vh;
+  height: 100vh;
   width: 100%;
-  background-color: ${(props) => props.background};
+  display: flex;
+  justify-content: flex-end;
 `;
 export const Info = styled.div`
   height: 100%;
-  width: 50%;
+  width: 45%;
   position: fixed;
-  padding: 12rem 7rem;
+  left: 0;
+  bottom: 0;
+  padding: 15rem 8rem;
+`;
+export const Presentation = styled.div`
+  height: auto;
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  row-gap: 60px;
+  & img {
+    width: 80%;
+    height: auto;
+    &:last-child {
+        width: auto;
+    }
+  }
 `;
 export const Title = styled.h1`
   position: relative;
@@ -52,6 +73,7 @@ export const Details = styled.ul`
   grid-column-gap: 100px;
   grid-row-gap: 30px;
   margin-top: 60px;
+  max-width: 500px;
   & li {
     display: flex;
     flex-direction: column;
@@ -77,17 +99,17 @@ export const Details = styled.ul`
     }
   }
   & h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: ${ManropeBold};
     text-transform: uppercase;
     margin-bottom: 14px;
     color: ${(props) => props.color};
   }
-  & ,
+  &,
   a {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-family: ${ManropeMedium};
-    line-height: 20px;
+    line-height: 24px;
     letter-spacing: 0.5px;
     color: #222;
   }

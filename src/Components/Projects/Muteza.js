@@ -6,8 +6,8 @@ function Muteza({data}) {
   setTitle("Vittorio Busatta — Muteza");
   const projectData = data.filter(project => project.id === 5)
   return (
-    <Container>
-      <Content background={projectData[0].background}>
+    <Container background={projectData[0].background}>
+      <Content>
         <Info>
           <Title color={projectData[0].textColor}>{projectData[0].name}</Title>
           <Details color={projectData[0].textColor}>

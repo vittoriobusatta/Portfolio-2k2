@@ -1,13 +1,14 @@
 import React from "react";
-import { Container, Content, Details, Info, Title } from '../../Utils/Common'
+import { Container, Content, Details, Info, Title, Presentation } from '../../Utils/Common'
 import setTitle from "../../Utils/setTitle";
 
 function ABDistribution({ data }) {
   setTitle("Vittorio Busatta — AB Distribution ");
   const projectData = data.filter(project => project.id === 1)
+  console.log(projectData[0].images);
   return (
-    <Container>
-      <Content background={projectData[0].background}>
+    <Container background={projectData[0].background}>
+      <Content>
         <Info>
           <Title color={projectData[0].textColor}>{projectData[0].name}</Title>
           <Details color={projectData[0].textColor}>
@@ -38,6 +39,9 @@ function ABDistribution({ data }) {
             </li>
           </Details>
         </Info>
+        <Presentation>
+          {/* <img src={projectData[0].images.post.landing} alt={projectData[0].name} /> */}
+        </Presentation>
       </Content>
     </Container>
   );
