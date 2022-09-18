@@ -119,6 +119,20 @@
           "image": "../Images/Unkle/unk2.png",
           "alt": "Deuxième Carte Galleria"
         }
+      },
+      "view": {
+        "first": {
+          "image": "../Images/Unkle/first.png",
+          "alt": ""
+        },
+        "second": {
+          "image": "../Images/Unkle/second.png",
+          "alt": ""
+        },
+        "third": {
+          "image": "../Images/Unkle/third.png",
+          "alt": ""
+        }
       }
     }
   },
