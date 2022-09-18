@@ -7,7 +7,7 @@
     "date": "Mai 2022",
     "role": "Développement & Design",
     "technologies": "React, Figma",
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur vitae nibh et mi efficitur iaculis ac vitae dui.",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus.",
     "link": "https://www.ab-distribution.re/",
     "primaryColor": "#FFA928",
     "textColor": "#FFA928",
@@ -15,8 +15,8 @@
     "intro":"Web design & developement of the website for a wholesaler ",
     "images": {
       "card": {
-        "first": "../Images/ab1.png",
-        "second": "../Images/ab2.png"
+        "first": "../Images/ABDistribution/ab1.png",
+        "second": "../Images/ABDistribution/ab2.png"
       }
     }
   },
@@ -28,7 +28,7 @@
     "date": "Août 2022",
     "role": "Développement",
     "technologies": "React",
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur vitae nibh et mi efficitur iaculis ac vitae dui.",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus.",
     "link": "http://galleria-ten.vercel.app/",
     "primaryColor": "#860EE3",
     "textColor": "#860EE3",
@@ -36,8 +36,8 @@
     "intro":"Who needs a website when you can have a gallery ? ",
     "images": {
       "card": {
-        "first": "../Images/gal1.png",
-        "second": "../Images/gal2.png"
+        "first": "../Images/Galleria/gal1.png",
+        "second": "../Images/Galleria/gal2.png"
       }
     }
   },
@@ -49,7 +49,7 @@
     "date": "Juin 2022",
     "role": "Développement",
     "technologies": "React, Regex",
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur vitae nibh et mi efficitur iaculis ac vitae dui.",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus.",
     "link": "https://password-components.vercel.app/",
     "primaryColor": "#2EB4FF",
     "textColor": "#2EB4FF",
@@ -57,8 +57,8 @@
     "intro":"Password generator with regex",
     "images": {
       "card": {
-        "first": "../Images/unk1.png",
-        "second": "../Images/unk2.png"
+        "first": "../Images/Unkle/unk1.png",
+        "second": "../Images/Unkle/unk2.png"
       }
     }
   },
@@ -70,16 +70,21 @@
     "date": "Juillet 2022",
     "role": "Développement",
     "technologies": "React",
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur vitae nibh et mi efficitur iaculis ac vitae dui.",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus.",
     "link": "https://sunnyside-lovat.vercel.app/",
     "primaryColor": "#FAFF00",
-    "textColor": "#F1DA0D",
+    "textColor": "#FFE600",
     "background": "#EDEDE5",
     "intro":"Landing page for a fictional agency",
     "images": {
       "card": {
-        "first": "../Images/sun1.png",
-        "second": "../Images/sun2.png"
+        "first": "../Images/Sunnyside/sun1.png",
+        "second": "../Images/Sunnyside/sun2.png"
+      },
+      "post": {
+        "landing": "../Images/Sunnyside/landingSun.png",
+        "desktop": "../Images/Sunnyside/desktopSun.png",
+        "mobile": "../Images/Sunnyside/mobileSun.png"
       }
     }
   },
@@ -91,7 +96,7 @@
     "date": "Mai 2021",
     "role": "Développement",
     "technologies": "HTML, CSS, JavaScript",
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur vitae nibh et mi efficitur iaculis ac vitae dui.",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum justo sodales ultricies rutrum. Curabitur at sapien quis ex tincidunt sodales sed eget erat. Vivamus id nibh vitae enim molestie rhoncus.",
     "link": "https://tonii0.github.io/Muteza/",
     "primaryColor": "#FFD6C1",
     "textColor": "#FFA372",
@@ -99,8 +104,8 @@
     "intro":"Care product presentation website",
     "images": {
       "card": {
-        "first": "../Images/mut1.png",
-        "second": "../Images/mut2.png"
+        "first": "../Images/Muteza/mut1.png",
+        "second": "../Images/Muteza/mut2.png"
       }
     }
   }
