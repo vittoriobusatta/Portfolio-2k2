@@ -9,7 +9,7 @@ import Landing from "./Components/Landing";
 import Navbar from "./Components/Navbar";
 import axios from "axios";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ABDistribution from "./Components/Projects/ABDistribution";
+import ABDistribution from "./Components/Projects/AbDistribution";
 import Galleria from "./Components/Projects/Galleria";
 import Unkle from "./Components/Projects/Unkle";
 import Sunnyside from "./Components/Projects/Sunnyside";
