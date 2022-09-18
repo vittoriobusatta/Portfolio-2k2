@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import styled from "styled-components";
 import setTitle from "../Utils/setTitle";
 import { ManropeMedium, Morgenwalsh } from "../Utils/Common";

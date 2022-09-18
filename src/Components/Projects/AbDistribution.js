@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import styled from "styled-components";
 import { Container, Content, Details, Info, Title, Presentation } from '../../Utils/Common'
 import setTitle from "../../Utils/setTitle";
