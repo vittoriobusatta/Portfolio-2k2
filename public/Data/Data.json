@@ -92,6 +92,20 @@
           "image": "../Images/Galleria/gal2.png",
           "alt": "Deuxième Carte Galleria"
         }
+      },
+      "view": {
+        "first": {
+          "image": "../Images/Galleria/first.png",
+          "alt": ""
+        },
+        "second": {
+          "image": "../Images/Galleria/second.png",
+          "alt": ""
+        },
+        "third": {
+          "image": "../Images/Galleria/third.png",
+          "alt": ""
+        }
       }
     }
   },
