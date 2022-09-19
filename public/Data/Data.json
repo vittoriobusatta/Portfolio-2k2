@@ -76,7 +76,7 @@
     "date": "Août 2022",
     "role": "Développement",
     "technologies": "React",
-    "description": "Ce projet expérimental m'a aidé à me fortifier dans la prise en main de React. J'ai réalisé un slideshow (diaporama interactif) d'une galerie qui expose les caractéristiques d'œuvres d'art célèbre comme leurs histoires, descriptif ainsi que leur peintre.",
+    "description": "Ce projet expérimental m'a aidé à me fortifier dans la prise en main de React. J'ai réalisé un slideshow (diaporama interactif) d'une galerie qui expose les caractéristiques d'œuvres d'art célèbre comme leurs histoires, descriptif ainsi que leurs peintres.",
     "link": "http://galleria-ten.vercel.app/",
     "primaryColor": "#860EE3",
     "textColor": "#860EE3",
