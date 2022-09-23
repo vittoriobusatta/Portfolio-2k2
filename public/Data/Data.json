@@ -16,53 +16,53 @@
     "images": {
       "card": {
         "first": {
-          "image": "../Images/ABDistribution/firstcard.png",
+          "image": "../Images/ABDistribution/firstcard.webp",
           "alt": "Première Carte AB Distribution"
         },
         "second": {
-          "image": "../Images/ABDistribution/secondcard.png",
+          "image": "../Images/ABDistribution/secondcard.webp",
           "alt": "Deuxième Carte AB Distribution"
         }
       },
       "view": {
         "desktop": {
-          "image": "../Images/ABDistribution/desktop.png",
+          "image": "../Images/ABDistribution/desktop.webp",
           "alt": "Vue version Ordinateur"
         },
         "tablet": {
-          "image": "../Images/ABDistribution/tablet.png",
+          "image": "../Images/ABDistribution/tablet.webp",
           "alt": "Vue version Tablette"
         },
         "mobile": {
-          "image": "../Images/ABDistribution/mobile.png",
+          "image": "../Images/ABDistribution/mobile.webp",
           "alt": "Vue version Téléphone"
         }
       },
       "page": {
         "first": {
-          "image": "../Images/ABDistribution/coffee.png",
+          "image": "../Images/ABDistribution/coffee.webp",
           "alt": ""
         },
         "second": {
-          "image": "../Images/ABDistribution/bodymist.png",
+          "image": "../Images/ABDistribution/bodymist.webp",
           "alt": ""
         }
       },
       "post": {
         "first": {
-          "image": "../Images/ABDistribution/firstpost.png",
+          "image": "../Images/ABDistribution/firstpost.webp",
           "alt": ""
         },
         "second": {
-          "image": "../Images/ABDistribution/secondpost.png",
+          "image": "../Images/ABDistribution/secondpost.webp",
           "alt": ""
         },
         "third": {
-          "image": "../Images/ABDistribution/thirdpost.png",
+          "image": "../Images/ABDistribution/thirdpost.webp",
           "alt": ""
         },
         "fourth": {
-          "image": "../Images/ABDistribution/fourthpost.png",
+          "image": "../Images/ABDistribution/fourthpost.webp",
           "alt": ""
         }
       }
