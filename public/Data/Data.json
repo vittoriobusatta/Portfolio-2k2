@@ -85,25 +85,25 @@
     "images": {
       "card": {
         "first": {
-          "image": "../Images/Galleria/gal1.png",
+          "image": "../Images/Galleria/gal1.webp",
           "alt": "Première Carte Galleria"
         },
         "second": {
-          "image": "../Images/Galleria/gal2.png",
+          "image": "../Images/Galleria/gal2.webp",
           "alt": "Deuxième Carte Galleria"
         }
       },
       "view": {
         "first": {
-          "image": "../Images/Galleria/first.png",
+          "image": "../Images/Galleria/first.webp",
           "alt": ""
         },
         "second": {
-          "image": "../Images/Galleria/second.png",
+          "image": "../Images/Galleria/second.webp",
           "alt": ""
         },
         "third": {
-          "image": "../Images/Galleria/third.png",
+          "image": "../Images/Galleria/third.webp",
           "alt": ""
         }
       }
@@ -126,25 +126,25 @@
     "images": {
       "card": {
         "first": {
-          "image": "../Images/Unkle/unk1.png",
+          "image": "../Images/Unkle/unk1.webp",
           "alt": "Première Carte Galleria"
         },
         "second": {
-          "image": "../Images/Unkle/unk2.png",
+          "image": "../Images/Unkle/unk2.webp",
           "alt": "Deuxième Carte Galleria"
         }
       },
       "view": {
         "first": {
-          "image": "../Images/Unkle/first.png",
+          "image": "../Images/Unkle/first.webp",
           "alt": ""
         },
         "second": {
-          "image": "../Images/Unkle/second.png",
+          "image": "../Images/Unkle/second.webp",
           "alt": ""
         },
         "third": {
-          "image": "../Images/Unkle/third.png",
+          "image": "../Images/Unkle/third.webp",
           "alt": ""
         }
       }
@@ -167,18 +167,18 @@
     "images": {
       "card": {
         "first": {
-          "image": "../Images/Sunnyside/sun1.png",
+          "image": "../Images/Sunnyside/sun1.webp",
           "alt": "Première Carte Galleria"
         },
         "second": {
-          "image": "../Images/Sunnyside/sun2.png",
+          "image": "../Images/Sunnyside/sun2.webp",
           "alt": "Deuxième Carte Galleria"
         }
       },
       "view": {
-        "landing": "../Images/Sunnyside/landingSun.png",
-        "desktop": "../Images/Sunnyside/desktopSun.png",
-        "mobile": "../Images/Sunnyside/mobileSun.png"
+        "landing": "../Images/Sunnyside/landingSun.webp",
+        "desktop": "../Images/Sunnyside/desktopSun.webp",
+        "mobile": "../Images/Sunnyside/mobileSun.webp"
       }
     }
   },
@@ -199,37 +199,37 @@
     "images": {
       "card": {
         "first": {
-          "image": "../Images/Muteza/mut1.png",
+          "image": "../Images/Muteza/mut1.webp",
           "alt": "Première Carte Galleria"
         },
         "second": {
-          "image": "../Images/Muteza/mut2.png",
+          "image": "../Images/Muteza/mut2.webp",
           "alt": "Deuxième Carte Galleria"
         }
       },
       "view": {
         "first": {
-          "image": "../Images/Muteza/first.png",
+          "image": "../Images/Muteza/first.webp",
           "alt": ""
         },
         "second": {
-          "image": "../Images/Muteza/second.png",
+          "image": "../Images/Muteza/second.webp",
           "alt": ""
         },
         "third": {
-          "image": "../Images/Muteza/third.png",
+          "image": "../Images/Muteza/third.webp",
           "alt": ""
         },
         "fourth": {
-          "image": "../Images/Muteza/fourth.png",
+          "image": "../Images/Muteza/fourth.webp",
           "alt": ""
         },
         "fifth": {
-          "image": "../Images/Muteza/fifth.png",
+          "image": "../Images/Muteza/fifth.webp",
           "alt": ""
         },
         "sixth": {
-          "image": "../Images/Muteza/sixth.png",
+          "image": "../Images/Muteza/sixth.webp",
           "alt": ""
         }
       }
