@@ -27,7 +27,7 @@ function Unkle({data}) {
               <p>{projectData[0].date}</p>
             </li>
             <li>
-              <h2>Role</h2>
+              <h2>Rôle</h2>
               <p>{projectData[0].role}</p>
             </li>
             <li>
