@@ -11,7 +11,7 @@ import setTitle from "../../Utils/setTitle";
 
 function ABDistribution({ data }) {
   setTitle("Vittorio Busatta — AB Distribution ");
-  const projectData = data.filter(project => project.id === 1)
+  const projectData = data.filter(project => project.id === 2)
   return (
     <Container background={projectData[0].background}>
       <Content>

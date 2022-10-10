@@ -12,7 +12,7 @@ export const Overview = styled(Presentation)`
 
 function Galleria({data}) {
   setTitle("Vittorio Busatta — Galleria");
-  const projectData = data.filter(project => project.id === 2)
+  const projectData = data.filter(project => project.id === 3)
   return (
     <Container background={projectData[0].background}>
       <Content>

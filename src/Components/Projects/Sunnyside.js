@@ -15,7 +15,7 @@ export const Overview = styled(Presentation)`
 
 function Sunnyside({data}) {
   setTitle("Vittorio Busatta — Sunnyside");
-  const projectData = data.filter(project => project.id === 4)
+  const projectData = data.filter(project => project.id === 5)
   return (
     <Container background={projectData[0].background}>
       <Content>

@@ -12,7 +12,7 @@ export const Overview = styled(Presentation)`
 
 function Muteza({data}) {
   setTitle("Vittorio Busatta — Muteza");
-  const projectData = data.filter(project => project.id === 5)
+  const projectData = data.filter(project => project.id === 6)
   return (
     <Container background={projectData[0].background}>
       <Content>
