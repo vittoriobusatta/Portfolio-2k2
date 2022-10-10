@@ -15,6 +15,7 @@ import Unkle from "./Components/Projects/Unkle";
 import Sunnyside from "./Components/Projects/Sunnyside";
 import Muteza from "./Components/Projects/Muteza";
 import Footer from "./Components/Footer";
+import Projects from "./Components/Projects";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -131,7 +132,7 @@ function App() {
   return (
     <>
       <GlobalStyle darkMode={darkMode} />
-      {loading ? <Loader darkMode={darkMode} /> : null}
+      {/* {loading ? <Loader darkMode={darkMode} /> : null} */}
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Routes>
         <Route path="/" element={<Landing data={data} />} />
@@ -143,6 +144,7 @@ function App() {
         <Route path={`${data[2]?.path}`} element={<Unkle data={data} />} />
         <Route path={`${data[3]?.path}`} element={<Sunnyside data={data} />} />
         <Route path={`${data[4]?.path}`} element={<Muteza data={data} />} />
+        <Route path="projets" element={<Projects data={data} />} />
       </Routes>
       <Footer data={data} />
     </>
