@@ -104,6 +104,7 @@ const Details = styled.div`
     font-family: ${Morgenwalsh};
     font-size: 6rem;
     text-align: center;
+    text-transform: uppercase;
   }
   & span {
     font-family: ${Morgenwalsh};
@@ -159,7 +160,7 @@ function Landing({ darkMode, data }) {
                   <Details>
                     <span>{project.id}/6</span>
                     <h1>{project.name}</h1>
-                    <p>{project.intro}</p>
+                    {/* <p>{project.intro}</p> */}
                   </Details>
                 </Path>
               </Link>

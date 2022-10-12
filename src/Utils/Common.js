@@ -27,7 +27,7 @@ export const Info = styled.div`
   height: fill-available;
   width: 100%;
   background-color: ${(props) => props.background};
-  padding: 100px 15px 50px;
+  padding: 100px 20px 50px;
   @media screen and (min-width: 992px) {
     width: 45%;
     position: fixed;

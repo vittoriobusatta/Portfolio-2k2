@@ -21,7 +21,7 @@ const Content = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 25px 30px;
+  padding: 25px 20px;
   & a svg path:nth-child(4),
   & a svg path:nth-child(5) {
     fill: #fff6e7;
