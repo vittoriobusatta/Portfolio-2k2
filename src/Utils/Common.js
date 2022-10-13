@@ -187,7 +187,7 @@ export const Layout = styled.div`
     padding: 25px 50px;
   }
   @media screen and (min-width: 1224px) {
-    padding: 25px 80px;
+    padding: 25px 50px 25px 80px;
   }
 `;
 export const Asterix = styled.svg`
