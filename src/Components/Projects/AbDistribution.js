@@ -2,13 +2,6 @@ import React from 'react';
 import { Container, Content, Details, Info, Title, Presentation } from '../../Utils/Common'
 import setTitle from "../../Utils/setTitle";
 
-// export const Overview = styled(Presentation)`
-//   & img {
-//     width: 80%;
-//     height: 100%;
-//   }
-// `;
-
 function ABDistribution({ data }) {
   setTitle("Vittorio Busatta — AB Distribution ");
   const projectData = data.filter(project => project.id === 2)
@@ -49,8 +42,6 @@ function ABDistribution({ data }) {
           <img src={projectData[0].images.page.first.image} alt={projectData[0].images.page.first.alt} />
           <img src={projectData[0].images.page.second.image} alt={projectData[0].images.page.second.alt} />
           <img src={projectData[0].images.view.desktop.image} alt={projectData[0].images.view.desktop.alt} />
-          {/* <img src={projectData[0].images.view.tablet.image} alt={projectData[0].images.view.tablet.alt} /> */}
-          {/* <img src={projectData[0].images.view.mobile.image} alt={projectData[0].images.view.mobile.alt} /> */}
           <img src={projectData[0].images.post.first.image} alt={projectData[0].images.post.first.alt} />
           <img src={projectData[0].images.post.second.image} alt={projectData[0].images.post.second.alt} />
           <img src={projectData[0].images.post.third.image} alt={projectData[0].images.post.third.alt} />

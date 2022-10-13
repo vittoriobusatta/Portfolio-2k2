@@ -14,7 +14,6 @@ export const Overview = styled(Presentation)`
   & div {
     display: inline-flex;
     justify-content: space-between;
-    /* padding: 0 15px; */
     width: 100%;
     & img {
       width: 48%;

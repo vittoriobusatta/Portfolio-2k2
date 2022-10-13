@@ -37,9 +37,9 @@ const Content = styled.div`
   }
 `;
 const Asterix = styled.svg`
-  @media screen and (max-width: 992px) {
+  /* @media screen and (max-width: 992px) {
     display: none;
-  }
+  } */
 `;
 
 function Navbar({ darkMode }) {
@@ -54,6 +54,9 @@ function Navbar({ darkMode }) {
   return (
     <Container id="navbar" colorTheme={darkMode}>
       <Content>
+        <Link to="/">
+          <LogoLight />
+        </Link>
         <Asterix
           ref={asterix}
           width="32"
@@ -67,10 +70,6 @@ function Navbar({ darkMode }) {
             fill="#000"
           />
         </Asterix>
-        <Link to="/">
-          <LogoLight />
-        </Link>
-        <div></div>
       </Content>
     </Container>
   );

@@ -2,13 +2,6 @@ import React from 'react'
 import { Container, Content, Details, Info, Title, Presentation } from '../../Utils/Common'
 import setTitle from "../../Utils/setTitle";
 
-// export const Overview = styled(Presentation)`
-//   & img {
-//     width: 80%;
-//     height: 100%;
-//   }
-// `;
-
 function Unkle({data}) {
   setTitle("Vittorio Busatta — Unkle");
   const projectData = data.filter(project => project.id === 4)

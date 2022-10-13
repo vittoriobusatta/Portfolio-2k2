@@ -54,9 +54,9 @@ export const Presentation = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 80px;
-  row-gap: 60px;
+  row-gap: 40px;
   padding: 0px 30px;
+  padding-bottom: 40px;
   & img {
     width: 100%;
     height: 100%;

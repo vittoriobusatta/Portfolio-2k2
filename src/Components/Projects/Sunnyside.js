@@ -4,13 +4,9 @@ import { Container, Content, Details, Info, Presentation, Title } from '../../Ut
 import setTitle from "../../Utils/setTitle";
 
 export const Overview = styled(Presentation)`
-  & img {
-    width: 90%;
-    height: 100%;
-    &:nth-child(3) {
+  & img:nth-child(3) {
       width: auto;
     }
-  }
 `;
 
 function Sunnyside({data}) {
@@ -51,8 +47,8 @@ function Sunnyside({data}) {
         </Info>
         <Overview background={projectData[0].background}>
           <img src={projectData[0].images.view.landing} alt={projectData[0].name} />
-          <img src={projectData[0].images.view.desktop} alt={projectData[0].name} />
-          <img src={projectData[0].images.view.mobile} alt={projectData[0].name} />
+          {/* <img src={projectData[0].images.view.desktop} alt={projectData[0].name} /> */}
+          {/* <img src={projectData[0].images.view.mobile} alt={projectData[0].name} /> */}
         </Overview>
       </Content>
     </Container>
