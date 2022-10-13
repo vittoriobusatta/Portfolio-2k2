@@ -106,7 +106,7 @@ export const Details = styled.ul`
   grid-column-gap: 50px;
   grid-row-gap: 20px;
   margin-top: 40px;
-  max-width: 500px;
+  /* max-width: 500px; */
   @media screen and (min-width: 992px) {
     grid-column-gap: 100px;
     grid-row-gap: 30px;
