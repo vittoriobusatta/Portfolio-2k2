@@ -8,13 +8,11 @@ import faviconDark from "./Assets/Icons/faviconDark.png";
 import faviconLight from "./Assets/Icons/faviconLight.png";
 import Landing from "./Components/Landing";
 import Loader from "./Components/Loader";
-import Navbar from "./Components/Navbar";
 import ABDistribution from "./Components/Projects/AbDistribution";
 import Galleria from "./Components/Projects/Galleria";
 import Unkle from "./Components/Projects/Unkle";
 import Sunnyside from "./Components/Projects/Sunnyside";
 import Muteza from "./Components/Projects/Muteza";
-import Footer from "./Components/Footer";
 import Projects from "./Components/Projects";
 import Nocta from "./Components/Projects/Nocta";
 
@@ -50,11 +48,11 @@ const GlobalStyle = createGlobalStyle`
     min-height: -webkit-fill-available;
   }
   ::-moz-selection {
-    background: #FFA400;
+    background: #fff6e7;
     text-shadow: none;
   }
   ::selection {
-    background: #FFA400;
+    background: #fff6e7;
     text-shadow: none;
   }
   ::-webkit-scrollbar{
@@ -134,7 +132,6 @@ function App() {
     <>
       <GlobalStyle darkMode={darkMode} />
       {loading ? <Loader darkMode={darkMode} /> : null}
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Routes>
         <Route path="/" element={<Landing data={data} />} />
         <Route path={`${data[0]?.path}`} element={<Nocta data={data} />} />
@@ -148,7 +145,6 @@ function App() {
         <Route path={`${data[5]?.path}`} element={<Muteza data={data} />} />
         <Route path="projets" element={<Projects data={data} />} />
       </Routes>
-      <Footer data={data} />
     </>
   );
 }

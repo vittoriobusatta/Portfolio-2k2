@@ -15,6 +15,7 @@ export const Container = styled.main`
   background-color: ${(props) => props.background};
 `;
 export const Content = styled.section`
+  position: relative;
   height: 100%;
   width: 100%;
   display: flex;
@@ -57,6 +58,7 @@ export const Presentation = styled.div`
   row-gap: 40px;
   padding: 0px 30px;
   padding-bottom: 40px;
+  margin-bottom: 104px;
   & img {
     width: 100%;
     height: 100%;
@@ -158,4 +160,38 @@ export const Details = styled.ul`
       color: ${(props) => props.color};
     }
   }
+`;
+
+export const Header = styled.header`
+  position: fixed;
+  top: 0;
+  height: 82px;
+  width: 100%;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.3s;
+`;
+export const Layout = styled.div`
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 25px 30px;
+  @media screen and (min-width: 576px) {
+    padding: 25px 40px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 25px 50px;
+  }
+  @media screen and (min-width: 1224px) {
+    padding: 25px 80px;
+  }
+`;
+export const Asterix = styled.svg`
+  /* @media screen and (max-width: 992px) {
+    display: none;
+  } */
 `;
