@@ -7,7 +7,7 @@
     "date": "Octobre 2022",
     "role": "Design",
     "technologies": "Figma",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed nisl vitae odio commodo rhoncus. Pellentesque non nisl lacinia, accumsan diam non, mattis eros. In vitae tempor felis. Fusce ultrices nec nulla vel ultricies. Sed arcu libero, ullamcorper eu sapien quis, tempus lacinia velit. ",
+    "description": "Ce projet expérimentale est une re-conception de la marque Nocta qui avait pour but d'imaginer une nouvelle identité visuelle. Tous les droits sont réservés à Nike Inc. & Nocta.",
     "link": "",
     "primaryColor": "#093738",
     "textColor": "#006F72",
@@ -16,11 +16,11 @@
     "images": {
       "card": {
         "first": {
-          "image": "../Images/Nocta/noct1.webp",
+          "image": "../Images/Nocta/noct1.png",
           "alt": "Première Carte Nocta"
         },
         "second": {
-          "image": "../Images/Nocta/noct2.webp",
+          "image": "../Images/Nocta/noct2.png",
           "alt": "Deuxième Carte Nocta"
         }
       },
@@ -48,7 +48,7 @@
           "alt": ""
         },
         "fourth": {
-          "image": "../Images/Nocta/secondproduct.webp",
+          "image": "../Images/Nocta/productgrid.jpg",
           "alt": ""
         }
       },
