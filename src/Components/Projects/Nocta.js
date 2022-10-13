@@ -11,15 +11,11 @@ import {
 import setTitle from "../../Utils/setTitle";
 
 export const Overview = styled(Presentation)`
-  & img {
-    width: 90%;
-    height: 100%;
-  }
   & div {
     display: inline-flex;
     justify-content: space-between;
     /* padding: 0 15px; */
-    width: 90%;
+    width: 100%;
     & img {
       width: 48%;
       &:nth-child(1) {

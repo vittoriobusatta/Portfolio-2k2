@@ -27,14 +27,23 @@ export const Info = styled.div`
   height: fill-available;
   width: 100%;
   background-color: ${(props) => props.background};
-  padding: 100px 20px 50px;
+  padding: 100px 30px 40px;
+  @media screen and (min-width: 576px) {
+    padding: 100px 40px 40px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 100px 50px 40px;
+  }
   @media screen and (min-width: 992px) {
     width: 45%;
     position: fixed;
-    left: 0;
-    bottom: 0;
-    min-height: 100vh;
-    padding: 15rem 8rem;
+    left: 0%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    height: auto;
+  }
+  @media screen and (min-width: 1224px) {
+    padding: 140px 80px 40px;
   }
 `;
 export const Presentation = styled.div`
@@ -47,9 +56,16 @@ export const Presentation = styled.div`
   flex-direction: column;
   padding-bottom: 80px;
   row-gap: 60px;
+  padding: 0px 30px;
   & img {
-    width: 90%;
+    width: 100%;
     height: 100%;
+  }
+  @media screen and (min-width: 576px) {
+    padding: 0px 40px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 0px 50px;
   }
   @media screen and (min-width: 992px) {
     margin-top: 15rem;
@@ -125,7 +141,8 @@ export const Details = styled.ul`
     margin-bottom: 14px;
     color: ${(props) => props.color};
   }
-  &, p,
+  &,
+  p,
   a {
     font-size: max(1.6rem, 12px);
     font-family: ${ManropeMedium};
