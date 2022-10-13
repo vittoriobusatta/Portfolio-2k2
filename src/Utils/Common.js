@@ -135,7 +135,7 @@ export const Details = styled.ul`
     }
   }
   & h2 {
-    font-size: max(1.8rem, 14px);
+    font-size: max(1.8rem, 15px);
     font-family: ${ManropeBold};
     text-transform: uppercase;
     margin-bottom: 14px;
@@ -144,7 +144,7 @@ export const Details = styled.ul`
   &,
   p,
   a {
-    font-size: max(1.6rem, 12px);
+    font-size: max(1.6rem, 13px);
     font-family: ${ManropeMedium};
     line-height: 24px;
     letter-spacing: 0.5px;
