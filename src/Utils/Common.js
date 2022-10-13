@@ -68,10 +68,14 @@ export const Presentation = styled.div`
   }
   @media screen and (min-width: 768px) {
     padding: 0px 50px;
+    row-gap: 60px;
   }
   @media screen and (min-width: 992px) {
     margin-top: 15rem;
     width: 55%;
+  }
+  @media screen and (min-width: 1224px) {
+    row-gap: 90px;
   }
 `;
 export const Title = styled.h1`
@@ -112,6 +116,7 @@ export const Details = styled.ul`
     grid-row-gap: 30px;
     margin-top: 60px;
   }
+
   & li {
     display: flex;
     flex-direction: column;

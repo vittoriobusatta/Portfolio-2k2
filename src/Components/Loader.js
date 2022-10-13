@@ -24,7 +24,7 @@ const Overlay = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: #ffa400;
+  background-color: #FFF6E7;
   z-index: 200;
   opacity: 0;
 `;
