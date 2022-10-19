@@ -48,7 +48,7 @@ const bounce = keyframes`
 const Circle = styled.div`
   height: 20px;
   width: 20px;
-  background-color: #ffa400;
+  background-color: #222;
   border-radius: 50%;
   animation: ${bounce} 1.5s ease infinite;
   animation-delay: 1.1s;
