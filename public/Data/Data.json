@@ -166,11 +166,11 @@
     "images": {
       "card": {
         "first": {
-          "image": "../Images/Galleria/gal1.png",
+          "image": "../Images/Galleria/gal1.webp",
           "alt": "Première Carte Galleria"
         },
         "second": {
-          "image": "../Images/Galleria/gal2.png",
+          "image": "../Images/Galleria/gal2.webp",
           "alt": "Deuxième Carte Galleria"
         }
       },
