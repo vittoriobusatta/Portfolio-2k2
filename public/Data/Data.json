@@ -159,18 +159,18 @@
     "technologies": "React",
     "description": "Ce projet expérimental m'a aidé à me fortifier dans la prise en main de React. J'ai réalisé un slideshow (diaporama interactif) d'une galerie qui expose les caractéristiques d'œuvres d'art célèbre comme leurs histoires, descriptif ainsi que leurs peintres.",
     "link": "http://galleria-ten.vercel.app/",
-    "primaryColor": "#860EE3",
-    "textColor": "#860EE3",
-    "background": "#E9E5ED",
+    "primaryColor": "#04052E",
+    "textColor": "#1F2D78",
+    "background": "#E1E0EF",
     "intro": "Une gallerie d'art intéractive",
     "images": {
       "card": {
         "first": {
-          "image": "../Images/Galleria/gal1.webp",
+          "image": "../Images/Galleria/gal1.png",
           "alt": "Première Carte Galleria"
         },
         "second": {
-          "image": "../Images/Galleria/gal2.webp",
+          "image": "../Images/Galleria/gal2.png",
           "alt": "Deuxième Carte Galleria"
         }
       },
