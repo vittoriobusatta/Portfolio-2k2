@@ -5,9 +5,9 @@
     "path": "nocta",
     "type": "Expérimental",
     "date": "Octobre 2022",
-    "role": "Design",
+    "role": "Branding & Design",
     "technologies": "Figma",
-    "description": "Ce projet expérimentale est un redesign de la marque Nocta qui a pour but d'imaginer une nouvelle identité visuelle. Tous les droits sont réservés à Nike Inc. & Nocta.",
+    "description": "Ce projet expérimentale est une re-conception de l'identité visuelle et du design de la marque Nocta. Tous les droits sont réservés à Nike, Nocta & JnProduction.",
     "link": "",
     "primaryColor": "#093738",
     "textColor": "#006F72",
@@ -30,17 +30,17 @@
           "alt": ""
         },
         "second": {
-          "image": "../Images/Nocta/post.webp",
+          "image": "../Images/Nocta/post.jpg",
           "alt": ""
         }
       },
       "page": {
         "first": {
-          "image": "../Images/Nocta/landing.webp",
+          "image": "../Images/Nocta/landing.jpg",
           "alt": ""
         },
         "second": {
-          "image": "../Images/Nocta/menu.webp",
+          "image": "../Images/Nocta/menu.jpg",
           "alt": ""
         },
         "third": {
@@ -54,11 +54,11 @@
       },
       "view": {
         "mobile": {
-          "image": "../Images/Nocta/mobile.webp",
+          "image": "../Images/Nocta/mobile.jpg",
           "alt": ""
         },
         "tablet": {
-          "image": "../Images/Nocta/tablet.webp",
+          "image": "../Images/Nocta/tablet.jpg",
           "alt": ""
         },
         "first": {

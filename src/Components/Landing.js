@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import setTitle from "../Utils/setTitle";
-import { ManropeMedium, Morgenwalsh } from "../Utils/Common";
+import { ManropeMedium, ManropeRegular, Morgenwalsh } from "../Utils/Common";
 import { Link, Outlet } from "react-router-dom";
 import { Header, Layout, Asterix } from "../Utils/Common";
 import { useRef } from "react";
@@ -108,8 +108,8 @@ const Details = styled.div`
     text-transform: uppercase;
   }
   & span {
-    font-family: ${Morgenwalsh};
-    font-size: max(2.4rem, 16px);
+    font-family: ${ManropeRegular};
+    font-size: max(2rem, 12px);
     margin-bottom: 1.5rem;
   }
   & p {
