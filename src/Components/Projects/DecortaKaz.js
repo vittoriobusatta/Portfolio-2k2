@@ -31,7 +31,7 @@ export const Overview = styled(Presentation)`
 `;
 
 function DecortaKaz({ data }) {
-  setTitle("Vittorio Busatta — Nocta");
+  setTitle("Vittorio Busatta — Decor ta Kaz");
   const projectData = data.filter((project) => project.id === 1);
   const asterix = useRef(null);
   window.onscroll = () => {
@@ -127,12 +127,16 @@ function DecortaKaz({ data }) {
           </Details>
         </Info>
         <Overview background={projectData[0].background}>
-          <img
+          {/* <img
             src={projectData[0].images.view.first.image}
+            alt={projectData[0].images.view.first.alt}
+          /> */}
+          <img
+            src={projectData[0].images.assets.first.image}
             alt={projectData[0].images.view.first.alt}
           />
           <img
-            src={projectData[0].images.assets.first.image}
+            src={projectData[0].images.assets.second.image}
             alt={projectData[0].images.view.first.alt}
           />
           <img
@@ -143,10 +147,10 @@ function DecortaKaz({ data }) {
             src={projectData[0].images.page.second.image}
             alt={projectData[0].images.view.first.alt}
           />
-          <img
+          {/* <img
             src={projectData[0].images.view.second.image}
             alt={projectData[0].images.view.second.alt}
-          />
+          /> */}
           <img
             src={projectData[0].images.page.third.image}
             alt={projectData[0].images.view.first.alt}
@@ -155,14 +159,11 @@ function DecortaKaz({ data }) {
             src={projectData[0].images.page.fourth.image}
             alt={projectData[0].images.view.first.alt}
           />
-          <img
+          {/* <img
             src={projectData[0].images.view.fourth.image}
             alt={projectData[0].images.view.first.alt}
-          />
-          <img
-            src={projectData[0].images.assets.second.image}
-            alt={projectData[0].images.view.first.alt}
-          />
+          /> */}
+
           <div>
             <img
               src={projectData[0].images.view.mobile.image}

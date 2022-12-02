@@ -5,13 +5,13 @@
     "path": "decortakaz",
     "type": "Mission",
     "date": "Décembre 2022",
-    "role": "Design & Développement",
-    "technologies": "Figma, React",
+    "role": "Design",
+    "technologies": "Figma",
     "description": "",
     "link": "",
     "primaryColor": "#C9986D",
     "textColor": "#785436",
-    "background": "#E5EDEB",
+    "background": "#D2C8C3",
     "images": {
       "card": {
         "first": {
@@ -25,55 +25,55 @@
       },
       "assets": {
         "first": {
-          "image": "",
+          "image": "../Images/DecorTaKaz/logo.jpg",
           "alt": ""
         },
         "second": {
-          "image": "",
+          "image": "../Images/DecorTaKaz/Menu.jpg",
           "alt": ""
         }
       },
       "page": {
         "first": {
-          "image": "",
+          "image": "../Images/DecorTaKaz/Catalogue1.jpg",
           "alt": ""
         },
         "second": {
-          "image": "",
+          "image": "../Images/DecorTaKaz/Catalogue2.jpg",
           "alt": ""
         },
         "third": {
-          "image": "",
+          "image": "../Images/DecorTaKaz/Intérieur.jpg",
           "alt": ""
         },
         "fourth": {
-          "image": "",
+          "image": "../Images/DecorTaKaz/Mobilier.jpg",
           "alt": ""
         }
       },
       "view": {
         "mobile": {
-          "image": "",
+          "image": "../Images/DecorTaKaz/Catalogue_mobile.jpg",
           "alt": ""
         },
         "tablet": {
-          "image": "",
+          "image": "../Images/DecorTaKaz/Intérieur_mobile.jpg",
           "alt": ""
         },
         "first": {
-          "image": "",
+          "image": "../Images/DecorTaKaz",
           "alt": ""
         },
         "second": {
-          "image": "",
+          "image": "../Images/DecorTaKaz",
           "alt": ""
         },
         "third": {
-          "image": "",
+          "image": "../Images/DecorTaKaz",
           "alt": ""
         },
         "fourth": {
-          "image": "",
+          "image": "../Images/DecorTaKaz",
           "alt": ""
         }
       }
