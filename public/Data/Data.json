@@ -1,7 +1,87 @@
 [
   {
-    "name": "Nocta",
+    "name": "Decor Ta Kaz",
     "id": 1,
+    "path": "decortakaz",
+    "type": "Mission",
+    "date": "Décembre 2022",
+    "role": "Design & Développement",
+    "technologies": "Figma, React",
+    "description": "",
+    "link": "",
+    "primaryColor": "#C9986D",
+    "textColor": "#785436",
+    "background": "#E5EDEB",
+    "images": {
+      "card": {
+        "first": {
+          "image": "../Images/DecorTaKaz/dtk1.png",
+          "alt": "Première Carte Decor Ta Kaz"
+        },
+        "second": {
+          "image": "../Images/DecorTaKaz/dtk2.png",
+          "alt": "Deuxième Carte Decor Ta Kaz"
+        }
+      },
+      "assets": {
+        "first": {
+          "image": "",
+          "alt": ""
+        },
+        "second": {
+          "image": "",
+          "alt": ""
+        }
+      },
+      "page": {
+        "first": {
+          "image": "",
+          "alt": ""
+        },
+        "second": {
+          "image": "",
+          "alt": ""
+        },
+        "third": {
+          "image": "",
+          "alt": ""
+        },
+        "fourth": {
+          "image": "",
+          "alt": ""
+        }
+      },
+      "view": {
+        "mobile": {
+          "image": "",
+          "alt": ""
+        },
+        "tablet": {
+          "image": "",
+          "alt": ""
+        },
+        "first": {
+          "image": "",
+          "alt": ""
+        },
+        "second": {
+          "image": "",
+          "alt": ""
+        },
+        "third": {
+          "image": "",
+          "alt": ""
+        },
+        "fourth": {
+          "image": "",
+          "alt": ""
+        }
+      }
+    }
+  },
+  {
+    "name": "Nocta",
+    "id": 2,
     "path": "nocta",
     "type": "Expérimental",
     "date": "Octobre 2022",
@@ -12,7 +92,6 @@
     "primaryColor": "#093738",
     "textColor": "#006F72",
     "background": "#E5EDEB",
-    "intro": "Une collection pour le collectif",
     "images": {
       "card": {
         "first": {
@@ -81,8 +160,60 @@
     }
   },
   {
+    "name": "Muteza",
+    "id": 3,
+    "path": "muteza",
+    "type": "Expérimental",
+    "date": "Novembre 2022",
+    "role": "Développement",
+    "technologies": "React, SCSS",
+    "description": "Dans ce projet expérimentale, j'ai reproduit à l'identique le site Muteza. J'ai élaboré une version responsive du site ainsi que certaines optimisations en vue d'ameliorer les performances. Ce projet m'a permis de manipuler les librairies GSAP et Locomotive Scroll.",
+    "link": "https://muteza.vercel.app/",
+    "primaryColor": "#FFD6C1",
+    "textColor": "#FFA372",
+    "background": "#EDE5E9",
+    "images": {
+      "card": {
+        "first": {
+          "image": "../Images/Muteza/mut1.webp",
+          "alt": "Première Carte Galleria"
+        },
+        "second": {
+          "image": "../Images/Muteza/mut2.webp",
+          "alt": "Deuxième Carte Galleria"
+        }
+      },
+      "view": {
+        "first": {
+          "image": "../Images/Muteza/first.webp",
+          "alt": ""
+        },
+        "second": {
+          "image": "../Images/Muteza/second.webp",
+          "alt": ""
+        },
+        "third": {
+          "image": "../Images/Muteza/third.webp",
+          "alt": ""
+        },
+        "fourth": {
+          "image": "../Images/Muteza/fourth.webp",
+          "alt": ""
+        },
+        "fifth": {
+          "image": "../Images/Muteza/fifth.webp",
+          "alt": ""
+        },
+        "sixth": {
+          "image": "../Images/Muteza/sixth.webp",
+          "alt": ""
+        }
+      }
+    }
+  },
+  {
     "name": "AB Distribution",
-    "id": 2,
+    "id": 4,
     "path": "ab-distribution",
     "type": "Mission",
     "date": "Mai 2022",
@@ -93,7 +224,6 @@
     "primaryColor": "#FFA928",
     "textColor": "#FFA928",
     "background": "#EDE9E5",
-    "intro": "Site vitrine pour un grossite",
     "images": {
       "card": {
         "first": {
@@ -151,7 +281,7 @@
   },
   {
     "name": "Galleria",
-    "id": 3,
+    "id": 5,
     "path": "galleria",
     "type": "Expérimental",
     "date": "Août 2022",
@@ -162,7 +292,6 @@
     "primaryColor": "#04052E",
     "textColor": "#1F2D78",
     "background": "#E1E0EF",
-    "intro": "Une gallerie d'art intéractive",
     "images": {
       "card": {
         "first": {
@@ -192,7 +321,7 @@
   },
   {
     "name": "Unkle",
-    "id": 4,
+    "id": 6,
     "path": "unkle",
     "type": "Mission",
     "date": "Juin 2022",
@@ -203,7 +332,6 @@
     "primaryColor": "#2EB4FF",
     "textColor": "#2EB4FF",
     "background": "#E5EBED",
-    "intro": "Password generator using regex",
     "images": {
       "card": {
         "first": {
@@ -233,7 +361,7 @@
   },
   {
     "name": "Sunnyside",
-    "id": 5,
+    "id": 7,
     "path": "sunnyside",
     "type": "Expérimental",
     "date": "Juillet 2022",
@@ -244,7 +372,6 @@
     "primaryColor": "#FAFF00",
     "textColor": "#FFE600",
     "background": "#EDEDE5",
-    "intro": "Landing page pour une agence fictive",
     "images": {
       "card": {
         "first": {
@@ -260,59 +387,6 @@
         "landing": "../Images/Sunnyside/landingSun.webp",
         "desktop": "../Images/Sunnyside/desktopSun.webp",
         "mobile": "../Images/Sunnyside/mobileSun.webp"
-      }
-    }
-  },
-  {
-    "name": "Muteza",
-    "id": 6,
-    "path": "muteza",
-    "type": "Expérimental",
-    "date": "Novembre 2022",
-    "role": "Développement",
-    "technologies": "React, SCSS",
-    "description": "Dans ce projet expérimentale, j'ai reproduit à l'identique le site Muteza. J'ai élaboré une version responsive du site ainsi que certaines optimisations en vue d'ameliorer les performances. Ce projet m'a permis de manipuler les librairies GSAP et Locomotive Scroll.",
-    "link": "https://muteza.vercel.app/",
-    "primaryColor": "#FFD6C1",
-    "textColor": "#FFA372",
-    "background": "#EDE5E9",
-    "intro": "Présentation de produits de soins fictifs",
-    "images": {
-      "card": {
-        "first": {
-          "image": "../Images/Muteza/mut1.webp",
-          "alt": "Première Carte Galleria"
-        },
-        "second": {
-          "image": "../Images/Muteza/mut2.webp",
-          "alt": "Deuxième Carte Galleria"
-        }
-      },
-      "view": {
-        "first": {
-          "image": "../Images/Muteza/first.webp",
-          "alt": ""
-        },
-        "second": {
-          "image": "../Images/Muteza/second.webp",
-          "alt": ""
-        },
-        "third": {
-          "image": "../Images/Muteza/third.webp",
-          "alt": ""
-        },
-        "fourth": {
-          "image": "../Images/Muteza/fourth.webp",
-          "alt": ""
-        },
-        "fifth": {
-          "image": "../Images/Muteza/fifth.webp",
-          "alt": ""
-        },
-        "sixth": {
-          "image": "../Images/Muteza/sixth.webp",
-          "alt": ""
-        }
       }
     }
   }

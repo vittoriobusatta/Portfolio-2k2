@@ -32,7 +32,7 @@ export const Overview = styled(Presentation)`
 
 function Nocta({ data }) {
   setTitle("Vittorio Busatta — Nocta");
-  const projectData = data.filter((project) => project.id === 1);
+  const projectData = data.filter((project) => project.id === 2);
   const asterix = useRef(null);
   window.onscroll = () => {
     scrollRotate();

@@ -24,7 +24,7 @@ export const Overview = styled(Presentation)`
 
 function Sunnyside({ data }) {
   setTitle("Vittorio Busatta — Sunnyside");
-  const projectData = data.filter((project) => project.id === 5);
+  const projectData = data.filter((project) => project.id === 7);
   const asterix = useRef(null);
   window.onscroll = () => {
     scrollRotate();

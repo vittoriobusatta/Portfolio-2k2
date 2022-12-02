@@ -234,7 +234,7 @@ function Landing({ darkMode, data }) {
                     />
                   </Cards>
                   <Details>
-                    <span>{project.id}/6</span>
+                    <span>{project.id}/7</span>
                     <h1>{project.name}</h1>
                     {/* <p>{project.intro}</p> */}
                   </Details>
