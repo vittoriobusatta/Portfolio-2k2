@@ -15,6 +15,8 @@ import Sunnyside from "./Components/Projects/Sunnyside";
 import Muteza from "./Components/Projects/Muteza";
 import Projects from "./Components/Projects";
 import Nocta from "./Components/Projects/Nocta";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import { useRef } from "react";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -69,8 +71,9 @@ const GlobalStyle = createGlobalStyle`
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [loading, setLoading] = useState(true);
-  // const [scrollTop, setScrollTop] = useState(0);
+  const containerRef = useRef(null);
   const [data, setData] = useState([]);
+  // const [scrollTop, setScrollTop] = useState(0);
 
   function fetchPaintingsData() {
     axios
@@ -112,6 +115,17 @@ function App() {
     window.localStorage.setItem("theme", JSON.stringify(darkMode));
   }, [darkMode]);
 
+  const options = {
+    smooth: true,
+    touchMultiplier: 4,
+    smartphone: {
+      smooth: true,
+    },
+    tablet: {
+      smooth: true,
+    },
+  };
+
   // useEffect(() => {
   //   function onScroll() {
   //     let navBar = document.getElementById("navbar");
@@ -132,19 +146,29 @@ function App() {
     <>
       <GlobalStyle darkMode={darkMode} />
       {/* {loading ? <Loader darkMode={darkMode} /> : null} */}
-      <Routes>
-        <Route path="/" element={<Landing data={data} />} />
-        <Route path={`${data[0]?.path}`} element={<Nocta data={data} />} />
-        <Route
-          path={`${data[1]?.path}`}
-          element={<ABDistribution data={data} />}
-        />
-        <Route path={`${data[2]?.path}`} element={<Galleria data={data} />} />
-        <Route path={`${data[3]?.path}`} element={<Unkle data={data} />} />
-        <Route path={`${data[4]?.path}`} element={<Sunnyside data={data} />} />
-        <Route path={`${data[5]?.path}`} element={<Muteza data={data} />} />
-        <Route path="projets" element={<Projects data={data} />} />
-      </Routes>
+      <LocomotiveScrollProvider options={options} containerRef={containerRef}>
+        <main data-scroll-container ref={containerRef}>
+          <Routes>
+            <Route path="/" element={<Landing data={data} />} />
+            <Route path={`${data[0]?.path}`} element={<Nocta data={data} />} />
+            <Route
+              path={`${data[1]?.path}`}
+              element={<ABDistribution data={data} />}
+            />
+            <Route
+              path={`${data[2]?.path}`}
+              element={<Galleria data={data} />}
+            />
+            <Route path={`${data[3]?.path}`} element={<Unkle data={data} />} />
+            <Route
+              path={`${data[4]?.path}`}
+              element={<Sunnyside data={data} />}
+            />
+            <Route path={`${data[5]?.path}`} element={<Muteza data={data} />} />
+            <Route path="projets" element={<Projects data={data} />} />
+          </Routes>
+        </main>
+      </LocomotiveScrollProvider>
     </>
   );
 }

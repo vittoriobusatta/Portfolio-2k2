@@ -34,7 +34,7 @@ function Sunnyside({ data }) {
       "rotate(" + window.pageYOffset / 2 + "deg)";
   }
   return (
-    <Container background={projectData[0].background}>
+    <Container background={projectData[0].background} data-scroll-section>
       <Header id="navbar">
         <Layout>
           <Link to="/">

@@ -42,8 +42,8 @@ function Nocta({ data }) {
       "rotate(" + window.pageYOffset / 2 + "deg)";
   }
   return (
-    <Container background={projectData[0].background}>
-      <Header id="navbar">
+    <Container background={projectData[0].background} data-scroll-section>
+      <Header id="navbar" data-scroll data-scroll-sticky data-scroll-target>
         <Layout>
           <Link to="/">
             <svg

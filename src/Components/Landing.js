@@ -165,8 +165,8 @@ function Landing({ darkMode, data }) {
       "rotate(" + window.pageYOffset / 2 + "deg)";
   }
   return (
-    <Container>
-      <Header id="navbar" colorTheme={darkMode}>
+    <Container data-scroll-section>
+      <Header id="navbar" colorTheme={darkMode} data-scroll data-scroll-sticky data-scroll-target>
         <Layout>
           <Link to="/">
             <svg
@@ -225,10 +225,12 @@ function Landing({ darkMode, data }) {
                 <Path>
                   <Cards>
                     <img
+                      data-scroll
                       src={project.images.card.first.image}
                       alt={project.images.card.first.alt}
                     />
                     <img
+                      data-scroll
                       src={project.images.card.second.image}
                       alt={project.images.card.second.alt}
                     />
