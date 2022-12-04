@@ -39,6 +39,14 @@
         "fourth": {
           "image": "../Images/DecorTaKaz/Menu.webp",
           "alt": ""
+        },
+        "fifth": {
+          "image": "../Images/DecorTaKaz/Card.jpg",
+          "alt": ""
+        },
+        "sixth": {
+          "image": "../Images/DecorTaKaz/Logo Conception.jpg",
+          "alt": ""
         }
       },
       "section": {
