@@ -15,11 +15,11 @@
     "images": {
       "card": {
         "first": {
-          "image": "../Images/DecorTaKaz/dtk1.png",
+          "image": "../Images/DecorTaKaz/dtk1.webp",
           "alt": "Première Carte Decor Ta Kaz"
         },
         "second": {
-          "image": "../Images/DecorTaKaz/dtk2.png",
+          "image": "../Images/DecorTaKaz/dtk2.webp",
           "alt": "Deuxième Carte Decor Ta Kaz"
         }
       },
