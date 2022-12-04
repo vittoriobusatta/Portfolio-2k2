@@ -127,10 +127,6 @@ function DecortaKaz({ data }) {
           </Details>
         </Info>
         <Overview background={projectData[0].background}>
-          {/* <img
-            src={projectData[0].images.view.first.image}
-            alt={projectData[0].images.view.first.alt}
-          /> */}
           <img
             src={projectData[0].images.assets.first.image}
             alt={projectData[0].images.view.first.alt}
@@ -140,6 +136,40 @@ function DecortaKaz({ data }) {
             alt={projectData[0].images.view.first.alt}
           />
           <img
+            src={projectData[0].images.assets.third.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+          <img
+            src={projectData[0].images.assets.fourth.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+
+          <img
+            src={projectData[0].images.section.first.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+          <img
+            src={projectData[0].images.section.second.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+          <img
+            src={projectData[0].images.section.third.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+          <img
+            src={projectData[0].images.section.fourth.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+          <img
+            src={projectData[0].images.section.fifth.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+          <img
+            src={projectData[0].images.section.sixth.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+
+          <img
             src={projectData[0].images.page.first.image}
             alt={projectData[0].images.view.first.alt}
           />
@@ -147,10 +177,6 @@ function DecortaKaz({ data }) {
             src={projectData[0].images.page.second.image}
             alt={projectData[0].images.view.first.alt}
           />
-          {/* <img
-            src={projectData[0].images.view.second.image}
-            alt={projectData[0].images.view.second.alt}
-          /> */}
           <img
             src={projectData[0].images.page.third.image}
             alt={projectData[0].images.view.first.alt}
@@ -159,10 +185,6 @@ function DecortaKaz({ data }) {
             src={projectData[0].images.page.fourth.image}
             alt={projectData[0].images.view.first.alt}
           />
-          {/* <img
-            src={projectData[0].images.view.fourth.image}
-            alt={projectData[0].images.view.first.alt}
-          /> */}
 
           <div>
             <img
