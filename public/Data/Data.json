@@ -25,77 +25,77 @@
       },
       "assets": {
         "first": {
-          "image": "../Images/DecorTaKaz/logo.jpg",
+          "image": "../Images/DecorTaKaz/logo.webp",
           "alt": ""
         },
         "second": {
-          "image": "../Images/DecorTaKaz/Typographie.jpg",
+          "image": "../Images/DecorTaKaz/Typographie.webp",
           "alt": ""
         },
         "third": {
-          "image": "../Images/DecorTaKaz/SiteMap.jpg",
+          "image": "../Images/DecorTaKaz/SiteMap.webp",
           "alt": ""
         },
         "fourth": {
-          "image": "../Images/DecorTaKaz/Menu.jpg",
+          "image": "../Images/DecorTaKaz/Menu.webp",
           "alt": ""
         }
       },
       "section": {
         "first": {
-          "image": "../Images/DecorTaKaz/Catalogue1.jpg",
+          "image": "../Images/DecorTaKaz/Catalogue1.webp",
           "alt": ""
         },
         "second": {
-          "image": "../Images/DecorTaKaz/Catalogue2.jpg",
+          "image": "../Images/DecorTaKaz/Catalogue2.webp",
           "alt": ""
         },
         "third": {
-          "image": "../Images/DecorTaKaz/Intérieur.jpg",
+          "image": "../Images/DecorTaKaz/Intérieur.webp",
           "alt": ""
         },
         "fourth": {
-          "image": "../Images/DecorTaKaz/Mobilier.jpg",
+          "image": "../Images/DecorTaKaz/Mobilier.webp",
           "alt": ""
         },
         "fifth": {
-          "image": "../Images/DecorTaKaz/About.jpg",
+          "image": "../Images/DecorTaKaz/About.webp",
           "alt": ""
         },
         "sixth": {
-          "image": "../Images/DecorTaKaz/Contact.jpg",
+          "image": "../Images/DecorTaKaz/Contact.webp",
           "alt": ""
         }
       },
       "page": {
         "first": {
-          "image": "../Images/DecorTaKaz/Réalisations.jpg",
+          "image": "../Images/DecorTaKaz/Réalisations.webp",
           "alt": ""
         },
         "second": {
-          "image": "../Images/DecorTaKaz/AboutUs.jpg",
+          "image": "../Images/DecorTaKaz/AboutUs.webp",
           "alt": ""
         },
         "third": {
-          "image": "../Images/DecorTaKaz/Review.jpg",
+          "image": "../Images/DecorTaKaz/Review.webp",
           "alt": ""
         },
         "fourth": {
-          "image": "../Images/DecorTaKaz/FAQ.jpg",
+          "image": "../Images/DecorTaKaz/FAQ.webp",
           "alt": ""
         },
         "fifth": {
-          "image": "../Images/DecorTaKaz/ContactUs.jpg",
+          "image": "../Images/DecorTaKaz/ContactUs.webp",
           "alt": ""
         }
       },
       "view": {
         "mobile": {
-          "image": "../Images/DecorTaKaz/Catalogue_mobile.jpg",
+          "image": "../Images/DecorTaKaz/Catalogue_mobile.webp",
           "alt": ""
         },
         "tablet": {
-          "image": "../Images/DecorTaKaz/Intérieur mobile.jpg",
+          "image": "../Images/DecorTaKaz/Intérieur mobile.webp",
           "alt": ""
         },
         "first": {
