@@ -1,5 +1,5 @@
-import React from 'react'
-import { useRef } from 'react';
+import React from "react";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import {
   Container,
@@ -15,9 +15,9 @@ import {
 import setTitle from "../../Utils/setTitle";
 import Footer from "../Footer";
 
-function Galleria({data}) {
+function Galleria({ data }) {
   setTitle("Vittorio Busatta — Galleria");
-  const projectData = data.filter(project => project.id === 3)
+  const projectData = data.filter((project) => project.id === 3);
   const asterix = useRef(null);
   window.onscroll = () => {
     scrollRotate();
@@ -100,21 +100,38 @@ function Galleria({data}) {
               <p>{projectData[0].description}</p>
             </li>
             <li>
-              <a href={projectData[0].link} target="_blank" rel="noopener noreferrer">
+              <a
+                href={projectData[0].link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {projectData[0].link}
               </a>
             </li>
           </Details>
         </Info>
         <Presentation background={projectData[0].background}>
-          <img src={projectData[0].images.view.first.image} alt={projectData[0].images.view.first.alt} />
-          <img src={projectData[0].images.view.second.image} alt={projectData[0].images.view.second.alt} />
-          <img src={projectData[0].images.view.third.image} alt={projectData[0].images.view.third.alt} />
+          <img
+            src={projectData[0].images.page.first}
+            alt={projectData[0].name}
+          />
+          <img
+            src={projectData[0].images.view.first.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+          <img
+            src={projectData[0].images.view.second.image}
+            alt={projectData[0].images.view.second.alt}
+          />
+          <img
+            src={projectData[0].images.view.third.image}
+            alt={projectData[0].images.view.third.alt}
+          />
         </Presentation>
         <Footer />
       </Content>
     </Container>
-  )
+  );
 }
 
-export default Galleria
+export default Galleria;

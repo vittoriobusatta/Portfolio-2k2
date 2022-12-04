@@ -119,9 +119,14 @@ function Sunnyside({ data }) {
         </Info>
         <Overview background={projectData[0].background}>
           <img
+            src={projectData[0].images.page.first}
+            alt={projectData[0].name}
+          />
+          <img
             src={projectData[0].images.view.landing}
             alt={projectData[0].name}
           />
+
           {/* <img src={projectData[0].images.view.desktop} alt={projectData[0].name} /> */}
           {/* <img src={projectData[0].images.view.mobile} alt={projectData[0].name} /> */}
         </Overview>

@@ -131,7 +131,7 @@ function App() {
   return (
     <>
       <GlobalStyle darkMode={darkMode} />
-      {/* {loading ? <Loader darkMode={darkMode} /> : null} */}
+      {loading ? <Loader darkMode={darkMode} /> : null}
       <Routes>
         <Route path="/" element={<Landing data={data} />} />
         <Route path={`${data[0]?.path}`} element={<Nocta data={data} />} />

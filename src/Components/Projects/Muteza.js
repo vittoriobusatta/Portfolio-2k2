@@ -112,6 +112,10 @@ function Muteza({ data }) {
         </Info>
         <Presentation background={projectData[0].background}>
           <img
+            src={projectData[0].images.page.first}
+            alt={projectData[0].name}
+          />
+          <img
             src={projectData[0].images.view.first.image}
             alt={projectData[0].images.view.first.alt}
           />

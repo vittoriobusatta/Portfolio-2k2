@@ -1,5 +1,5 @@
-import React from 'react';
-import { useRef } from 'react';
+import React from "react";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import {
   Container,
@@ -17,7 +17,7 @@ import Footer from "../Footer";
 
 function ABDistribution({ data }) {
   setTitle("Vittorio Busatta — AB Distribution ");
-  const projectData = data.filter(project => project.id === 2)
+  const projectData = data.filter((project) => project.id === 2);
   const asterix = useRef(null);
   window.onscroll = () => {
     scrollRotate();
@@ -100,20 +100,49 @@ function ABDistribution({ data }) {
               <p>{projectData[0].description}</p>
             </li>
             <li>
-              <a href={projectData[0].link} target="_blank" rel="noopener noreferrer">
+              <a
+                href={projectData[0].link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {projectData[0].link}
               </a>
             </li>
           </Details>
         </Info>
         <Presentation background={projectData[0].background}>
-          <img src={projectData[0].images.page.first.image} alt={projectData[0].images.page.first.alt} />
-          <img src={projectData[0].images.page.second.image} alt={projectData[0].images.page.second.alt} />
-          <img src={projectData[0].images.view.desktop.image} alt={projectData[0].images.view.desktop.alt} />
-          <img src={projectData[0].images.post.first.image} alt={projectData[0].images.post.first.alt} />
-          <img src={projectData[0].images.post.second.image} alt={projectData[0].images.post.second.alt} />
-          <img src={projectData[0].images.post.third.image} alt={projectData[0].images.post.third.alt} />
-          <img src={projectData[0].images.post.fourth.image} alt={projectData[0].images.post.fourth.alt} />
+          <img
+            src={projectData[0].images.page.third}
+            alt={projectData[0].name}
+          />
+          <img
+            src={projectData[0].images.page.first.image}
+            alt={projectData[0].images.page.first.alt}
+          />
+          <img
+            src={projectData[0].images.page.second.image}
+            alt={projectData[0].images.page.second.alt}
+          />
+          <img
+            src={projectData[0].images.view.desktop.image}
+            alt={projectData[0].images.view.desktop.alt}
+          />
+          <img
+            src={projectData[0].images.post.first.image}
+            alt={projectData[0].images.post.first.alt}
+          />
+          <img
+            src={projectData[0].images.post.second.image}
+            alt={projectData[0].images.post.second.alt}
+          />
+          <img
+            src={projectData[0].images.post.third.image}
+            alt={projectData[0].images.post.third.alt}
+          />
+          <img
+            src={projectData[0].images.post.fourth.image}
+            alt={projectData[0].images.post.fourth.alt}
+          />
         </Presentation>
         <Footer />
       </Content>

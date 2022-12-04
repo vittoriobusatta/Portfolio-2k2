@@ -90,18 +90,18 @@
     "technologies": "React, Figma",
     "description": "La mission consistait à réaliser un site vitrine pour une entreprise de vente en gros. J'ai d'abord désigné la maquette graphique pour ensuite l'intégrer en site web. Pour faire la distinction entre les 8 différentes catégories, j'ai essayé de jouer avec plusieurs couleurs.",
     "link": "https://www.ab-distribution.re/",
-    "primaryColor": "#FFA928",
+    "primaryColor": "#FF9B71",
     "textColor": "#FFA928",
     "background": "#EDE9E5",
     "intro": "Site vitrine pour un grossite",
     "images": {
       "card": {
         "first": {
-          "image": "../Images/ABDistribution/firstcard.webp",
+          "image": "../Images/ABDistribution/ab1.webp",
           "alt": "Première Carte AB Distribution"
         },
         "second": {
-          "image": "../Images/ABDistribution/secondcard.webp",
+          "image": "../Images/ABDistribution/ab2.webp",
           "alt": "Deuxième Carte AB Distribution"
         }
       },
@@ -127,7 +127,8 @@
         "second": {
           "image": "../Images/ABDistribution/bodymist.webp",
           "alt": ""
-        }
+        },
+        "third": "../Images/ABDistribution/Project Presentation.webp"
       },
       "post": {
         "first": {
@@ -174,6 +175,9 @@
           "alt": "Deuxième Carte Galleria"
         }
       },
+      "page": {
+        "first": "../Images/Galleria/Project Presentation.webp"
+      },
       "view": {
         "first": {
           "image": "../Images/Galleria/first.webp",
@@ -215,6 +219,9 @@
           "alt": "Deuxième Carte Galleria"
         }
       },
+      "page": {
+        "first": "../Images/Unkle/Project Presentation.webp"
+      },
       "view": {
         "first": {
           "image": "../Images/Unkle/first.webp",
@@ -248,7 +255,7 @@
     "images": {
       "card": {
         "first": {
-          "image": "../Images/Sunnyside/sun1.webp",
+          "image": "../Images/Sunnyside/sun1.png",
           "alt": "Première Carte Galleria"
         },
         "second": {
@@ -260,6 +267,9 @@
         "landing": "../Images/Sunnyside/landingSun.webp",
         "desktop": "../Images/Sunnyside/desktopSun.webp",
         "mobile": "../Images/Sunnyside/mobileSun.webp"
+      },
+      "page": {
+        "first": "../Images/Sunnyside/Project Presentation.webp"
       }
     }
   },
@@ -273,7 +283,7 @@
     "technologies": "React, SCSS",
     "description": "Dans ce projet expérimentale, j'ai reproduit à l'identique le site Muteza. J'ai élaboré une version responsive du site ainsi que certaines optimisations en vue d'ameliorer les performances. Ce projet m'a permis de manipuler les librairies GSAP et Locomotive Scroll.",
     "link": "https://muteza.vercel.app/",
-    "primaryColor": "#FFD6C1",
+    "primaryColor": "#FFA372",
     "textColor": "#FFA372",
     "background": "#EDE5E9",
     "intro": "Présentation de produits de soins fictifs",
@@ -287,6 +297,9 @@
           "image": "../Images/Muteza/mut2.webp",
           "alt": "Deuxième Carte Galleria"
         }
+      },
+      "page": {
+        "first": "../Images/Muteza/Project Presentation.webp"
       },
       "view": {
         "first": {
