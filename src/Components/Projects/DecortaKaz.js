@@ -132,11 +132,11 @@ function DecortaKaz({ data }) {
             alt={projectData[0].images.view.first.alt}
           />
           <img
-            src={projectData[0].images.assets.sixth.image}
+            src={projectData[0].images.assets.fifth.image}
             alt={projectData[0].images.view.first.alt}
           />
-          <img
-            src={projectData[0].images.assets.fifth.image}
+            <img
+            src={projectData[0].images.assets.sixth.image}
             alt={projectData[0].images.view.first.alt}
           />
           <img
