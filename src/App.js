@@ -15,6 +15,7 @@ import Sunnyside from "./Components/Projects/Sunnyside";
 import Muteza from "./Components/Projects/Muteza";
 import Projects from "./Components/Projects";
 import Nocta from "./Components/Projects/Nocta";
+import DecortaKaz from "./Components/Projects/DecorTaKaz";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -131,18 +132,19 @@ function App() {
   return (
     <>
       <GlobalStyle darkMode={darkMode} />
-      {loading ? <Loader darkMode={darkMode} /> : null}
+      {/* {loading ? <Loader darkMode={darkMode} /> : null} */}
       <Routes>
-        <Route path="/" element={<Landing data={data} />} />
-        <Route path={`${data[0]?.path}`} element={<Nocta data={data} />} />
+      <Route path="/" element={<Landing data={data} />} />
+        <Route path={`${data[0]?.path}`} element={<DecortaKaz data={data} />} />
+        <Route path={`${data[1]?.path}`} element={<Nocta data={data} />} />
+        <Route path={`${data[2]?.path}`} element={<Muteza data={data} />} />
+        <Route path={`${data[3]?.path}`} element={<Galleria data={data} />} />
         <Route
-          path={`${data[1]?.path}`}
+          path={`${data[4]?.path}`}
           element={<ABDistribution data={data} />}
         />
-        <Route path={`${data[2]?.path}`} element={<Galleria data={data} />} />
-        <Route path={`${data[3]?.path}`} element={<Unkle data={data} />} />
-        <Route path={`${data[4]?.path}`} element={<Sunnyside data={data} />} />
-        <Route path={`${data[5]?.path}`} element={<Muteza data={data} />} />
+        <Route path={`${data[5]?.path}`} element={<Unkle data={data} />} />
+        <Route path={`${data[6]?.path}`} element={<Sunnyside data={data} />} />
         <Route path="projets" element={<Projects data={data} />} />
       </Routes>
     </>

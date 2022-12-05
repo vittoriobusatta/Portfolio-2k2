@@ -17,7 +17,7 @@ import Footer from "../Footer";
 
 function Galleria({ data }) {
   setTitle("Vittorio Busatta — Galleria");
-  const projectData = data.filter((project) => project.id === 3);
+  const projectData = data.filter((project) => project.id === 4);
   const asterix = useRef(null);
   window.onscroll = () => {
     scrollRotate();

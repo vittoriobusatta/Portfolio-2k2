@@ -1,6 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 import {
   Container,
   Content,
@@ -12,12 +13,24 @@ import {
   Layout,
   Asterix,
 } from "../../Utils/Common";
-import setTitle from "../../Utils/setTitle";
 import Footer from "../Footer";
+import setTitle from "../../Utils/setTitle";
 
-function ABDistribution({ data }) {
-  setTitle("Vittorio Busatta — AB Distribution ");
-  const projectData = data.filter((project) => project.id === 5);
+export const Overview = styled(Presentation)`
+  & div {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    & img {
+      width: 48%;
+      max-width: 400px;
+    }
+  }
+`;
+
+function DecortaKaz({ data }) {
+  setTitle("Vittorio Busatta — Decor ta Kaz");
+  const projectData = data.filter((project) => project.id === 1);
   const asterix = useRef(null);
   window.onscroll = () => {
     scrollRotate();
@@ -26,6 +39,7 @@ function ABDistribution({ data }) {
     asterix.current.style.transform =
       "rotate(" + window.pageYOffset / 2 + "deg)";
   }
+
   return (
     <Container background={projectData[0].background}>
       <Header id="navbar">
@@ -110,44 +124,94 @@ function ABDistribution({ data }) {
             </li>
           </Details>
         </Info>
-        <Presentation background={projectData[0].background}>
+        <Overview background={projectData[0].background}>
           <img
-            src={projectData[0].images.page.third}
-            alt={projectData[0].name}
+            src={projectData[0].images.assets.first.image}
+            alt={projectData[0].images.view.first.alt}
           />
           <img
+            src={projectData[0].images.assets.fifth.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+          <img
+            src={projectData[0].images.assets.sixth.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+          <img
+            src={projectData[0].images.assets.second.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+          <img
+            src={projectData[0].images.assets.third.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+          <img
+            src={projectData[0].images.assets.fourth.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+
+          <img
+            src={projectData[0].images.section.first.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+          <img
+            src={projectData[0].images.section.second.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+          <img
+            src={projectData[0].images.section.third.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+          <img
+            src={projectData[0].images.section.fourth.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+          <img
+            src={projectData[0].images.section.fifth.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+          <img
+            src={projectData[0].images.section.sixth.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+
+          <img
+            src={projectData[0].images.page.sixth.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+
+          {/* <img
             src={projectData[0].images.page.first.image}
-            alt={projectData[0].images.page.first.alt}
+            alt={projectData[0].images.view.first.alt}
           />
           <img
             src={projectData[0].images.page.second.image}
-            alt={projectData[0].images.page.second.alt}
+            alt={projectData[0].images.view.first.alt}
           />
           <img
-            src={projectData[0].images.view.desktop.image}
-            alt={projectData[0].images.view.desktop.alt}
+            src={projectData[0].images.page.third.image}
+            alt={projectData[0].images.view.first.alt}
           />
           <img
-            src={projectData[0].images.post.first.image}
-            alt={projectData[0].images.post.first.alt}
-          />
-          <img
-            src={projectData[0].images.post.second.image}
-            alt={projectData[0].images.post.second.alt}
-          />
-          <img
-            src={projectData[0].images.post.third.image}
-            alt={projectData[0].images.post.third.alt}
-          />
-          <img
-            src={projectData[0].images.post.fourth.image}
-            alt={projectData[0].images.post.fourth.alt}
-          />
-        </Presentation>
+            src={projectData[0].images.page.fourth.image}
+            alt={projectData[0].images.view.first.alt}
+          /> */}
+
+          <div>
+            <img
+              src={projectData[0].images.view.mobile.image}
+              alt={projectData[0].images.view.second.alt}
+            />
+            <img
+              src={projectData[0].images.view.tablet.image}
+              alt={projectData[0].images.view.second.alt}
+            />
+          </div>
+        </Overview>
         <Footer />
       </Content>
     </Container>
   );
 }
 
-export default ABDistribution;
+export default DecortaKaz;

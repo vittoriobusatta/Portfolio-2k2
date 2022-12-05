@@ -17,7 +17,7 @@ import Footer from "../Footer";
 
 function Muteza({ data }) {
   setTitle("Vittorio Busatta — Muteza");
-  const projectData = data.filter((project) => project.id === 6);
+  const projectData = data.filter((project) => project.id === 3);
   const asterix = useRef(null);
   window.onscroll = () => {
     scrollRotate();
