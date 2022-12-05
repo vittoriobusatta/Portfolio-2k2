@@ -27,9 +27,9 @@ export const Info = styled.div`
   height: fill-available;
   width: 100%;
   background-color: ${(props) => props.background};
-  padding: 100px 30px 40px;
+  padding: 100px 20px 40px;
   @media screen and (min-width: 576px) {
-    padding: 100px 40px 40px;
+    padding: 100px 35px 40px;
   }
   @media screen and (min-width: 768px) {
     padding: 100px 50px 40px;
@@ -55,7 +55,7 @@ export const Presentation = styled.div`
   align-items: center;
   flex-direction: column;
   row-gap: 40px;
-  padding: 0px 30px;
+  padding: 0px 20px;
   padding-bottom: 40px;
   margin-bottom: 104px;
   & img {
@@ -63,7 +63,7 @@ export const Presentation = styled.div`
     height: 100%;
   }
   @media screen and (min-width: 576px) {
-    padding: 0px 40px;
+    padding: 0px 35px;
   }
   @media screen and (min-width: 768px) {
     padding: 0px 50px;
@@ -146,6 +146,9 @@ export const Details = styled.ul`
     text-transform: uppercase;
     margin-bottom: 14px;
     color: ${(props) => props.color};
+    @media screen and (max-width: 576px) {
+    margin-bottom: 4px;
+  }
   }
   &,
   p,
@@ -183,9 +186,9 @@ export const Layout = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 25px 30px;
+  padding: 25px 20px;
   @media screen and (min-width: 576px) {
-    padding: 25px 40px;
+    padding: 25px 35px;
   }
   @media screen and (min-width: 768px) {
     padding: 25px 50px;
