@@ -70,7 +70,6 @@ const GlobalStyle = createGlobalStyle`
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [loading, setLoading] = useState(true);
-  // const [scrollTop, setScrollTop] = useState(0);
   const [data, setData] = useState([]);
 
   function fetchPaintingsData() {
@@ -112,22 +111,6 @@ function App() {
   useEffect(() => {
     window.localStorage.setItem("theme", JSON.stringify(darkMode));
   }, [darkMode]);
-
-  // useEffect(() => {
-  //   function onScroll() {
-  //     let navBar = document.getElementById("navbar");
-  //     let currentPosition = window.pageYOffset;
-  //     if (currentPosition > scrollTop) {
-  //       navBar.style.top = "-100px";
-  //     } else {
-  //       navBar.style.top = "0";
-  //     }
-  //     setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
-  //   }
-
-  //   window.addEventListener("scroll", onScroll);
-  //   return () => window.removeEventListener("scroll", onScroll);
-  // }, [scrollTop]);
 
   return (
     <>
