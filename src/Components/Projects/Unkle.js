@@ -13,7 +13,6 @@ import {
   Asterix,
 } from "../../Utils/Common";
 import setTitle from "../../Utils/setTitle";
-import Footer from "../Footer";
 
 function Unkle({ data }) {
   setTitle("Vittorio Busatta — Unkle");
@@ -128,7 +127,6 @@ function Unkle({ data }) {
             alt={projectData[0].images.view.third.alt}
           />
         </Presentation>
-        <Footer />
       </Content>
     </Container>
   );

@@ -13,7 +13,6 @@ import {
   Asterix,
 } from "../../Utils/Common";
 import setTitle from "../../Utils/setTitle";
-import Footer from "../Footer";
 
 function ABDistribution({ data }) {
   setTitle("Vittorio Busatta — AB Distribution ");
@@ -144,7 +143,6 @@ function ABDistribution({ data }) {
             alt={projectData[0].images.post.fourth.alt}
           />
         </Presentation>
-        <Footer />
       </Content>
     </Container>
   );

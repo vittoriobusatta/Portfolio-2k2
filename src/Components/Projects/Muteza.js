@@ -13,7 +13,6 @@ import {
   Asterix,
 } from "../../Utils/Common";
 import setTitle from "../../Utils/setTitle";
-import Footer from "../Footer";
 
 function Muteza({ data }) {
   setTitle("Vittorio Busatta — Muteza");
@@ -140,7 +139,6 @@ function Muteza({ data }) {
             alt={projectData[0].images.view.sixth.alt}
           />
         </Presentation>
-        <Footer />
       </Content>
     </Container>
   );

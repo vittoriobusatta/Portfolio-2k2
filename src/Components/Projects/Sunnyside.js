@@ -130,7 +130,6 @@ function Sunnyside({ data }) {
           {/* <img src={projectData[0].images.view.desktop} alt={projectData[0].name} /> */}
           {/* <img src={projectData[0].images.view.mobile} alt={projectData[0].name} /> */}
         </Overview>
-        <Footer />
       </Content>
     </Container>
   );

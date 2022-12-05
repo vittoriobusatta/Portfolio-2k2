@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import setTitle from "../Utils/setTitle";
-import { ManropeMedium, ManropeRegular, Morgenwalsh } from "../Utils/Common";
+import { GangOfThree } from "../Utils/Common";
 import { Link, Outlet } from "react-router-dom";
 import { Header, Layout, Asterix } from "../Utils/Common";
 import { useRef } from "react";
@@ -58,7 +58,6 @@ const Path = styled.div`
   & img {
     width: 40%;
     height: auto;
-    /* min-width: 100px; */
     max-width: 270px;
     transition: transform 0.4s;
     @media screen and (min-width: 992px) {
@@ -102,55 +101,18 @@ const Details = styled.div`
   color: #222;
   margin-top: 20px;
   & h1 {
-    font-family: ${Morgenwalsh};
-    font-size: 6rem;
+    font-family: ${GangOfThree};
+    font-size: 5rem;
     text-align: center;
     text-transform: uppercase;
   }
   & span {
-    font-family: ${ManropeRegular};
-    font-size: max(2rem, 12px);
+    font-family: ${GangOfThree};
+    font-size: max(2.5rem, 12px);
     margin-bottom: 1.5rem;
-  }
-  & p {
-    font-family: ${ManropeMedium};
-    font-size: max(1.6rem, 14px);
-    margin-top: 2rem;
-    max-width: 200px;
-    line-height: 16px;
-    text-align: center;
-    padding-bottom: 10px;
-
-    @media screen and (min-width: 576px) {
-      max-width: 300px;
-    }
-    @media screen and (max-width: 321px) {
-      padding-bottom: 0px;
-    }
   }
   @media screen and (min-width: 576px) {
     margin-top: 40px;
-  }
-`;
-
-const Footer = styled.footer`
-  height: auto;
-  width: 100%;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  & p {
-    font-size: 12px;
-    font-family: ${ManropeMedium};
-    color: #000;
-    @media screen and (min-width: 992px) {
-      width: 55%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
   }
 `;
 
@@ -244,9 +206,6 @@ function Landing({ darkMode, data }) {
           </Item>
         ))}
       </Grid>
-      <Footer>
-        <p>Build & Design by Vittorio</p>
-      </Footer>
     </Container>
   );
 }

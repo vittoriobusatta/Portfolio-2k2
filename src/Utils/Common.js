@@ -4,8 +4,7 @@ export const ManropeRegular = "Manrope Regular";
 export const ManropeMedium = "Manrope Medium";
 export const ManropeBold = "Manrope Bold";
 export const ManropeExtraBold = "Manrope ExtraBold";
-export const RecoletaRegular = "Recoleta Regular";
-export const Morgenwalsh = "Morgenwalsh";
+export const GangOfThree = "go3v";
 
 /////////////////////////////////////////////////////////////////////////
 
@@ -81,7 +80,7 @@ export const Presentation = styled.div`
 export const Title = styled.h1`
   position: relative;
   font-size: 8rem;
-  font-family: ${Morgenwalsh};
+  font-family: ${GangOfThree};
   text-transform: uppercase;
   line-height: 65px;
   z-index: 2;

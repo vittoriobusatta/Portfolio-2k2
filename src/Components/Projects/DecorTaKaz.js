@@ -13,7 +13,6 @@ import {
   Layout,
   Asterix,
 } from "../../Utils/Common";
-import Footer from "../Footer";
 import setTitle from "../../Utils/setTitle";
 
 export const Overview = styled(Presentation)`
@@ -179,24 +178,6 @@ function DecortaKaz({ data }) {
             src={projectData[0].images.page.sixth.image}
             alt={projectData[0].images.view.first.alt}
           />
-
-          {/* <img
-            src={projectData[0].images.page.first.image}
-            alt={projectData[0].images.view.first.alt}
-          />
-          <img
-            src={projectData[0].images.page.second.image}
-            alt={projectData[0].images.view.first.alt}
-          />
-          <img
-            src={projectData[0].images.page.third.image}
-            alt={projectData[0].images.view.first.alt}
-          />
-          <img
-            src={projectData[0].images.page.fourth.image}
-            alt={projectData[0].images.view.first.alt}
-          /> */}
-
           <div>
             <img
               src={projectData[0].images.view.mobile.image}
@@ -208,7 +189,6 @@ function DecortaKaz({ data }) {
             />
           </div>
         </Overview>
-        <Footer />
       </Content>
     </Container>
   );

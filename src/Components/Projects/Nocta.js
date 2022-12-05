@@ -173,7 +173,6 @@ function Nocta({ data }) {
             />
           </div>
         </Overview>
-        <Footer />
       </Content>
     </Container>
   );
