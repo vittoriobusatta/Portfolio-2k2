@@ -150,6 +150,11 @@ function DecortaKaz({ data }) {
           />
 
           <img
+            src={projectData[0].images.page.sixth.image}
+            alt={projectData[0].images.view.first.alt}
+          />
+
+          <img
             src={projectData[0].images.section.first.image}
             alt={projectData[0].images.view.first.alt}
           />
@@ -174,10 +179,6 @@ function DecortaKaz({ data }) {
             alt={projectData[0].images.view.first.alt}
           />
 
-          <img
-            src={projectData[0].images.page.sixth.image}
-            alt={projectData[0].images.view.first.alt}
-          />
           <div>
             <img
               src={projectData[0].images.view.mobile.image}
