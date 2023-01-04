@@ -91,30 +91,6 @@ const Cards = styled.div`
   display: inline-flex;
   justify-content: center;
 `;
-const Details = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  z-index: 2;
-  color: #222;
-  margin-top: 20px;
-  & h1 {
-    font-family: ${GangOfThree};
-    font-size: 5rem;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  & span {
-    font-family: ${GangOfThree};
-    font-size: max(2.5rem, 12px);
-    margin-bottom: 1.5rem;
-  }
-  @media screen and (min-width: 576px) {
-    margin-top: 40px;
-  }
-`;
 
 function Landing({ darkMode, data }) {
   setTitle("Vittorio Busatta — Creative Developer ");
@@ -195,10 +171,6 @@ function Landing({ darkMode, data }) {
                       alt={project.images.card.second.alt}
                     />
                   </Cards>
-                  <Details>
-                    <span>{project.id}/7</span>
-                    <h1>{project.name}</h1>
-                  </Details>
                 </Path>
               </Link>
               <Outlet />
